@@ -2,30 +2,14 @@
 layout: default
 ---
 
-<div class="catalogue">
-  {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      <div>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-        <h1 class="catalogue-title">{{ post.title }}</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-          {{ post.content | strip_html | truncatewords: 30 }}
-        </p>
-
-      </div>
-    </a>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+<div class="home">
+  {% if site.theme_settings.header_text %}
+  <div id="main" class="call-out"
+  style="background-image: url('{{ site.theme_settings.header_feature_image | relative_url }}')">
+    <h1> {{ site.theme_settings.header_text }} </h1>
+  </div>
   {% endif %}
 
-  <span>{{ paginator.page }}</span>
+  {% include blog.html %}
+    
 </div>
