@@ -1,14 +1,14 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://kangrachel.github.io"
-title: Type on Strap # site's title
+title: Rachel's TIL # site's title
 description: "A website with blog posts and pages" # used by search engines
 
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Rachel's BLOG # blog's title
+  title: TIL LOGs # blog's title
   avatar: assets/img/web-programming.svg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
