@@ -8,14 +8,14 @@ description: "A website with blog posts and pages" # used by search engines
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Type on Strap # blog's title
+  title: Rachel's BLOG # blog's title
   avatar: assets/img/triangle.svg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
 
   # Header and footer text
-  header_text: Change header text in <code>_config.yml</code>
-  header_feature_image: assets/img/pexels/triangular.jpeg
+  header_text: BLOG for TIL (Today I Learned)
+  header_feature_image: assets/img/pexels/retro-school.jpeg
   footer_text: >
     Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
