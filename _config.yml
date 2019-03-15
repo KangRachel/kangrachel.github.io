@@ -9,7 +9,7 @@ description: "A website with blog posts and pages" # used by search engines
 theme_settings:
   # Meta
   title: Rachel's BLOG # blog's title
-  avatar: assets/img/triangle.svg
+  avatar: assets/img/web-programming.svg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
 
