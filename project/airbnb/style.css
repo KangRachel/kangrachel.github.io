@@ -1,0 +1,155 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin: 8px 0 8px 0;
+    line-height: 26px;
+}
+strong {
+    font-weight: 800;
+}
+.maintop {
+    height: 691px;
+    background-image: url(./assets/maintop.jpg);
+    padding : 32px;
+}
+.wrap{
+    width: 1080px;
+    height: 563px;
+    margin: 0 auto;
+    padding: 64px 0 0 76px;
+}
+
+#reservation {
+    float: left;
+    width: 444px;
+    height: 499px;
+    background: white;
+    align-items: center;
+    padding: 32px;
+    margin-bottom: 64px;
+    border-radius: 4px;
+}
+#reservation input {
+    border: 0px;
+}
+div > span{
+    display: block;
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+input, select {
+    display: block;
+    width : 420px;
+    height: 20px;
+    font-size: 18px;
+    padding: 11px 6px 11px 11px;
+}
+
+.datebox {
+    display: inline-block;
+    width: 222px;
+    float: left;
+    margin : 10px 0 10px 0;
+}
+
+.datebox  input {
+    width: 202px;
+    border: 0px;
+}
+
+.people {
+    display: inline-block;
+    width: 222px;
+    float: left;
+    margin : 5px 0 25px 0;
+}
+.selectbox, .dateItem, .destination {
+    border: 1px solid rgb(235, 235, 235);
+}
+.selectbox > select {
+    display: inline-block;
+    width: 210px;
+    height: 40px;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 0;
+    padding: 10px;
+    background: url('./assets/caret-down-solid.svg') no-repeat 95% 50%; 
+}
+.btnbox {
+    margin : 10px 0 10px 0;
+    align-items: center;
+    width: 444px;
+}
+.submitBtn {
+    background: rgb(255, 90, 95);
+    width: 446px;
+    height: 50px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: 0px
+}
+
+.submitBtn > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.title {
+    margin: 10px 0;
+}
+.photoreview {
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.cardItem {
+    display: inline-block;
+    width: 340px;
+    height: 380px;
+    float: left;
+    padding: 10px 10px 0 10px;
+}
+
+.cardimg img {
+    width: 333px;
+    height: 222px;
+    padding-bottom: 10px;
+}
+.text p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+.profileimg {
+    display: inline-block;
+    float: left;
+}
+.profileimg img {
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    margin-right: 30px;
+}
+.profilebox {
+    width: 100px;
+    margin-top: px;
+    display: inline-block;
+}
+.country span {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
