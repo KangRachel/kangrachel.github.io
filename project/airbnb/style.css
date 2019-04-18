@@ -40,7 +40,7 @@ strong {
 #reservation input {
     border: 0px;
 }
-div > span{
+ div > span {
     display: block;
     margin: 10px 0 10px 0;
     font-size: 14px;
@@ -152,4 +152,60 @@ input, select {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
+}
+
+.introduction > .wrap {
+    height: 280px;
+    
+}
+.introduction .title {
+    padding: 5px 0;
+    
+}
+.intro-box {
+    width: 1080px;
+    height: 220px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+
+    
+}
+.intro-item {
+    display: inline-block;
+    float: left;
+    width: 333px;
+    height: 136px;
+    padding: 10px;
+}
+
+.icon-box > i {
+    font-size: 3em;
+    padding-bottom: 20px;
+    color: #60B6B5;
+}
+
+.text-box, .popular-title  > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 3px 0;
+}
+.text-box > p {
+    font-size: 16px;
+}
+.popular-item {
+    display: inline-block;
+    float: left;
+    width: 262px;
+    height: 280px;
+}
+.popular-card img {
+    width: 244px;
+    height: 164px;
+    padding: 10px 0;
+}
+.popular-types, .super-host {
+    font-size: 0.8em;
+    color: grey;
+    font-weight: 600;
 }
