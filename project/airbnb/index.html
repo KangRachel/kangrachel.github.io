@@ -27,13 +27,13 @@
                         <div class="datebox">
                         <span>체크인</span>
                         <div class="dateItem">
-                        <input type="date" placeholder="년/월/일" name="checkinDate">
+                        <input id="check-in" type="date" placeholder="년/월/일" name="checkinDate">
                         </div>
                         </div>
                         <div class="datebox">
                           <span>체크아웃</span>
                           <div class="dateItem">
-                            <input type="date" placeholder="년/월/일" name="checkoutDate">
+                            <input id="check-out" type="date" placeholder="년/월/일" name="checkoutDate">
                           </div>
                         </div>
                       </div>
@@ -213,23 +213,23 @@
               </div>
             </div>
         </div>
-        <div class="wrap">
+        <div class="wrap" id="popular">
           <div class="title">
             <h2>한국 실시간 인기 숙소</h2>
           </div>
         <div class="popular-realtime">
           <div class="popular-item">
             <div class="popular-card">
-              <a href="#"><img src="./assets/architecture-1477041_1280.jpg" alt="popular-place-korea"></a>
+              <a href="#"><img src="./assets/korean-jindo-1846176_1920.jpg" alt="popular-place-korea"></a>
             </div>
             <div class="popular-types">
-              <span>전체 서울</span>
+              <span>전체 · 서울</span>
             </div>
             <div class="popular-title">
               <h3>(독채)청와대 5분 거리 한옥</h3>
             </div>
             <div class="popular-price">
-              <span>300,000원 / 박</span>
+              <span>₩300,000원 / 박</span>
             </div>
             <div class="popular-score">
               <span class="score">
@@ -239,82 +239,171 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
               </span>
-              <span class="super-host">슈퍼호스트</span>
+              <span class="super-host">200 · 슈퍼호스트</span>
+            </div>
+          </div>
+        <div class="popular-item">
+            <div class="popular-card">
+              <a href="#"><img src="./assets/bed-1846251_1920.jpg" alt="popular-place-korea"></a>
+            </div>
+            <div class="popular-types">
+              <span>서울특별시 · 아파트</span>
+            </div>
+            <div class="popular-title">
+              <h3>(Dwyane's luxury house (中文ok)</h3>
+            </div>
+            <div class="popular-price">
+              <span>₩230,000원 / 박</span>
+            </div>
+            <div class="popular-score">
+              <span class="score">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </span>
+              <span class="super-host">175</span>
+            </div>
+          </div>
+        <div class="popular-item">
+            <div class="popular-card">
+              <a href="#"><img src="./assets/korean-jindo-1846176_1920.jpg" alt="popular-place-korea"></a>
+            </div>
+            <div class="popular-types">
+              <span>집 전체 · 중구</span>
+            </div>
+            <div class="popular-title">
+              <h3>★ Myeong Dong ♥ Portable Wifi #1 ★</h3>               
+            </div>
+            <div class="popular-price">
+              <span>₩102,700 / 박</span>
+            </div>
+            <div class="popular-score">
+              <span class="score">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </span>
+        
+              <span class="super-host">230 · 슈퍼호스트</span>
+            </div>
+          </div>
+        <div class="popular-item">
+            <div class="popular-card">
+              <a href="#"><img src="./assets/city-2669015_1920.jpg" alt="popular-place-korea"></a>
+            </div>
+            <div class="popular-types">
+              <span>개인실 · 종로구</span>
+            </div>
+            <div class="popular-title">
+              <h3>HANOK VILLAGE,OWN BED & LIVING ROOM</h3>
+            </div>
+            <div class="popular-price">
+              <span>₩75,000 / 박</span>
+            </div>
+            <div class="popular-score">
+              <span class="score">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </span>
+              <span class="super-host">197 · 슈퍼호스트</span>
             </div>
           </div>
         </div>
-        <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/architecture-1477041_1280.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>전체 서울</span>
-            </div>
-            <div class="popular-title">
-              <h3>(독채)청와대 5분 거리 한옥</h3>
-            </div>
-            <div class="popular-price">
-              <span>300,000원 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </span>
-              <span class="super-host">슈퍼호스트</span>
-            </div>
+          <div class="view-all">
+            <a href="#">
+              <span>모두 보기 (1400개 이상)  <i class="fas fa-chevron-right"></i></span>
+            </a>
           </div>
-        <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/architecture-1477041_1280.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>전체 서울</span>
-            </div>
-            <div class="popular-title">
-              <h3>(독채)청와대 5분 거리 한옥</h3>
-            </div>
-            <div class="popular-price">
-              <span>300,000원 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </span>
-              <span class="super-host">슈퍼호스트</span>
-            </div>
+        </div>
+        <div class="wrap">
+        <div class="add-date">
+          <div>
+            <h2>언제 여행하실 계획인가요?</h2>
           </div>
-        <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/architecture-1477041_1280.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>전체 서울</span>
-            </div>
-            <div class="popular-title">
-              <h3>(독채)청와대 5분 거리 한옥</h3>
-            </div>
-            <div class="popular-price">
-              <span>300,000원 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </span>
-              <span class="super-host">슈퍼호스트</span>
-            </div>
+          <div><p>정확한 요금과 예약 가능 여부를 확인하려면 날짜를 입력하세요.</p>
           </div>
+          <div class="btnbox">
+            <button class="date-btn" onclick="location.href='#check-in'"><span>날짜 추가</span></button>
+          </div>
+        </div>
+        </div>
+    </section>
+    <section class="footer">
+      <div class="wrap">
+        <div class="footer-item">
+          <div class="footer-category">
+          <span>에어비앤비</span>
+          </div>
+          <div class="footer-list">
+            <ul>
+              <li><a href="#">채용정보</a></li>
+              <li><a href="#">미디어</a></li>
+              <li><a href="#">정책</a></li>
+              <li><a href="#">도움말</a></li>
+              <li><a href="#">다양성과 소속감</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-item">
+          <div class="footer-category">
+          <span>여행하기</span>
+          </div>
+          <div class="footer-list">
+            <ul>
+              <li><a href="#">신뢰와 안전</a></li>
+              <li><a href="#">여행 크레딧</a></li>
+              <li><a href="#">Airbnb Citizen</a></li>
+              <li><a href="#">비즈니스 프로그램</a></li>
+              <li><a href="#">가이드북</a></li>
+              <li><a href="#">Airbnbmag</a></li>
+              <li><a href="#">에어비앤비 이벤트</a><span>NEW!</span></li>
+              <li><a href="#"><strong>한국의 변경된 환불 정책</strong></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-item">
+          <div class="footer-category">
+          <span>호스팅하기</span>
+          </div>
+          <div class="footer-list">
+            <ul>
+              <li><a href="#">호스팅의 장점</a></li>
+              <li><a href="#">호스팅의 기준</a></li>
+              <li><a href="#">책임감 있는 호스팅하기</a></li>
+              <li><a href="#">커뮤니티 센터</a></li>
+              <li><a href="#">트립 호스팅</a><span>NEW!</span></li>
+              <li><a href="#">Open Homes프로그램</a><span>NEW!</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-item">
+          <div class="footer-category">
+          <span id="icon-link">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter-square"></i></a>
+              <a href="#"><i class="fab fa-github-square"></i></a>
+          </span>
+          </div>
+          <div class="footer-list">
+            <ul>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보 처리방침</a></li>
+              <li><a href="#">여행지 찾기</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wrap" id="reserved">
+        <div>
+          <span><i class="fab fa-airbnb"></i>©2019 Airbnb, Inc. All rights reserved.</span>
         </div>
       </div>
     </section>
