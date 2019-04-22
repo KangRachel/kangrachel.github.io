@@ -17,7 +17,17 @@ strong {
 }
 .maintop {
     height: 691px;
-    /* padding : 32px; */
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    opacity: 99;
+}
+.logo i {
+    color: white;
+    font-size: 40px;
 }
 .reserve-box {
     position: absolute;
@@ -44,10 +54,11 @@ strong {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -2!important;
+    opacity: 99;
 }
 .wrap{
-    width: 1080px;
+    width: 100%;
+    max-width: 1080px;
     height: 563px;
     margin: 0 auto;
     padding: 64px 0 0 76px;
@@ -150,21 +161,25 @@ input, select {
 }
 .card-container {
     display: inline-block;
-    position: relative;
-    width: 32.3333333%;
+    float: left;
     vertical-align: top;
 }
-.cardItem {
+.card-item {
     display: inline-block;
     width: 340px;
     height: 380px;
     padding: 10px 10px 0 10px;
 }
 
-.cardimg img {
+.card-img img {
     width: 333px;
     height: 222px;
     padding-bottom: 10px;
+}
+.wrap-img {
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/bedroom-416062_1280.jpg)
 }
 
 .text p {
@@ -194,14 +209,15 @@ input, select {
 }
 
 .introduction > .wrap {
-    height: 260px;
-    
+    height: auto;
+    clear: both;
 }
 .introduction .title {
-    padding: 5px 0; 
+    padding: 15px 0; 
 }
 .intro-box {
-    width: 1080px;
+    width: 100%;
+    max-width: 1080px;
     height: 220px;
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
@@ -212,7 +228,6 @@ input, select {
     display: inline-block;
     float: left;
     width: 333px;
-    height: 136px;
     padding: 10px;
 }
 .icon-box > i {
@@ -229,13 +244,13 @@ input, select {
     font-size: 16px;
 }
 #popular {
-    height: 400px;
+    height: auto;
+    clear: both;
 }
 .popular-item {
     display: inline-block;
     float: left;
     width: 262px;
-    height: 280px;
 }
 .popular-realtime {
     height: 310px;
@@ -264,6 +279,7 @@ input, select {
 }
 .view-all {
     clear: both;
+    padding-top: 25px;
 }
 .view-all span {
     color: #60B6B5;
@@ -292,13 +308,12 @@ input, select {
 }
 .footer .wrap {
     height: 280px;
-    border-bottom: 1px solid #cccccc;
 }
 .footer-item {
     display: inline-block;
     width: 160px;
     float: left;
-    padding: 0 45px;
+    padding: 0 45px 10px 45px;
 }
 .footer-category > span {
     font-size: 16px;
@@ -327,6 +342,8 @@ input, select {
     height: 60px;
     padding-top: 32px;
     border-bottom: 0;
+    clear: both;
+    border-top: 1px solid #cccccc;
 }
 #reserved span {
     color: grey;
