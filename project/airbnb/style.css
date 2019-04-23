@@ -89,7 +89,7 @@ strong {
     font-weight: bold;
     letter-spacing: 3px;
 }
-input, select {
+.destination input, select {
     display: block;
     width : 420px;
     height: 20px;
@@ -104,9 +104,11 @@ input, select {
     margin : 10px 0 10px 0;
 }
 
-.datebox  input {
+#check-in, #check-out {
     width: 202px;
     border: 0px;
+    font-size: 18px;
+    padding: 11px 6px 11px 11px;
 }
 
 .people {
@@ -328,7 +330,7 @@ input, select {
     padding: 5px 0;
     font-size: 14px;
 }
-.footer-list a {
+ a {
     text-decoration: none;
     color: grey;
 }
@@ -367,3 +369,88 @@ li span {
     margin: 0 3px;
 }
 
+/* 상세페이지 */
+
+.header {
+    width: 100%;
+    height: 50%;
+}
+.header .logo {
+    float: left;
+    margin-top: 15px
+}
+
+.header > .logo i {
+    color: red;
+    opacity: 1;
+    margin: 0 20px;
+    font-weight: 400;
+}
+.search-box {
+    display: inline-block;
+    margin-left: 100px;
+    padding-top: 30px;
+}
+.search-bar {
+    display: inline-block;
+    padding: 3px 20px;
+    box-shadow: 0px 9px 13px 0 #cccccc;
+    border: 1px solid #EBEBEB
+
+}
+.search-icon {
+    display: inline-block;
+    font-size: 1.3em;
+    color: grey;
+    float: left;
+}
+#search {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    width: 300px;
+}
+#search:focus {
+    width: 500px;
+}
+.nav-bar {
+    float: right;
+    padding: 30px;
+    display: inline-block;
+
+}
+.nav-item {
+    display: inline-block;
+    padding: 15px 10px;
+}
+
+.nav-item:hover {
+    border-bottom: #cccccc solid 3px;
+}
+
+.photo {
+    width: 102%;
+    padding: 30px 0;
+}
+
+.main-photo, .sub-photo {
+    border: 1px solid black;
+}
+
+
+.main-photo, .main-photo2 {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    height: 592px;
+}
+.sub-photo-group {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    height: 592px;
+}
+.sub-photo {
+    height: 50%;
+}
