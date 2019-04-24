@@ -23,7 +23,6 @@ strong {
     top: 0;
     left: 0;
     padding: 10px 20px;
-    opacity: 99;
 }
 .logo i {
     color: white;
@@ -32,7 +31,7 @@ strong {
 .reserve-box {
     position: absolute;
     top: 50%;
-    left: 33%;
+    left: 30%;
     transform: translate( -50%, -50% );
     width: 520px;
     height: 570px;
@@ -42,7 +41,6 @@ strong {
     min-width: 100%;
     min-height: 100%;
     width: 100%;
-    opacity: 1!important;
 }
 .bg-img {
     position: relative;
@@ -54,7 +52,6 @@ strong {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    opacity: 99;
 }
 .wrap{
     width: 100%;
@@ -88,8 +85,9 @@ strong {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 3px;
+    color: #484848;
 }
-.destination input, select {
+.destination input, .select-box select {
     display: block;
     width : 420px;
     height: 20px;
@@ -117,10 +115,10 @@ strong {
     float: left;
     margin : 5px 0 25px 0;
 }
-.selectbox, .dateItem, .destination {
+.select-box, .dateItem, .destination, .guest-box {
     border: 1px solid rgb(235, 235, 235);
 }
-.selectbox > select {
+.select-box > select, #persons {
     display: inline-block;
     width: 210px;
     height: 40px;
@@ -201,7 +199,6 @@ strong {
 }
 .profilebox {
     width: 100px;
-    margin-top: px;
     display: inline-block;
 }
 .country span {
@@ -262,13 +259,13 @@ strong {
     height: 164px;
     padding: 10px 0;
 }
-.popular-score > .score {
+.sr-score .score, .popular-score  .score {
     font-size: 10px;
     color: #60B6B5;
     letter-spacing: -1px;
     display: inline;
 }
-.popular-types, .super-host {
+.rv-number, .popular-types, .super-host {
     font-size: 0.8em;
     color: grey;
     font-weight: 600;
@@ -283,7 +280,7 @@ strong {
     clear: both;
     padding-top: 25px;
 }
-.view-all span {
+.view-all span, .contact-host span, .explain-more span {
     color: #60B6B5;
     font-size: 17px;
     font-weight: 600;
@@ -382,7 +379,6 @@ li span {
 
 .header > .logo i {
     color: red;
-    opacity: 1;
     margin: 0 20px;
     font-weight: 400;
 }
@@ -416,13 +412,13 @@ li span {
 }
 .nav-bar {
     float: right;
-    padding: 30px;
+    padding: 5px 15px;
     display: inline-block;
 
 }
 .nav-item {
     display: inline-block;
-    padding: 15px 10px;
+    padding: 40px 10px;
 }
 
 .nav-item:hover {
@@ -431,19 +427,33 @@ li span {
 
 .photo {
     width: 102%;
+    height: 550px;
     padding: 30px 0;
 }
-
 .main-photo, .sub-photo {
     border: 1px solid black;
 }
-
 
 .main-photo, .main-photo2 {
     display: inline-block;
     float: left;
     width: 49%;
     height: 592px;
+    overflow: hidden;
+}
+.main-photo2 {
+    height: 595px;
+}
+.main-photo img {
+    height: 592px;
+    width: 100%;
+    min-width: 400px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .sub-photo-group {
     display: inline-block;
@@ -453,4 +463,137 @@ li span {
 }
 .sub-photo {
     height: 50%;
+    overflow: hidden;
+}
+
+.sub-photo img {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 130%;
+    height: 100%;
+}
+.room-content {
+    width: 58%;
+    float: left;
+    padding-bottom: 10px;
+    border-bottom: #cccccc 1px solid;
+}
+.room-content .title {
+    display: inline-block;
+}
+.room {
+    display: block;
+    padding-bottom: 15px;
+}
+.room span {
+    display: inline;
+}
+.profile-host {
+    float: right;
+}
+.profile-host span {
+    text-align: center;
+}
+.profile-host img {
+    display: inline-block;
+    width: 55px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+}
+.room-icon {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 30px;
+}
+.room-text {
+    display: inline-block;
+    width: 85%;
+}
+.room-text span, .dateItem span {
+    display: inline;
+    font-size: 18px;
+    padding: 5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.room-info {
+    padding-bottom: 5px;
+}
+.room-detail {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.side-reservation {
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    position: relative;
+    float: left;
+    margin-left: 70px;
+    padding: 0 20px;
+    display: inline-block;
+    height: 372px;
+}
+.sr-info {
+    margin: 0 auto;
+    padding: 15px;
+    border-bottom: 1px solid #cccccc;
+}
+.sr-price span, .sr-score span {
+    display: inline;
+}
+
+#price {
+    font-size: 20px;
+}
+.booking .dateItem{
+    display: inline-block;
+    width: 300px;
+    float: left;
+    margin : 10px 0 10px 0;
+}
+#booking .datebox, #booking .people {
+    width: 290px;
+}
+#date-from, #date-to, #persons{
+    display: inline-block;
+    width: 100px;
+    border: 0;
+    padding: 10px;
+    font-size: 16px
+}
+
+#persons {
+    width: 290px;
+}
+
+#booking .btnbox, #booking .submitBtn {
+    width: 290px;
+    height: 40px;
+}
+.confirm-message {
+    padding-top: 200px;
+}
+.confirm-message span {
+    color: #484848;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+.room-explain {
+    clear: both;
+    width: 58%;
+    border-bottom: #cccccc 1px solid;
+}
+.translate-btn button {
+    width: 595px;
+    padding: 6px 12px;
+    background: transparent;
+}
+.explain-more span {
+    display: inline-block;
+    padding-bottom: 15px;
 }

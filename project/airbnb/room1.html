@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,19 +35,167 @@
   <section class="photo">
     <div class="photo-group">
       <div class="main-photo">
+        <img src="./assets/bedroom-416062_1280.jpg" alt="house-main">
       </div>
       <div class="main-photo2">
         <div class="sub-photo-group">
-          <div class="sub-photo"></div>
-          <div class="sub-photo"></div>
+          <div class="sub-photo">
+            <img src="./assets/kitchen.jpg" alt="house">
+          </div>
+          <div class="sub-photo">
+            <img src="./assets/breakfast.jpg" alt="house">
+          </div>
         </div>
         <div class="sub-photo-group">
-            <div class="sub-photo"></div>
-            <div class="sub-photo"></div>
+            <div class="sub-photo">
+              <img src="./assets/villa.jpg" alt="house">
+            </div>
+            <div class="sub-photo">
+              <img src="./assets/toilet.jpg" alt="house">
+            </div>
         </div>
       </div>
     </div>
   </section>
-
+  <section class="content">
+    <div class="wrap">
+      <div class="room-content">
+        <div class="title">
+          <h2>서귀포의 아담하고 접근성 좋은 아파트</h2>
+          <span>제주 서귀포</span>
+        </div>
+      <div class="profile-host">
+        <img src="./assets/megane.png">
+        <span>KYJ</span>
+      </div>
+      <div class="room">
+        <div class="room-icon">
+            <span><i class="fas fa-home"></i></span>
+        </div>
+        <div class="room-text">
+          <div class="room-info">
+            <span>아파트 전체</span>
+          </div>
+          <div class="room-detail">
+            <span>인원 2명</span>
+            <span>원룸</span>
+            <span>침대 1개</span>
+            <span>욕실 1개</span>
+          </div>
+        </div>
+      </div>
+      <div class="room">
+          <div class="room-icon">
+              <span><i class="fas fa-trophy"></i></span>
+          </div>
+          <div class="room-text">
+            <div class="room-info">
+              <span>KYJ님은 슈퍼호스트입니다</span>
+            </div>
+            <div class="room-detail">
+              <span>슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.</span>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-icon">
+              <span><i class="fas fa-broom"></i></span>
+          </div>
+          <div class="room-text">
+            <div class="room-info">
+              <span>높은 청결도</span>
+            </div>
+            <div class="room-detail">
+              <span>최근 게스트 9명이 이 숙소가 티 없이 깨끗하다고 후기를 남겼습니다.</span>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-icon">
+            <span><i class="fas fa-bell"></i></span>
+          </div>
+          <div class="room-text">
+            <div class="room-info">
+              <span>셀프 체크인</span>
+            </div>
+            <div class="room-detail">
+              <span>열쇠 보관함을 이용해 체크인하세요.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-reservation">
+        <div class="sr-info">
+          <div class="sr-price">
+            <span id="price">₩51,401</span>
+            <span>/박</span>
+          </div>
+          <div class="sr-score">
+            <span class="score">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </span>
+            <span class="rv-number">179</span>
+          </div>
+        </div>
+        <div class="book-request">
+          <form id="booking">
+            <div id="checkin-out">
+              <div class="datebox">
+                <span>날짜</span>
+                <div class="dateItem">
+                  <input id="date-from" type="text" value="체크인" name="checkinDate">
+                  <span><i class="fas fa-arrow-right"></i></span>
+                  <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
+                </div>
+              </div>
+            </div>
+            <div class="people">
+              <span>인원</span>
+              <div class="guest-box">
+                <select id="persons" name="persons">
+                    <option value="1" selected>게스트 1명</option>
+                    <option value="2">게스트 2명</option>
+                    <option value="3">게스트 3명</option>
+                    <option value="4">게스트 4명</option>
+                    <option value="5">게스트 5명</option>
+                    <option value="6">게스트 6명</option>
+                </select>
+              </div>
+            </div>
+            <div class="btnbox">
+              <button type="submit" class="submitBtn"><span>예약 요청</span></button>
+            </div>
+          </form>
+          <div class="confirm-message">
+          <span>예약 확정 전에는 요금이 청구되지 않습니다</span>
+          </div>
+        </div>
+      </div>
+        <div class="room-explain">
+        <div class="translate-btn">
+          <button type="button" name="traslate">
+            <span>이 설명을 한국어로 번역하기</span>
+          </button>
+        </div>
+        <div class="explain-text">
+          <p>Location, Location, Location - 10 minute bus ride (1 stop) to NYC Times Square. Bus stop is a 2 mins walk from house and frequency is every few minutes for 24 hours. Super safe and Quiet neighborhood.<br>
+            Brand new, very clean, studio apartment with a private bath room, kitchenette and private work space. The studio is renovated with natural stone floors, high end finishings and closets, throughout the apartment.
+          </p>
+        </div>
+        <div class="explain-more">
+          <span>이 공간 자세히 알아보기</span>
+          <span><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="contact-host">
+          <span>호스트에게 연락하기</span>
+        </div>
+      </div>
+     </div>
+    </div>
+  </section>
 </body>
 </html>
