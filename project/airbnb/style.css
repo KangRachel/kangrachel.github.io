@@ -286,7 +286,7 @@ strong {
     font-weight: 600;
     letter-spacing: 1px;
 }
-.view-all > a {
+.view-all a {
     text-decoration: none;
     color: #60B6B5;
 }
@@ -476,7 +476,7 @@ li span {
     width: 130%;
     height: 100%;
 }
-.room-content {
+.room-content, .amenity-content {
     width: 58%;
     float: left;
     padding-bottom: 10px;
@@ -596,4 +596,55 @@ li span {
 .explain-more span {
     display: inline-block;
     padding-bottom: 15px;
+}
+
+.amenity-title {
+    padding: 10px 0;
+}
+.amenity-title span {
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.amenity-list {
+    display: inline-block;
+    width: 49%;
+}
+
+.amenity-list span, .carbon-check, .bed-type{
+    display: inline-block;
+    color: #484848;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.bedding {
+    clear: both;
+}
+.room-bed {
+    display: inline-block;
+    height: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 15px 10px 0;
+}
+.bed-icon {
+    margin: 0 20px 10px 0;
+    padding: 10px;
+}
+.bed-info {
+    display: block;
+    margin: 10px 20px 10px 0;
+}
+.bed-info span{
+    display: block;
+    margin: 0;
+}
+.first-room {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.footer {
+    clear: both;
 }
