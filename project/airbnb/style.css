@@ -482,6 +482,9 @@ li span {
     padding-bottom: 10px;
     border-bottom: #cccccc 1px solid;
 }
+.content .wrap {
+    height: 100%;
+}
 .room-content .title {
     display: inline-block;
 }
@@ -531,8 +534,8 @@ li span {
 .side-reservation {
     border: 1px solid #e4e4e4;
     border-radius: 4px;
-    position: relative;
-    float: left;
+    position: sticky;
+    top: 10px;
     margin-left: 70px;
     padding: 0 20px;
     display: inline-block;
