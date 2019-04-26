@@ -406,9 +406,11 @@ li span {
     font-size: 16px;
     font-weight: 600;
     width: 300px;
+    transition: all 0.5s;
 }
 #search:focus {
     width: 500px;
+    transition: all 0.5s;
 }
 .nav-bar {
     float: right;
@@ -475,6 +477,11 @@ li span {
     margin: auto;
     width: 130%;
     height: 100%;
+}
+.photo img:hover {
+    width: 140%;
+    height: 110%;
+    transition: all 0.5s;
 }
 .room-content, .amenity-content {
     width: 58%;
