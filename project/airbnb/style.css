@@ -734,7 +734,7 @@ li span {
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
-.how-many-reviews {
+.how-many-reviews, .host-name span {
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -832,4 +832,15 @@ li span {
 }
 #next-nav {
     border: 1px solid #006a70;
+}
+.about-host {
+    width: 58%;
+    padding-top: 50px;
+    display: inline-block;
+}
+.host-name {
+    display: inline-block;
+}
+.host-detail {
+    margin: 10px 0;
 }
