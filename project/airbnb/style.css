@@ -1,7 +1,9 @@
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+input {
+    outline: none;
+}
 h2 {
     font-size: 32px;
     font-weight: bold;
@@ -187,11 +189,11 @@ strong {
     line-height: 20px;
     margin: 10px 0;
 }
-.profileimg {
+.profile-img {
     display: inline-block;
     float: left;
 }
-.profileimg img {
+.profile-img img {
     width: 48px;
     border-radius: 50%;
     border: 1px solid #cccccc;
@@ -259,7 +261,7 @@ strong {
     height: 164px;
     padding: 10px 0;
 }
-.sr-score .score, .popular-score  .score {
+.sr-score .score, .popular-score  .score, .review-stars {
     font-size: 10px;
     color: #60B6B5;
     letter-spacing: -1px;
@@ -659,6 +661,7 @@ li span {
     letter-spacing: 1px;
 }
 .reservation-check {
+    width: 58%;
     clear: both;
     display: inline-block;
     padding-bottom: 30px;
@@ -698,7 +701,7 @@ li span {
     padding: 0 0 10px 55px;
 }
 .right-icon {
-    padding-left: 33px;
+    padding-left: 30px;
 }
 .not-av, .available {
     text-align: center;
@@ -719,4 +722,114 @@ li span {
 
 .available:hover {
     background: rgb(204, 238, 235);
+}
+.review-content {
+    width: 58%;
+    display: inline-block;
+}
+.review-total div {
+    display: inline-block;
+}
+.review-total {
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.how-many-reviews {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.review-stars {
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(0, 132, 137);
+    vertical-align: super;
+    margin: 0 30px;
+}
+.review-search-box {
+    margin-left: 110px;
+    vertical-align: super;
+}
+.review-search-bar {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+.review-search-bar .search-icon {
+    font-size: 1em;
+}
+#review-search {
+    border: none;
+    padding: 10px;
+    font-size: 13px;
+}
+.review-search-box:active {
+    border: 1px solid #006a70;
+    border-radius: 4px;
+}
+.score-detail {
+    border-bottom: 1px solid #cccccc;
+}
+.detail-subject {
+    display: inline-block;
+    width: 49%;
+}
+.detail-subject span {
+    display: inline-block;
+    vertical-align: unset;
+    margin: 0 30px;
+}
+.detail-subject .review-stars {
+    float: right;
+    padding: 12px 0;
+}
+.detail-title {
+    padding: 15px 0;
+    letter-spacing: 1px;
+    color: #808080;
+    font-weight: 500;
+}
+.review-item {
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+.customer-photo, .customer-detail {
+    display: inline-block;
+}
+.customer-photo img {
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+}
+.customer-name span, .review-date span{
+    letter-spacing: 1px;
+}
+.review-date span{
+    font-size: 10px;
+    font-weight: 400;
+}
+.review-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #484848;
+    line-height: 18px;
+}
+
+.review-nav li {
+    display: inline-block;
+    margin: 10px;
+}
+.review-nav button {
+    color: #006a70;
+    border-radius: 50%;
+    padding: 8px 10px;
+    border:0;
+}
+#now-review-page {
+    background: #006a70;
+    color: white;
+}
+#next-nav {
+    border: 1px solid #006a70;
 }
