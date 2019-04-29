@@ -718,10 +718,13 @@
       <div class="location-map" id="map">
           <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
           <script>
+            var markerPosition  = new daum.maps.LatLng(33.2447926, 126.5644025);
+            var marker = {    position: markerPosition};
             var container = document.getElementById('map');
             var options = {
-              center: new daum.maps.LatLng(33.450701, 126.570667),
+              center: new daum.maps.LatLng(33.2447926, 126.5644025),
               level: 3
+              marker: marker
             };
         
             var map = new daum.maps.Map(container, options);
