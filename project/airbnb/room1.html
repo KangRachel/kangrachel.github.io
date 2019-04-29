@@ -586,7 +586,7 @@
                 <div class="review-date">
                   <span>2019년 3월</span>
                 </div>
-            </div>
+              </div>
             </div>
             <div class="review-text">
               <p>집이 정말 이뻐요! 아름다운 정원에서의 고기 파티는 잊을 수 없을것 같아요~ 호스트 분들도 정말 편안하게 대해주셨습니다! 저희가 시끄러운 편은 아니지만 어떠한 터치도 없이 자유롭게 해주셨구요! 충분한 타월 갯수, 빵빵한 에어컨, 엄청 편한 복층구조, 깔끔한 디자인과 모든 필요한 주방용품들 까지! 또 한번 들르고 싶어요~ 그날까지 잘 지내세요:-)</p>
@@ -673,10 +673,62 @@
               Jeju-shi, 한국 · 회원 가입: 2015년 5월
             </span>
           </div>
+          <div class="verified-host">
+            <span><i class="fas fa-star"></i></span>
+            <span>후기 179개</span>
+            <span><i class="fas fa-check-circle"></i></span>
+            <span>인증됨</span>
+          </div>
+          <div class="host-text">
+            <p>안녕하세요 HOST KYJ입니다. 아름다운 제주 서귀포에서 게스트를 위한 아파트를 운영하고 있습니다. 공항까지 차로 약 60분이 소요되며 인근 시설로는 서귀포 올레시장, 올레 7코스등이 있습니다. 편안한 여행을 위해 최선을 다하겠습니다.</p>
+          </div>
         </div>
-         
+      <div class="host-contact">
+        <div class="host-response">
+          <span>응답률:<strong>100%</strong></span>
+        </div>
+        <div class="host-response">
+          <span>응답에 소요된 시간:<strong>1시간 이내</strong></span>
+        </div>
+        <div>
+          <button type="button" id="contact-host-btn">호스트에게 연락하기</button>
+        </div>
       </div>
-     </div>
+    <div class="warning">
+     <p><strong>언제나 에어비앤비를 통해 대화를 나누세요</strong> 
+      · 안전한 결제를 위해 에어비앤비 웹사이트나 앱 외부에서 송금하거나 대화를 나누지 마세요.
+      <a href="#">더 알아보기</a>
+    </p>
+    </div>
+    </div>
+    <div class="location">
+      <div class="location-info">
+        <span>지역정보</span>
+      </div>
+      <div>
+      <p>KYJ님의 아파트는 한국 제주특별자치도의 서귀포시에 위치하고 있습니다.</p>
+      <p>공항과 차로 60분 거리이며 서귀포 시내와 가깝습니다.</p>
+      <span>
+        <button type="button" id="location-more">
+          이 지역 자세히 알아보기
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </span>
+      </div>
+      <div class="location-map" id="map">
+          <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
+          <script>
+            var container = document.getElementById('map');
+            var options = {
+              center: new daum.maps.LatLng(33.450701, 126.570667),
+              level: 3
+            };
+        
+            var map = new daum.maps.Map(container, options);
+          </script>
+      </div>
+    </div>
+  </div>
   </section>
   <section class="footer">
       <div class="wrap">

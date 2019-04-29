@@ -579,7 +579,8 @@ li span {
     width: 100px;
     border: 0;
     padding: 10px;
-    font-size: 16px
+    font-size: 16px;
+    color: #484848;
 }
 
 #persons {
@@ -734,7 +735,8 @@ li span {
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
-.how-many-reviews, .host-name span {
+.how-many-reviews, .host-name span, 
+.location-info span {
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -802,14 +804,15 @@ li span {
     border-radius: 50%;
     border: 1px solid #cccccc;
 }
-.customer-name span, .review-date span{
+.customer-name span, .review-date span, .host-info span, 
+.verified-host span, .host-response span {
     letter-spacing: 1px;
 }
 .review-date span{
     font-size: 10px;
     font-weight: 400;
 }
-.review-text p {
+.content p{
     font-size: 14px;
     font-weight: 400;
     color: #484848;
@@ -843,4 +846,43 @@ li span {
 }
 .host-detail {
     margin: 10px 0;
+}
+.verified-host span {
+    display: inline-block;
+}
+.host-response span {
+    font-weight: 400;
+}
+.host-call {
+    padding: 10px 0;
+}
+#contact-host-btn {
+    border: #006a70 solid 1px;
+    color: #006a70;
+    border-radius: 4px;
+    padding: 7px 15px;
+}
+.host-contact {
+    padding: 20px 0;
+}
+.warning {
+    padding: 15px 0;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc
+}
+
+.warning a {
+    font-weight: 600;
+    color: #60B6B5;
+}
+#location-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: #60B6B5;
+    border: none;
+    outline: none;
+}
+.location-map {
+    width: 400px;
+    height: 300px;
 }
