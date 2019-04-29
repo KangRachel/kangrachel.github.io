@@ -879,6 +879,8 @@ li span {
     clear: both;
     display: inline-block;
     width: 58%;
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc;
 }
 #location-more {
     font-size: 14px;
