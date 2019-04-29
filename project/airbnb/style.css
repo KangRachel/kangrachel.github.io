@@ -875,6 +875,11 @@ li span {
     font-weight: 600;
     color: #60B6B5;
 }
+.location {
+    clear: both;
+    display: inline-block;
+    width: 58%;
+}
 #location-more {
     font-size: 14px;
     font-weight: 600;
@@ -883,6 +888,6 @@ li span {
     outline: none;
 }
 .location-map {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
