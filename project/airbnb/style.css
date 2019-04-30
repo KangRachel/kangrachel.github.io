@@ -8,7 +8,6 @@ h2 {
     font-size: 32px;
     font-weight: bold;
 }
-
 p {
     font-size: 18px;
     margin: 8px 0 8px 0;
@@ -63,7 +62,6 @@ strong {
     padding: 64px 0 0 76px;
     z-index: 1;
 }
-
 #reservation {
     position: absolute;
     top: 50%;
@@ -76,7 +74,6 @@ strong {
     padding: 32px;
     margin-bottom: 64px;
     border-radius: 4px;
-
 }
 #reservation input {
     border: 0px;
@@ -144,7 +141,6 @@ strong {
     margin: 10px 0;
     border: 0px
 }
-
 .submitBtn > span {
     font-size: 18px;
     font-weight: bold;
@@ -172,7 +168,6 @@ strong {
     height: 380px;
     padding: 10px 10px 0 10px;
 }
-
 .card-img img {
     width: 333px;
     height: 222px;
@@ -183,7 +178,6 @@ strong {
     width: 100%;
     background-image: url(./assets/bedroom-416062_1280.jpg)
 }
-
 .text p {
     font-size: 14px;
     line-height: 20px;
@@ -261,10 +255,11 @@ strong {
     height: 164px;
     padding: 10px 0;
 }
-.sr-score .score, .popular-score  .score, .review-stars {
+.sr-score .score, .popular-score  .score, .review-stars, 
+.score-price .score {
     font-size: 10px;
-    color: #60B6B5;
-    letter-spacing: -1px;
+    color: #006a70;
+    letter-spacing: -2px;
     display: inline;
 }
 .rv-number, .popular-types, .super-host {
@@ -737,7 +732,8 @@ li span {
     border-bottom: 1px solid #cccccc;
 }
 .how-many-reviews, .host-name span, 
-.location-info span, .refund-condition span {
+.location-info span, .refund-condition span, 
+.recommend-title span {
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -813,13 +809,15 @@ li span {
     font-size: 10px;
     font-weight: 400;
 }
-.content p{
+.content p, .recommendation p {
     font-size: 14px;
     font-weight: 400;
     color: #484848;
     line-height: 18px;
 }
-
+.recommendation span {
+    letter-spacing: 1px;
+}
 .review-nav li {
     display: inline-block;
     margin: 10px;
@@ -883,7 +881,8 @@ li span {
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
-#location-more, #refund-more, #cancle-more {
+#location-more, #refund-more, #cancle-more,
+#condition-more {
     font-size: 14px;
     font-weight: 600;
     color: #60B6B5;
@@ -896,4 +895,51 @@ li span {
 }
 .conditions {
     padding: 10px 0;
+}
+.recommend-item {
+    display: inline-block;
+    width: 28%;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid #cccccc;
+}
+.recommend-item img {
+    width: 100%;
+}
+.score-price .recommend-price {
+    display: inline-block;
+    float: right;
+}
+.score-price span {
+    display: inline-block;
+}
+.house-type span {
+    font-size: 12px;
+    color: #A02F18;
+    margin-bottom: 0;
+}
+.house-title span {
+    font-size: 16px;
+    margin: 1px 0;
+}
+.text-box {
+    padding: 10px;
+}
+.krw-price {
+    font-size: 14px;
+}
+.recommend-group {
+    display: inline-block;
+    position: relative;
+
+}
+.next-group {
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+}
+
+.rc-next-btn {
+    border: none;
+    font-size: 16px;
 }
