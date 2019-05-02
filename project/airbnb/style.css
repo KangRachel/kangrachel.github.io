@@ -5,7 +5,7 @@ input {
     outline: none;
 }
 h2 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
 }
 p {
@@ -478,7 +478,7 @@ li span {
     height: 100%;
 }
 .photo img:hover {
-    width: 140%;
+    width: 130%;
     height: 110%;
     transition: all 0.5s;
 }
@@ -486,7 +486,6 @@ li span {
     width: 58%;
     float: left;
     padding-bottom: 10px;
-    border-bottom: #cccccc 1px solid;
 }
 .content .wrap {
     height: 100%;
@@ -496,7 +495,7 @@ li span {
 }
 .room {
     display: block;
-    padding-bottom: 15px;
+    padding: 15px 0;
 }
 .room span {
     display: inline;
@@ -514,6 +513,32 @@ li span {
     margin: 0 auto;
     border: 1px solid #cccccc;
 }
+.alert {
+    display: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+.alert-text {
+    display: inline-block;
+    width: 85%;
+}
+.small-message {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 0;
+}
+.thumbs-up {
+    display: inline-block;
+    float: right;
+}
+.thumbs-up span {
+    color: blue;
+    font-size: 30px;
+    margin: 0;
+}
 .room-icon {
     display: inline-block;
     vertical-align: top;
@@ -523,7 +548,7 @@ li span {
     display: inline-block;
     width: 85%;
 }
-.room-text span, .dateItem span {
+.room-text span, .dateItem span, .alert-message {
     display: inline;
     font-size: 18px;
     padding: 5px;
@@ -599,7 +624,8 @@ li span {
     border-bottom: #cccccc 1px solid;
 }
 .translate-btn button {
-    width: 595px;
+    width: 90%;
+    margin: 10px 0;
     padding: 6px 12px;
     background: transparent;
 }
@@ -629,6 +655,7 @@ li span {
 }
 .bedding {
     clear: both;
+    border-top: 1px solid #cccccc;
 }
 .room-bed {
     display: inline-block;
@@ -660,7 +687,7 @@ li span {
     clear: both;
     display: inline-block;
     padding-bottom: 30px;
-    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
 }
 .reservation-check span, .pre-month li, .next-month li,
 .conditions span {
@@ -729,6 +756,8 @@ li span {
 .review-total {
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+
 }
 .how-many-reviews, .host-name span, 
 .location-info span, .refund-condition span, 
@@ -743,10 +772,10 @@ li span {
     font-size: 14px;
     color: rgb(0, 132, 137);
     vertical-align: super;
-    margin: 0 30px;
+    margin: 0 30px 0 0;
 }
 .review-search-box {
-    margin-left: 158px;
+    float: right;
     vertical-align: super;
 }
 .review-search-bar {
@@ -776,7 +805,7 @@ li span {
 .detail-subject span {
     display: inline-block;
     vertical-align: unset;
-    margin: 0 30px;
+    margin: 0 25px 0 0;
 }
 .detail-subject .review-stars {
     float: right;

@@ -15,11 +15,57 @@
     .side-reservation {
         display: none;
     }
+    .nav-bar {
+        display: none;
+    }
+    .room-content, .room-explain {
+        float: initial;
+        margin: 0 auto;
+    }
+    .content .wrap, .recommendation .wrap  {
+        padding: 64px 0 0 0;
+    }
+    .amenity, .review-content, .about-host,
+    .location, .refund, .cancle-reservation {
+        width: 58%;
+        display: block;
+        margin: 0 auto;
+    }
+    .amenity-content {
+        width: 100%;;
+    }
+    .room-content .profile-host {
+        display: none;
+    }
+    .alert {
+        display: block;
+    }
 
+}
+@media screen and (max-width: 899px) {
+    .review-search-box {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .review-search-bar {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 699px) {
     #footer-nav {
         display: none;
+    }
+    .amenity-list {
+        display: block;
+        width: 100%;
+    }
+    .alert {
+        display: none;
+    }
+    .detail-subject {
+        display: block;
+        width: 90%;
     }
 }
 @media screen and (max-width: 522px) {
@@ -41,5 +87,8 @@
     }
     .other-list {
         display: block;
+    }
+    #review-search {
+        padding: 8px;
     }
 }
