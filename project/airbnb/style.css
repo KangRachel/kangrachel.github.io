@@ -276,7 +276,6 @@ strong {
 .view-all {
     clear: both;
     padding-top: 25px;
-    border-bottom: 1px solid #cccccc;
 }
 .view-all span, .contact-host span, .explain-more span {
     color: #60B6B5;
@@ -1057,6 +1056,7 @@ li span {
     background: white;
     width: 100%;
     border-top: 1px solid #cccccc;
+    z-index: 1;
 }
 .bottom-nav-item {
     display: inline-block;
@@ -1073,4 +1073,11 @@ li span {
     border-radius: 4px;
     margin: 10px 0;
     border: 0px
+}
+#more-read-lo {
+    padding: 15px 0;
+}
+
+#more-read-refund {
+    padding: 15px 0;
 }

@@ -76,6 +76,13 @@
         display: block;
         width: 90%;
     }
+    .room-content, .room-explain, .amenity,
+    .review-content, .about-host, .location,
+    .refund, .cancle-reservation {
+        width: 100%;
+        margin: 0;
+        padding-left: 5px;
+    }
 }
 @media screen and (max-width: 522px) {
     .main-img {

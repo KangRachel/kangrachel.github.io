@@ -723,12 +723,25 @@
       <div>
       <p>KYJ님의 아파트는 한국 제주특별자치도의 서귀포시에 위치하고 있습니다.</p>
       <p>공항과 차로 60분 거리이며 서귀포 시내와 가깝습니다.</p>
-      <span>
-        <button type="button" id="location-more">
-          이 지역 자세히 알아보기
-          <i class="fas fa-chevron-down"></i>
-        </button>
-      </span>
+      <div>
+        <div id="more-read-lo" style="display:none; opacity: 0; transition: 1s all; background: white;" >
+          <p>제주공항에서 공항버스 100번, 혹은 공항 택시를 이용하여 </p>
+          <p>이중섭거리에서 하차하시면 됩니다. 약 60분 소요</p>
+          <p>유동커피 바로 옆 건물입니다.</p>
+        </div>
+        <input type="button" id="location-more" value="이 지역 자세히 알아보기" 
+        onclick="if(
+          document.getElementById('more-read-lo').style.display != 'block'
+          ){
+            document.getElementById('more-read-lo').style.display = 'block';
+            document.getElementById('more-read-lo').style.opacity = '1';
+            this.value = '숨기기';
+            }
+            else
+            {document.getElementById('more-read-lo').style.display = 'none';
+            document.getElementById('more-read-lo').style.opacity = '0';
+             this.value = '이 지역 자세히 알아보기';}">
+      </div>
       </div>
       <div class="location-map" id="map">
           <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
@@ -770,11 +783,31 @@
         <p>키 패드로 셀프 체크인</p>
       </div>
       <span>
-        <button type="button" id="refund-more">
-          숙소 이용규칙 모두 보기
-          <i class="fas fa-chevron-down"></i>
-        </button>
+        <input type="button" id="refund-more" value="숙소 이용규칙 모두 보기" 
+        onclick="if(document.getElementById('more-read-refund').style.display != 'block'){
+                 document.getElementById('more-read-refund').style.display = 'block';
+                 document.getElementById('more-read-refund').style.opacity = '1';
+                 this.value = '이용 규칙 숨기기'
+                 }
+                 else{document.getElementById('more-read-refund').style.display = 'none';
+                 document.getElementById('more-read-refund').style.opacity = '0';
+                 this.value = '숙소 이용규칙 모두 보기'
+                 }">
       </span>
+      <div id="more-read-refund" style="display:none; background:white; opacity:0; transition:all 1s;">
+        <div>
+          <p>체크인, 체크아웃 시간을 잘 지켜주세요.</p>
+          <p>외출시 에어컨과 보일러 조명을 꺼주세요. </p>
+          <p>현관문이 닫혔나 꼭 확인해주시고 주무시기전 외등을 꼭 소등해주세요.</p>
+        </div>
+        <div>
+           <p>펜션에 숙박하시는 손님 외 외부손님 출입금지, 실내흡연금지, 촛불금지, 염색금지,냄새가 심한 요리(고기구이, 생선구이, 튀김등)조리금지 입니다. </p>
+           <p>다음 손님을 위해 꼭 지켜주세요. 위반시 강제퇴실의 사유가 될 수 있습니다.</p>
+        </div>
+        <div>
+          <p>그릇이나 실내물건 파손시 꼭 연락해주세요.</p>
+        </div>
+      </div>
     </div>
     <div class="cancle-reservation">
       <div class="conditions">
