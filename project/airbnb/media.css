@@ -12,8 +12,16 @@
     .intro-box {
         border: 0;
     }
-}
+    .side-reservation {
+        display: none;
+    }
 
+}
+@media screen and (max-width: 699px) {
+    #footer-nav {
+        display: none;
+    }
+}
 @media screen and (max-width: 522px) {
     .main-img {
         visibility: hidden;
@@ -30,5 +38,8 @@
     }
     .img-box {
         background: wheat;
+    }
+    .other-list {
+        display: block;
     }
 }

@@ -256,7 +256,7 @@ strong {
     padding: 10px 0;
 }
 .sr-score .score, .popular-score  .score, .review-stars, 
-.score-price .score {
+.score-price .score, .activity-score .score {
     font-size: 10px;
     color: #006a70;
     letter-spacing: -2px;
@@ -307,9 +307,8 @@ strong {
 }
 .footer-item {
     display: inline-block;
-    width: 160px;
+    width: 24%;
     float: left;
-    padding: 0 45px 10px 45px;
 }
 .footer-category > span {
     font-size: 16px;
@@ -733,7 +732,7 @@ li span {
 }
 .how-many-reviews, .host-name span, 
 .location-info span, .refund-condition span, 
-.recommend-title span {
+.recommend-title span, .options-title span {
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -747,7 +746,7 @@ li span {
     margin: 0 30px;
 }
 .review-search-box {
-    margin-left: 110px;
+    margin-left: 158px;
     vertical-align: super;
 }
 .review-search-bar {
@@ -913,7 +912,7 @@ li span {
 .score-price span {
     display: inline-block;
 }
-.house-type span {
+.house-type span, .activity-type span {
     font-size: 12px;
     color: #A02F18;
     margin-bottom: 0;
@@ -931,7 +930,7 @@ li span {
 .recommend-group {
     display: inline-block;
     position: relative;
-
+    margin-bottom: 45px;
 }
 .next-group {
     display: inline-block;
@@ -942,4 +941,65 @@ li span {
 .rc-next-btn {
     border: none;
     font-size: 16px;
+}
+.activity-list {
+    display: inline-block;
+    float: left;
+}
+.activity-group {
+    position: relative;
+}
+
+.activity-item {
+    display: inline-block;
+    width: 17%;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    height: 300px;
+    overflow: hidden;
+}
+.activity-text {
+    padding: 0 10px;
+}
+
+.activity-img img{
+    width: 100%;
+    height: 180px;
+}
+.activity-type span {
+    color: #808080;
+}
+.activity-score .score, .activity-language {
+    font-size: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 0;
+}
+.activity-price span {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+}
+.options {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+.other-locations {
+    padding: 15px 0;
+}
+.other-list {
+    display: inline-block;
+    width: 30%;
+}
+.other-list li {
+    padding: 3px 0;
+    font-weight: 300;
+}
+.score-price .rv-number {
+    font-size: 11px;
+    color: #484848;
+    padding-left: 3px;
 }
