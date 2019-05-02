@@ -141,7 +141,7 @@ strong {
     margin: 10px 0;
     border: 0px
 }
-.submitBtn > span {
+.submitBtn > span, .submit-request span {
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -276,6 +276,7 @@ strong {
 .view-all {
     clear: both;
     padding-top: 25px;
+    border-bottom: 1px solid #cccccc;
 }
 .view-all span, .contact-host span, .explain-more span {
     color: #60B6B5;
@@ -388,7 +389,7 @@ li span {
 }
 .search-bar {
     display: inline-block;
-    padding: 3px 20px;
+    padding: 3px 15px;
     box-shadow: 0px 9px 13px 0 #cccccc;
     border: 1px solid #EBEBEB
 
@@ -404,11 +405,11 @@ li span {
     border: none;
     font-size: 16px;
     font-weight: 600;
-    width: 300px;
+    width: 250px;
     transition: all 0.5s;
 }
 #search:focus {
-    width: 500px;
+    width: 320px;
     transition: all 0.5s;
 }
 .nav-bar {
@@ -431,8 +432,10 @@ li span {
     height: 550px;
     padding: 30px 0;
 }
+
 .main-photo, .sub-photo {
     border: 1px solid black;
+    background: black;
 }
 
 .main-photo, .main-photo2 {
@@ -442,6 +445,7 @@ li span {
     height: 592px;
     overflow: hidden;
 }
+
 .main-photo2 {
     height: 595px;
 }
@@ -486,6 +490,9 @@ li span {
     width: 58%;
     float: left;
     padding-bottom: 10px;
+}
+.amenity-content {
+    border-bottom: 1px solid #cccccc;
 }
 .content .wrap {
     height: 100%;
@@ -581,7 +588,7 @@ li span {
     display: inline;
 }
 
-#price {
+.reservation-price {
     font-size: 20px;
 }
 .booking .dateItem{
@@ -655,7 +662,6 @@ li span {
 }
 .bedding {
     clear: both;
-    border-top: 1px solid #cccccc;
 }
 .room-bed {
     display: inline-block;
@@ -683,17 +689,18 @@ li span {
     letter-spacing: 1px;
 }
 .reservation-check {
-    width: 58%;
     clear: both;
     display: inline-block;
     padding-bottom: 30px;
-    border-top: 1px solid #cccccc;
 }
-.reservation-check span, .pre-month li, .next-month li,
-.conditions span {
+.amenity-title span, .pre-month li, .next-month li,
+.conditions span, .pre-year-month, .next-year-month,
+.right-icon, .left-icon  {
     display: inline-block;
     letter-spacing: 1px;
-    padding-right: 8px;
+}
+.pre-month li, .next-month li {
+    padding-right: 9px;
 }
 .pre-year-month {
     padding: 0 25px;
@@ -725,6 +732,9 @@ li span {
 }
 .right-icon {
     padding-left: 30px;
+}
+.right-icon2 {
+    display: none;
 }
 .not-av, .available {
     text-align: center;
@@ -1031,4 +1041,36 @@ li span {
     font-size: 11px;
     color: #484848;
     padding-left: 3px;
+}
+.bottom-reservation {
+    padding: 20px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+.bottom-price span {
+    display: inline-block;
+}
+.bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    border-top: 1px solid #cccccc;
+}
+.bottom-nav-item {
+    display: inline-block;
+}
+.bottom-btnbox {
+    display: inline-block;
+    float: right;
+}
+.submit-request{
+    background: rgb(255, 90, 95);
+    width: 160px;
+    height: 50px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: 0px
 }

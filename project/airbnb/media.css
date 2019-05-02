@@ -40,6 +40,9 @@
     .alert {
         display: block;
     }
+    .bottom-nav {
+        display: block;
+    }
 
 }
 @media screen and (max-width: 899px) {
@@ -50,6 +53,12 @@
     }
     .review-search-bar {
         width: 90%;
+    }
+    .next-month {
+        display: none;
+    }
+    .right-icon2 {
+        display: inline-block;
     }
 }
 @media screen and (max-width: 699px) {
