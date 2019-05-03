@@ -577,6 +577,7 @@ li span {
     padding: 0 20px;
     display: inline-block;
     height: 372px;
+    z-index: 0;
 }
 .sr-info {
     margin: 0 auto;
@@ -607,7 +608,13 @@ li span {
     font-size: 16px;
     color: #484848;
 }
-
+#checkin-out {
+    float: left;
+    display: inline-block;
+}
+.sr-people {
+    clear: both;
+}
 #persons {
     width: 290px;
 }
@@ -617,7 +624,8 @@ li span {
     height: 40px;
 }
 .confirm-message {
-    padding-top: 200px;
+    padding-top: 10px;
+    display: inline-block;
 }
 .confirm-message span {
     color: #484848;
@@ -694,7 +702,7 @@ li span {
 }
 .amenity-title span, .pre-month li, .next-month li,
 .conditions span, .pre-year-month, .next-year-month,
-.right-icon, .left-icon  {
+.right-icon, .left-icon, #read-more-condition span {
     display: inline-block;
     letter-spacing: 1px;
 }
@@ -1080,4 +1088,14 @@ li span {
     transition-property: opacity;
     transition-duration: 3s;
     background: white;
+}
+
+#read-more-condition a {
+    letter-spacing: 1px;
+    color: #60B6B5;
+}
+#side-calendar {
+    width: 300px;
+    z-index: 1;
+    display: none;
 }

@@ -162,7 +162,9 @@
                 </div>
               </div>
             </div>
-            <div class="people">
+            <div id="side-calendar" style="border: 1px solid;">
+              </div>
+            <div class="sr-people">
               <span>인원</span>
               <div class="guest-box">
                 <select id="persons" name="persons">
@@ -1221,8 +1223,6 @@
           var marker = new daum.maps.Marker({
               position: markerPosition
           });
-
-            // 마커가 지도 위에 표시되도록 설정합니다
           marker.setMap(map);
   </script>
 </body>
