@@ -1074,10 +1074,10 @@ li span {
     margin: 10px 0;
     border: 0px
 }
-#more-read-lo {
+#more-read-lo, #more-read-refund,
+#read-more-condition{
     padding: 15px 0;
-}
-
-#more-read-refund {
-    padding: 15px 0;
+    transition-property: opacity;
+    transition-duration: 3s;
+    background: white;
 }
