@@ -17,6 +17,41 @@
           <a href="#"><i class="fab fa-airbnb"></i></a>
         </span>
     </div>
+    <div id="fixed-nav" style="display:none;">
+      <div class="wrap">
+        <div class="fixed-nav-list">
+          <span class="fixed-nav-item">
+            <button class="nav-item-btn" name="content">개요</button>
+          </span>
+          <span>·</span>
+          <span class="fixed-nav-item">
+            <button class="nav-item-btn" name="content">후기</button>
+          </span>
+          <span>·</span>
+          <span class="fixed-nav-item">
+            <button class="nav-item-btn" name="content">호스트</button>
+          </span>
+          <span>·</span>
+          <span class="fixed-nav-item">
+            <button class="nav-item-btn" name="content">위치</button>
+          </span>
+          <span>·</span>
+          <span class="fixed-nav-item">
+            <button class="nav-item-btn" name="content">환불정책</button>
+          </span>
+        </div>
+        <div class="nav-btn">
+          <button class="sub-item-btn">
+            <span><i class="far fa-share-square"></i></span>
+            <span>공유하기</span>
+          </button>
+          <button class="sub-item-btn">
+            <span><i class="far fa-heart"></i></span>
+            <span>저장</span>
+          </button>
+        </div>
+      </div>  
+    </div>
     <div class="search-box">
       <div class="search-bar">
         <span class="search-icon"><i class="fas fa-search"></i></span>
@@ -1168,84 +1203,6 @@
       </div>
   </div>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
-  <script>
-    var translateBtn = document.querySelector('#text-translate-btn');
-    var translate = function() {
-      var btnText = document.querySelector('#text-translate-btn span');
-      var beforeTranslate = document.querySelector('#english-explain');
-      var afterTranslate = document.querySelector('#korean-explain');
-      if (beforeTranslate.style.display != 'inline-block') {
-        afterTranslate.style.display = 'none';
-        beforeTranslate.style.display = 'inline-block';
-        btnText.innerHTML = '이 설명을 한국어로 번역하기';
-      } else {
-        afterTranslate.style.display ='inline-block';
-        beforeTranslate.style.display ='none';
-        btnText.innerHTML = '원문으로 보기';
-      }
-    }
-    translateBtn.addEventListener('click', translate);
-
-
-    function locationMore(event) {
-      console.log(event);
-      var moreReadLocationBtn = document.getElementById('more-read-lo');
-      var target = event.srcElement;
-      if (moreReadLocationBtn.style.display != 'block') {
-        moreReadLocationBtn.style.display = 'block';
-        moreReadLocationBtn.style.opacity = '1';
-        target.value = '숨기기';
-      } else {
-        document.getElementById('more-read-lo').style.display = 'none';
-        document.getElementById('more-read-lo').style.opacity = '0';
-        target.value = '이 지역 자세히 알아보기';}
-    }
-
-    function roomMore(event) {
-      console.log(event);
-      var moreReadRefundBtn = document.getElementById('more-read-refund');
-      var target = event.srcElement;
-      if (moreReadRefundBtn.style.display != 'block') {
-        moreReadRefundBtn.style.display = 'block';
-        moreReadRefundBtn.style.opacity = '1';
-        target.value = '이용 규칙 숨기기';
-      } else { 
-        moreReadRefundBtn.style.display = 'none';
-        moreReadRefundBtn.style.opacity = '0';
-        target.value = '숙소 이용규칙 모두 보기';
-      }
-    }
-    function moreCondition(event) {
-      console.log(event);
-      var moreReadConditionBtn = document.getElementById('read-more-condition');
-      var target = event.srcElement;
-      if (moreReadConditionBtn.style.display != 'block') {
-        moreReadConditionBtn.style.display = 'block';
-        moreReadConditionBtn.style.opacity = '1';
-        target.value = '정책 숨기기';
-      } else {
-        moreReadConditionBtn.style.display = 'none';
-        moreReadConditionBtn.style.opacity = '0';
-        target.value = '정책 자세히 읽기';
-      }
-    }
-
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-        mapOption = { 
-                    center: new daum.maps.LatLng(33.2447806, 126.5644081), // 지도의 중심좌표
-                    level: 3 // 지도의 확대 레벨
-                };
-
-          var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-          // 마커가 표시될 위치입니다 
-          var markerPosition  = new daum.maps.LatLng(33.2447806, 126.5644081); 
-
-          // 마커를 생성합니다
-          var marker = new daum.maps.Marker({
-              position: markerPosition
-          });
-          marker.setMap(map);
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
