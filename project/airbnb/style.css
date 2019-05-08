@@ -617,9 +617,8 @@ li span {
     position: sticky;
     top: 75px;
     margin-left: 70px;
-    padding: 0 20px;
+    padding: 0 20px 30px 20px;
     display: inline-block;
-    height: 372px;
     z-index: -1;
 }
 .sr-info {
@@ -674,7 +673,9 @@ li span {
     color: #484848;
     letter-spacing: 1px;
     font-size: 10px;
+    padding: 0px 45px;
 }
+
 .room-explain {
     clear: both;
     width: 58%;
@@ -1142,4 +1143,21 @@ li span {
     z-index: 1;
     display: none;
 }
+.added-message {
+    padding-top: 20px;
+    border-top: 1px solid #cccccc;
+}
 
+.added-message .alert-message {
+    font-size: 12px;
+}
+
+.added-message .small-message {
+    font-size: 10px;
+}
+.added-message-text {
+    display: inline-block;
+}
+#message-box {
+    transition: all 1s ease 1s;
+}

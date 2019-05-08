@@ -1,4 +1,4 @@
-var fixedNavBar = document.querySelector('#fixed-nav');
+    var fixedNavBar = document.querySelector('#fixed-nav');
     var appearFixedNav = function() {
       if (window.scrollY >= 650) {
         fixedNavBar.style.display = 'block';
@@ -7,6 +7,19 @@ var fixedNavBar = document.querySelector('#fixed-nav');
       }
     }
     window.addEventListener('scroll', appearFixedNav);
+
+    var addedMessage = document.querySelector('#message-box');
+    var appearAddedMessage = function() {
+      if (window.scrollY >= 670) {
+        addedMessage.style.display = 'block';
+        addedMessage.style.opacity = '1';
+      } else {
+        addedMessage.style.display = 'none';
+        addedMessage.style.opacity = '0';
+      }
+    }
+    window.addEventListener('scroll', appearAddedMessage);
+
 
     var translateBtn = document.querySelector('#text-translate-btn');
     var translate = function() {
