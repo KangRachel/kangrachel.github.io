@@ -1161,3 +1161,27 @@ li span {
 #message-box {
     transition: all 1s ease 1s;
 }
+.above-img-btn {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 120px;
+    z-index: 2;
+}
+.above-img-btn2 {
+    display: inline-block;
+    position: absolute;
+    right: 17px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.above-img-btn button, .above-img-btn2 button {
+    padding: 10px;
+    background: white;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.above-img-btn span, .above-img-btn2 span{
+    font-size: 15px;
+}
