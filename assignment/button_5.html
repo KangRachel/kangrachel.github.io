@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+    button {
+        padding: 10px;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <button class="button">1</button>
+    <button class="button">2</button>
+    <button class="button">3</button>
+    <button class="button">4</button>
+    <button class="button">5</button>
+    <script>
+    
+    var numButtonList = document.querySelectorAll('.button');
+    for(i = 0; i < numButtonList.length; i++) {
+        var number = numButtonList[i]
+        number.addEventListener('click', function() {
+            var alertnumber = i+1;
+            return function(event) {
+                console.log(event);
+                var clickedBtn = event.target;
+                var anotherNumList = document.querySelectorAll('.button')
+                for (var j = 0; j < anotherNumList.length; j++) {
+                    var anotherNum = anotherNumList[j];
+                    if (clickedBtn != anotherNum) {
+                        console.log(j+1);
+                    }
+                    
+                }
+        }
+    }());
+    }
+
+
+    
+    </script>
+
+</body>
+</html>
