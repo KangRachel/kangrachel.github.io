@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task</title>
+    <style>
+        button {
+            display: inline-block;
+            padding: 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        for (i = 1; i <= 100; i++) {
+            var num = window.i
+            document.write('<button id = '+ num +'>' + num + '</button>');
+            var numBtn = document.getElementById(num);
+            numBtn.addEventListener('click', function() {
+                var num2 = num;
+                return function () {
+                    alert(num2);
+                }
+            }());
+        };
+    </script>
+</body>
+</html>
