@@ -82,7 +82,7 @@
       roomdetail.style.display = 'block';
     } )
 
-    var closeBtn = document.querySelector('.close-btn');
+    var closeBtn = document.querySelector('#close-room-btn');
     closeBtn.addEventListener('click', function (){
       var bodyTag = document.querySelector('body');
       var roomdetail = document.querySelector('#room-detail-popup');
@@ -90,6 +90,19 @@
       roomdetail.style.display = 'none';
     })
 
+    var popupAmenityBtn = document.querySelector('#amenity-popup-btn');
+    var bodyTag = document.querySelector('body');
+    var amenityDetail = document.querySelector('#amenity-detail-popup');
+    popupAmenityBtn.addEventListener('click', function() {
+      bodyTag.style.position = 'fixed';
+      amenityDetail.style.display = 'block';
+    })
+    var closeAmenityBtn = document.querySelector('#amenity-close-btn');
+    closeAmenityBtn.addEventListener('click', function(event) {
+      console.log(event);
+      bodyTag.style.position = 'relative';
+      amenityDetail.style.display = 'none';
+    })
     //더보기 기능
     function locationMore(event) {
       console.log(event);

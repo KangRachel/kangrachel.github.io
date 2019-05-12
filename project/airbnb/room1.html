@@ -308,7 +308,7 @@
             </div>
           </div>
           <div class="view-all">
-            <span><button id="amenity-popup-btn" class="popup-btn"><a href="#">18개의 편의시설 모두보기</a></button></span>
+            <span><button id="amenity-popup-btn" class="popup-btn"><a href="#amenity-popup-btn">18개의 편의시설 모두보기</a></button></span>
           </div>
         </div>
         <div class="bedding">
@@ -1234,7 +1234,7 @@
       <div class="popup-content">
         <div class="popup-text">
           <div class="close-btn-box">
-            <button class="close-btn">X</button>
+            <button id="close-room-btn" class="close-btn">X</button>
           </div>
           <span class="popup-title">숙소 설명</span>
           <div class="popup-phrase">
@@ -1269,6 +1269,66 @@
       </div>
     </div>
   </div>
+  <div class="layer-popup" id="amenity-detail-popup">
+      <div class="popup-bg">
+        <div class="popup-content">
+          <div class="popup-text">
+            <div class="close-btn-box">
+              <button id="amenity-close-btn" class="close-btn">X</button>
+            </div>
+            <span class="popup-title">편의시설</span>
+            <div class="popup-phrase">
+              <span class="amenity-subject">기본 편의시설</span>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">무선 인터넷</span>
+              <p>숙소에서 끊임없이 연결</p>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">노트북 작업공간</span>
+              <p>노트북을 놓을 수 있는 책상이나 테이블과 편안한 의자 </p>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">세탁기</span>
+              <p>건물 내 무료, 혹은 유료로 이용가능</p>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">필수품목</span>
+              <p>수건, 침구, 샤워용품, 화장지, 식기류, 전기포트</p>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">난방</span>
+              <p>중앙 난방 또는 숙소 내 히터 비치 </p>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">TV</span>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">에어컨</span>
+            </div>
+            <div class="popup-phrase">
+              <span class="amenity-subject">시설</span>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">조리시설</span>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">주방</span>
+              <p>게스트가 요리를 직접 할 수 있는 공간</p>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">안전시설</span>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">소화기</span>
+            </div>
+            <div class="amenity-popup-phrase">
+              <span class="amenity-detail">화재감지기</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
   <script src="main.js"></script>
 </body>

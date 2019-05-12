@@ -1235,11 +1235,23 @@ li span {
     border-radius: 50%;
     box-shadow: 1px 1px 10px #cccccc;
 }
-.popup-phrase {
+.popup-phrase, .amenity-popup-phrase {
     padding: 20px 0;
 }
-.popup-phrase p {
-    font: 400;
-    font-size: 16px;
+.popup-phrase p,.amenity-popup-phrase p, .amenity-detail {
+    font-weight: 400;
+    font-size: 15px;
     color: #484848;
+}
+.amenity-detail {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400
+}
+.amenity-subject {
+    font-weight: 700;
+    font-size: 18px;
+}
+.amenity-popup-phrase {
+    border-bottom: 1px solid #cccccc;
 }
