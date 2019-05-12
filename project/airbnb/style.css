@@ -277,11 +277,14 @@ strong {
     clear: both;
     padding-top: 25px;
 }
-.view-all span, .contact-host span, .explain-more span {
+.view-all span, .contact-host span, .explain-more span, .popup-btn {
     color: #60B6B5;
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 1px;
+    background: none;
+    border: none;
+    padding: 0;
 }
 .view-all a {
     text-decoration: none;
@@ -470,29 +473,31 @@ li span {
 }
 
 .photo {
-    width: 102%;
-    height: 550px;
-    padding: 30px 0;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background: black;
+
 }
 
 .main-photo, .sub-photo {
-    border: 1px solid black;
-    background: black;
+
 }
 
 .main-photo, .main-photo2 {
     display: inline-block;
     float: left;
-    width: 49%;
-    height: 592px;
+    width: 50%;
+    height: 595px;
     overflow: hidden;
 }
 
 .main-photo2 {
     height: 595px;
+    background: black;
 }
 .main-photo img {
-    height: 592px;
+    height: 100%;
     width: 100%;
     min-width: 400px;
     position: relative;
@@ -505,8 +510,8 @@ li span {
 .sub-photo-group {
     display: inline-block;
     float: left;
-    width: 49%;
-    height: 592px;
+    width: 50%;
+    height: 595px;
 }
 .sub-photo {
     height: 50%;
@@ -523,10 +528,10 @@ li span {
     width: 130%;
     height: 100%;
 }
+
 .photo img:hover {
-    width: 130%;
-    height: 110%;
-    transition: all 0.5s;
+    transition: transform 0.3s linear;
+    transform: scale(1.05);
 }
 .room-content, .amenity-content {
     width: 58%;
@@ -695,7 +700,7 @@ li span {
 .amenity-title {
     padding: 10px 0;
 }
-.amenity-title span {
+.amenity-title span, .popup-phrase span {
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 600;
@@ -822,7 +827,8 @@ li span {
 }
 .how-many-reviews, .host-name span, 
 .location-info span, .refund-condition span, 
-.recommend-title span, .options-title span {
+.recommend-title span, .options-title span,
+.popup-title {
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -1164,15 +1170,15 @@ li span {
 .above-img-btn {
     display: inline-block;
     position: absolute;
-    right: 20px;
-    top: 120px;
+    right: 55px;
+    top: 10px;
     z-index: 2;
 }
 .above-img-btn2 {
     display: inline-block;
     position: absolute;
-    right: 17px;
-    bottom: 0px;
+    right: 55px;
+    bottom: 10px;
     z-index: 1;
 }
 
@@ -1184,4 +1190,56 @@ li span {
 }
 .above-img-btn span, .above-img-btn2 span{
     font-size: 15px;
+}
+.layer-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.popup-content {
+    overflow: auto;
+    display: block;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.popup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.9);
+}
+.popup-text {
+    margin: 100px auto;
+    width: 520px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    box-shadow: 1px 1px 10px 0 #cccccc;
+    background: white;
+
+}
+.close-btn {
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: 100;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px #cccccc;
+}
+.popup-phrase {
+    padding: 20px 0;
+}
+.popup-phrase p {
+    font: 400;
+    font-size: 16px;
+    color: #484848;
 }

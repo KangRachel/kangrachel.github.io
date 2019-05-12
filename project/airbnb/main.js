@@ -1,3 +1,4 @@
+    //상단 고정 메뉴바
     var fixedNavBar = document.querySelector('#fixed-nav');
     var appearFixedNav = function() {
       if (window.scrollY >= 650) {
@@ -8,6 +9,39 @@
     }
     window.addEventListener('scroll', appearFixedNav);
 
+    // 사진 그림자 마우스오버 이벤트
+
+    var photoList = document.querySelectorAll('.show-photo');
+    console.log(photoList);
+    for (var i = 0; i < photoList.length; i++) {
+      var photo = photoList[i];
+      console.log(photo);
+      photo.addEventListener('mouseover', function (e) {
+        var shadowPhotoList = document.querySelectorAll('.show-photo');
+        for (var j = 0; j < shadowPhotoList.length; j++) {
+          var shadowPhoto = shadowPhotoList[j];
+          console.log(shadowPhoto);
+          if (e.target != shadowPhoto) {
+            shadowPhoto.style.opacity = '0.7';
+          }
+        }
+      });
+      photo.addEventListener('mouseout', removeShadowPhoto);
+    }
+    
+    function removeShadowPhoto(e) {
+      console.log(e.target);
+      var shadowPhotoList = document.querySelectorAll('.show-photo');
+      for (var j = 0; j < shadowPhotoList.length; j++) {
+        var shadowPhoto = shadowPhotoList[j];
+        console.log(shadowPhoto);
+        if (e.target != shadowPhoto) {
+          shadowPhoto.style.opacity = '1';
+        }
+      }
+    }
+    
+    //우측 예약요청 하단 추가 메세지
     var addedMessage = document.querySelector('#message-box');
     var appearAddedMessage = function() {
       if (window.scrollY >= 670) {
@@ -20,7 +54,7 @@
     }
     window.addEventListener('scroll', appearAddedMessage);
 
-
+    //번역하기 버튼
     var translateBtn = document.querySelector('#text-translate-btn');
     var translate = function() {
       var btnText = document.querySelector('#text-translate-btn span');
@@ -37,8 +71,26 @@
       }
     }
     translateBtn.addEventListener('click', translate);
+    
+    //레이어 팝업
+    var popupRoomBtn = document.querySelector('#room-detail-btn');
+    
+    popupRoomBtn.addEventListener('click', function() {
+      var bodyTag = document.querySelector('body');
+      var roomdetail = document.querySelector('#room-detail-popup');
+      bodyTag.style.position = 'fixed';
+      roomdetail.style.display = 'block';
+    } )
 
+    var closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function (){
+      var bodyTag = document.querySelector('body');
+      var roomdetail = document.querySelector('#room-detail-popup');
+      bodyTag.style.position = 'relative';
+      roomdetail.style.display = 'none';
+    })
 
+    //더보기 기능
     function locationMore(event) {
       console.log(event);
       var moreReadLocationBtn = document.getElementById('more-read-lo');
@@ -81,7 +133,7 @@
         target.value = '정책 자세히 읽기';
       }
     }
-
+    //다음 지도 api
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
         mapOption = { 
                     center: new daum.maps.LatLng(33.2447806, 126.5644081), // 지도의 중심좌표
@@ -98,3 +150,6 @@
               position: markerPosition
           });
           marker.setMap(map);
+    
+    //레이어팝업
+    
