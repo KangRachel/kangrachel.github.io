@@ -54,6 +54,42 @@
     }
     window.addEventListener('scroll', appearAddedMessage);
 
+    //스크롤 책갈피
+    var navRoomExplain = document.querySelector('#nav-room-explain');
+    var navReview = document.querySelector('#nav-review');
+    var navHost = document.querySelector('#nav-host');
+    var navLocation = document.querySelector('#nav-location');
+    var navRefund = document.querySelector('#nav-refund');
+
+    var navList = [navRoomExplain, navReview, navHost, navLocation, navRefund];
+    
+    function colorNav() {
+      for (i = 0; navList.length > i; i++) {
+        var navItem = navList[i];
+        if (window.scrollY >= 705 && window.scrollY < 2266) {
+            console.log('navItem');
+            navItem.style.color = '#006A70';
+            navList[0].style.color = '#484848';
+          } else if (window.scrollY >= 2266 && window.scrollY < 3729) {
+            navItem.style.color = '#006A70';
+            navList[1].style.color = '#484848';
+          } else if (window.scrollY >= 3730 && window.scrollY < 4180) {
+            navItem.style.color = '#006A70';
+            navList[2].style.color = '#484848';
+          } else if (window.scrollY >= 4180 && window.scrollY < 4690) {
+            navItem.style.color = '#006A70';
+            navList[3].style.color = '#484848';
+        } else {
+          navItem.style.color = '#006A70';
+          navList[4].style.color = '#484848';
+        }
+      }
+    }
+    
+    window.addEventListener('scroll', colorNav); 
+
+
+
     //번역하기 버튼
     var translateBtn = document.querySelector('#text-translate-btn');
     var translate = function() {

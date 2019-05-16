@@ -393,10 +393,11 @@ li span {
     margin-top: 15px;
 }
 .nav-item-btn {
-    border: none;
     font-size: 14px;
     font-weight: 600;
     color: #006a70;
+    padding: 5px;
+    display: inline-block;
 }
 .nav-item-btn:hover {
     border-bottom: 1px solid #006a70;
@@ -815,6 +816,7 @@ li span {
 .review-content {
     width: 58%;
     display: inline-block;
+    padding-top: 30px;
 }
 .review-total div {
     display: inline-block;
@@ -964,7 +966,6 @@ li span {
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc
 }
-
 .warning a {
     font-weight: 600;
     color: #60B6B5;
@@ -1138,6 +1139,7 @@ li span {
     transition-property: opacity;
     transition-duration: 3s;
     background: white;
+    display: inline-block;
 }
 
 #read-more-condition a {
@@ -1254,4 +1256,7 @@ li span {
 }
 .amenity-popup-phrase {
     border-bottom: 1px solid #cccccc;
+}
+#location, #refund {
+    padding-top:30px;
 }
