@@ -184,7 +184,7 @@
           </div>
         </div>
       </div>
-      <div class="side-reservation">
+      <div class="side-reservation" id="side-reservation">
         <div class="sr-info">
           <div class="sr-price">
             <span class="reservation-price">₩51,401</span>
@@ -1236,7 +1236,7 @@
           </div>
         </div>
         <div class="bottom-btnbox">
-            <button type="submit" class="submit-request"><span>예약 요청</span></button>
+            <button type="submit" class="submit-request" id="reservation-request-btn"><span>예약 요청</span></button>
           </div>
       </div>
   </div>
@@ -1340,6 +1340,81 @@
         </div>
       </div>
     </div>
+    <div class="layer-popup" id="reservation-request">
+        <div class="popup-bg">
+          <div class="popup-content">
+            <div class="popup-text">
+              <div class="close-btn-box">
+                <button id="close-reservation-btn" class="close-btn">X</button>
+              </div>
+              <div class="popup-inner-text">
+                <div class="side-reservation" id="footer-reservation">
+                  <div class="sr-info">
+                    <div class="sr-price">
+                      <span class="reservation-price">₩51,401</span>
+                      <span>/박</span>
+                    </div>
+                    <div class="sr-score">
+                      <span class="score">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </span>
+                      <span class="rv-number">179</span>
+                    </div>
+                  </div>
+                  <div class="book-request">
+                    <form id="booking">
+                      <div id="checkin-out">
+                        <div class="datebox">
+                          <span>날짜</span>
+                          <div class="dateItem">
+                            <input id="date-from" type="text" value="체크인" name="checkinDate">
+                            <span><i class="fas fa-arrow-right"></i></span>
+                            <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
+                          </div>
+                        </div>
+                      </div>
+                      <div id="side-calendar" style="border: 1px solid;">
+                        </div>
+                      <div class="sr-people">
+                        <span>인원</span>
+                        <div class="guest-box">
+                          <select id="persons" name="persons">
+                              <option value="1" selected>게스트 1명</option>
+                              <option value="2">게스트 2명</option>
+                              <option value="3">게스트 3명</option>
+                              <option value="4">게스트 4명</option>
+                              <option value="5">게스트 5명</option>
+                              <option value="6">게스트 6명</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="btnbox">
+                        <button type="submit" class="submitBtn"><span>예약 요청</span></button>
+                      </div>
+                    </form>
+                    <div class="confirm-message">
+                      <span>예약 확정 전에는 요금이 청구되지 않습니다</span>
+                    </div>
+                    <div class="added-message" id="message-box" style="display:none; opacity: 0;">
+                      <div class="added-message-text">
+                        <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
+                        <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
+                      </div>
+                      <div class="thumbs-up">
+                        <span><i class="far fa-thumbs-up"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
   <script src="main.js"></script>
 </body>

@@ -139,6 +139,20 @@
       bodyTag.style.position = 'relative';
       amenityDetail.style.display = 'none';
     })
+
+    var reservationRequestBtn = document.querySelector('#reservation-request-btn');
+    var popupRequest = document.querySelector('#reservation-request');
+    reservationRequestBtn.addEventListener('click', function() {
+      bodyTag.style.position = 'fixed';
+      popupRequest.style.display = 'block';
+    })
+    var closeRequestBtn = document.querySelector('#close-reservation-btn');
+    closeRequestBtn.addEventListener('click', function(event) {
+      console.log(event);
+      bodyTag.style.position = 'relative';
+      popupRequest.style.display = 'none';
+    })
+
     //더보기 기능
     function locationMore(event) {
       console.log(event);
@@ -201,4 +215,7 @@
           marker.setMap(map);
     
     //레이어팝업
+
+    // 하단 예약요청
+
     

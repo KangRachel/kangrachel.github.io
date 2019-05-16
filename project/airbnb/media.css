@@ -12,7 +12,7 @@
     .intro-box {
         border: 0;
     }
-    .side-reservation {
+    #side-reservation {
         display: none;
     }
     .nav-bar {
