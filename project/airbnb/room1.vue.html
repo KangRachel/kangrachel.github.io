@@ -20,27 +20,27 @@
           <a href="#"><i class="fab fa-airbnb"></i></a>
         </span>
     </div>
-    <div id="fixed-nav" style="display:none;">
+    <div id="fixed-nav" style="display:none;" ref="FixedNav">
       <div class="wrap">
         <div class="fixed-nav-list">
           <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#room-explain" id="nav-room-explain">개요</a>
+            <a class="nav-item-btn" href="#room-explain" id="nav-room-explain" ref="navRoomExplain">개요</a>
           </span>
           <span>·</span>
           <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#review" id="nav-review">후기</a>
+            <a class="nav-item-btn" href="#review" id="nav-review" ref="navReview">후기</a>
           </span>
           <span>·</span>
           <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#host" id="nav-host">호스트</a>
+            <a class="nav-item-btn" href="#host" id="nav-host" ref="navHost">호스트</a>
           </span>
           <span>·</span>
           <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#location" id="nav-location">위치</a>
+            <a class="nav-item-btn" href="#location" id="nav-location" ref="navLocation">위치</a>
           </span>
           <span>·</span>
           <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#refund" id="nav-refund">환불정책</a>
+            <a class="nav-item-btn" href="#refund" id="nav-refund" ref="navRefund">환불정책</a>
           </span>
         </div>
         <div class="nav-btn">
@@ -88,23 +88,23 @@
     </div>
     <div class="photo-group">
       <div class="main-photo">
-        <img src="./assets/bedroom-416062_1280.jpg" class="show-photo" alt="house-main">
+        <img src="./assets/bedroom-416062_1280.jpg" class="show-photo" alt="house-main" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
       </div>
       <div class="main-photo2">
         <div class="sub-photo-group" id="sub-group1">
           <div class="sub-photo">
-            <img src="./assets/kitchen.jpg" class="show-photo" alt="house">
+            <img src="./assets/kitchen.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
           </div>
           <div class="sub-photo">
-            <img src="./assets/breakfast.jpg" class="show-photo" alt="house">
+            <img src="./assets/breakfast.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
           </div>
         </div>
         <div class="sub-photo-group" id="sub-group2">
             <div class="sub-photo">
-              <img src="./assets/villa.jpg" class="show-photo" alt="house">
+              <img src="./assets/villa.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
             </div>
             <div class="sub-photo">
-              <img src="./assets/toilet.jpg" class="show-photo" alt="house">
+              <img src="./assets/toilet.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
             </div>
         </div>
       </div>
@@ -266,14 +266,14 @@
             Brand new, very clean, studio apartment with a private bath room, kitchenette and private work space. The studio is renovated with natural stone floors, high end finishings and closets, throughout the apartment.
           </p>
         </div>
-        <div id="korean-explain" class="explain-text" style="display:none;">
+        <div ref="koreanExplain" id="korean-explain" class="explain-text" style="display:none;">
           <p>장소 그리고 장소 역시나 장소 - 버스로 10분이면 서귀포 시내에 이동할 수 있으며 버스 정류장까지는 도보로 10분이 소요됩니다. 또한 버스는 24시간 운행되며 몇 분 단위로 운행됩니다. 주변이 매우 조용하며 안전합니다.
             아파트는 리모델링 직후로 매우 새 건물이며 깨끗하고 오피스텔식 아파트이며, 방에 개인 화장실이 있으며 주방, 개인 작업공간이 딸려 있습니다. 자연 친화적 디자인의 석재 계단과 붙박이장이 있습니다. </p>
         </div>
         <div class="explain-more">
           <span>
             <a href="#room-detail-btn">
-            <button id ="room-detail-btn" class="popup-btn">이 공간 자세히 알아보기</button>
+            <button id ="room-detail-btn" class="popup-btn" @click="popupRoom">이 공간 자세히 알아보기</button>
           </a>
           </span>
         </div>
@@ -318,7 +318,7 @@
             </div>
           </div>
           <div class="view-all">
-            <span><button id="amenity-popup-btn" class="popup-btn"><a href="#amenity-popup-btn">18개의 편의시설 모두보기</a></button></span>
+            <span><button id="amenity-popup-btn" class="popup-btn" @click="amenityPopup"><a href="#amenity-popup-btn">18개의 편의시설 모두보기</a></button></span>
           </div>
         </div>
         <div class="bedding">
@@ -710,7 +710,7 @@
           <p>유동커피 바로 옆 건물입니다.</p>
         </div>
         <input type="button" id="location-more" value="이 지역 자세히 알아보기" 
-        onclick=locationMore(event)>
+        @click="locationMore">
       </div>
       </div>
         <div class="location-map" id="map"> </div>
@@ -733,7 +733,7 @@
         <p>키 패드로 셀프 체크인</p>
       </div>
         <input type="button" id="refund-more" value="숙소 이용규칙 모두 보기" 
-        onclick="roomMore(event)">
+        @click="readMoreRefund">
       <div id="more-read-refund" style="display:none; opacity: 0;">
         <div>
           <p>체크인, 체크아웃 시간을 잘 지켜주세요.</p>
@@ -1004,7 +1004,7 @@
           </div>
         </div>
         <div class="bottom-btnbox">
-            <button type="submit" class="submit-request" id="reservation-request-btn"><span>예약 요청</span></button>
+            <button type="submit" class="submit-request" id="reservation-request-btn" @click="reservationRequestPopup"><span>예약 요청</span></button>
           </div>
       </div>
   </div>
@@ -1013,7 +1013,7 @@
       <div class="popup-content">
         <div class="popup-text">
           <div class="close-btn-box">
-            <button id="close-room-btn" class="close-btn">X</button>
+            <button id="close-room-btn" class="close-btn" @click="closePopupRoom">X</button>
           </div>
           <span class="popup-title">숙소 설명</span>
           <div class="popup-phrase">
@@ -1038,7 +1038,7 @@
               바베큐 또한 실내에서는 금지되어 있사오니 1층 정원의 바베큐 시설을 이용해 주시기 바랍니다
             </p>
             <p>
-              독채 숙소가 아닌 아파트형 숙소이므로 늦은시간에는 옆 방 소음 문제가 발생할 수 있습니다. 옆방의 게스트 분들을 배려하여
+              독채 숙소가 아닌 아파트형 숙소이므로 늦은시간에는 옆 방 소음 문ㅈ제가 발생할 수 있습니다. 옆방의 게스트 분들을 배려하여
               23시 이후에는 큰 소리를 자제해 주시기 바랍니다. 서귀포 항이 바로 앞에 있어 신선한 횟집이 많으며
               서귀포 올레시장에서 신선한 회를 저렴하게 포장하여 실내에서 드실 수 있습니다. 
               저희 숙소는 주차장을 제공하고 있습니다. 아파트 내 실외 주차장과, 아파트 뒤 공원에 위치한 무료 공영 주차장을 사용하실 수 있습니다.
@@ -1053,7 +1053,7 @@
         <div class="popup-content">
           <div class="popup-text">
             <div class="close-btn-box">
-              <button id="amenity-close-btn" class="close-btn">X</button>
+              <button id="amenity-close-btn" class="close-btn" @click="closeAmenityPopup">X</button>
             </div>
             <span class="popup-title">편의시설</span>
             <div class="popup-phrase">
@@ -1113,7 +1113,7 @@
           <div class="popup-content">
             <div class="popup-text">
               <div class="close-btn-box">
-                <button id="close-reservation-btn" class="close-btn">X</button>
+                <button id="close-reservation-btn" class="close-btn" @click="closeReservationRequestPopup">X</button>
               </div>
               <div class="popup-inner-text">
                 <div class="side-reservation" id="footer-reservation">
@@ -1377,12 +1377,16 @@
             
           ]
         },
+        mounted() {
+            window.addEventListener('scroll', this.appearFixedNav);
+            window.addEventListener('scroll', this.coloredNavbar);
+        },
         methods: {
           translate() {
             console.log('translate')
             var btnText = document.querySelector('#text-translate-btn span');
             var beforeTranslate = this.$refs.englishExplain;
-            var afterTranslate = document.querySelector('#korean-explain');
+            var afterTranslate = this.$refs.koreanExplain;
             if (beforeTranslate.style.display != 'inline-block') {
               afterTranslate.style.display = 'none';
               beforeTranslate.style.display = 'inline-block';
@@ -1392,8 +1396,143 @@
               beforeTranslate.style.display ='none';
               btnText.innerHTML = '원문으로 보기';
             }
+          },
+          popupRoom() {
+            var popupRoomBtn = document.querySelector('#room-detail-btn');
+            var bodyTag = document.querySelector('body');
+            var roomdetail = document.querySelector('#room-detail-popup');
+            bodyTag.style.position = 'fixed';
+            roomdetail.style.display = 'block';
+          },
+          closePopupRoom () {
+            var closeBtn = document.querySelector('#close-room-btn');
+            var bodyTag = document.querySelector('body');
+            var roomdetail = document.querySelector('#room-detail-popup');
+            bodyTag.style.position = 'relative';
+            roomdetail.style.display = 'none';
+          },
+          amenityPopup() {
+            var popupAmenityBtn = document.querySelector('#amenity-popup-btn');
+            var bodyTag = document.querySelector('body');
+            var amenityDetail = document.querySelector('#amenity-detail-popup');
+            bodyTag.style.position = 'fixed';
+            amenityDetail.style.display = 'block';
+          },
+          closeAmenityPopup() {
+            var closeAmenityBtn = document.querySelector('#amenity-close-btn');
+            var bodyTag = document.querySelector('body');
+            var amenityDetail = document.querySelector('#amenity-detail-popup');
+            bodyTag.style.position = 'relative';
+            amenityDetail.style.display = 'none';
+          },
+          appearFixedNav() {
+              var fixedNavBar = this.$refs.FixedNav;
+              if (window.scrollY >= 650) {
+                fixedNavBar.style.display = 'block';
+              } else {
+                fixedNavBar.style.display = 'none';
+              }
+          },
+          coloredNavbar() {
+            var navRoomExplain = this.$refs.navRoomExplain;
+            var navReview = this.$refs.navReview;
+            var navHost = this.$refs.navHost;
+            var navLocation = this.$refs.navLocation;
+            var navRefund = this.$refs.navRefund;
+
+            var navList = [navRoomExplain, navReview, navHost, navLocation, navRefund];
+            for (i = 0; navList.length > i; i++) {
+            var navItem = navList[i];
+            if (window.scrollY >= 705 && window.scrollY < 2266) {
+                console.log('navItem');
+                navItem.style.color = '#006A70';
+                navList[0].style.color = '#484848';
+              } else if (window.scrollY >= 2266 && window.scrollY < 3729) {
+                navItem.style.color = '#006A70';
+                navList[1].style.color = '#484848';
+              } else if (window.scrollY >= 3730 && window.scrollY < 4280) {
+                navItem.style.color = '#006A70';
+                navList[2].style.color = '#484848';
+              } else if (window.scrollY >= 4280 && window.scrollY < 4690) {
+                navItem.style.color = '#006A70';
+                navList[3].style.color = '#484848';
+            } else {
+              navItem.style.color = '#006A70';
+              navList[4].style.color = '#484848';
+            }
           }
-        }
+          },
+          reservationRequestPopup() {
+            var reservationRequestBtn = document.querySelector('#reservation-request-btn');
+            var popupRequest = document.querySelector('#reservation-request');
+            var bodyTag = document.querySelector('body');
+            bodyTag.style.position = 'fixed';
+            popupRequest.style.display = 'block';
+          },
+          closeReservationRequestPopup() {
+            var closeRequestBtn = document.querySelector('#close-reservation-btn');
+            var popupRequest = document.querySelector('#reservation-request');
+            var bodyTag = document.querySelector('body');
+            bodyTag.style.position = 'relative';
+            popupRequest.style.display = 'none';
+          },
+          locationMore() {
+            var moreReadLocationBtn = document.getElementById('more-read-lo');
+            var target = event.srcElement;
+            if (moreReadLocationBtn.style.display != 'block') {
+              moreReadLocationBtn.style.display = 'block';
+              moreReadLocationBtn.style.opacity = '1';
+              target.value = '숨기기';
+            } else {
+              document.getElementById('more-read-lo').style.display = 'none';
+              document.getElementById('more-read-lo').style.opacity = '0';
+              target.value = '이 지역 자세히 알아보기';
+            }
+          },
+          readMoreRefund() {
+            var moreReadRefundBtn = document.getElementById('more-read-refund');
+            var target = event.srcElement;
+            if (moreReadRefundBtn.style.display != 'block') {
+              moreReadRefundBtn.style.display = 'block';
+              moreReadRefundBtn.style.opacity = '1';
+              target.value = '이용 규칙 숨기기';
+            } else { 
+              moreReadRefundBtn.style.display = 'none';
+              moreReadRefundBtn.style.opacity = '0';
+              target.value = '숙소 이용규칙 모두 보기';
+            }
+          },
+          shadowPhoto() {
+            var photoList = document.querySelectorAll('.show-photo');
+            for (var i = 0; i < photoList.length; i++) {
+              var photo = photoList[i];
+              var shadowPhotoList = document.querySelectorAll('.show-photo');
+              for (var j = 0; j < shadowPhotoList.length; j++) {
+              var shadowPhoto = shadowPhotoList[j];
+                if (event.target != shadowPhoto) {
+                  shadowPhoto.style.opacity = '0.7';
+                }
+              }
+            }
+          },
+          removeShadowPhoto() {
+            var photoList = document.querySelectorAll('.show-photo');
+            for (var i = 0; i < photoList.length; i++) {
+              var photo = photoList[i];
+              var shadowPhotoList = document.querySelectorAll('.show-photo');
+              for (var j = 0; j < shadowPhotoList.length; j++) {
+              var shadowPhoto = shadowPhotoList[j];
+                if (event.target != shadowPhoto) {
+                  shadowPhoto.style.opacity = '1';
+                }
+              }
+            }
+
+          }
+
+
+        },
+        
       }
     )
   </script>

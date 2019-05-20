@@ -12,7 +12,6 @@
     // 사진 그림자 마우스오버 이벤트
 
     var photoList = document.querySelectorAll('.show-photo');
-    console.log(photoList);
     for (var i = 0; i < photoList.length; i++) {
       var photo = photoList[i];
       console.log(photo);
@@ -93,6 +92,7 @@
     //번역하기 버튼
     var translateBtn = document.querySelector('#text-translate-btn');
     var translate = function() {
+      console.log('translate')
       var btnText = document.querySelector('#text-translate-btn span');
       var beforeTranslate = document.querySelector('#english-explain');
       var afterTranslate = document.querySelector('#korean-explain');
@@ -196,8 +196,21 @@
         target.value = '정책 자세히 읽기';
       }
     }
+
+     // 추천숙소 캐러셀
+
+     var nextRoombtn = document.querySelector('#recommend-room-next-btn');
+     var recommendRoomList = document.querySelectorAll('.recommend-item');
+     nextRoombtn.addEventListener('click', function(event){
+       for (var i = 0; i < recommendRoomList.length; i++) {
+         console.log(event);
+         var recommendRoom = recommendRoomList[i];
+         console.log(recommendRoom);
+
+       } 
+     })
     //다음 지도 api
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
         mapOption = { 
                     center: new daum.maps.LatLng(33.2447806, 126.5644081), // 지도의 중심좌표
                     level: 3 // 지도의 확대 레벨
@@ -213,9 +226,9 @@
               position: markerPosition
           });
           marker.setMap(map);
-    
-    //레이어팝업
+  
 
-    // 하단 예약요청
+   
+    
 
     

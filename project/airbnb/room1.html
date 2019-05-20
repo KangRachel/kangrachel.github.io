@@ -89,7 +89,7 @@
         <img src="./assets/bedroom-416062_1280.jpg" class="show-photo" alt="house-main">
       </div>
       <div class="main-photo2">
-        <div class="sub-photo-group">
+        <div class="sub-photo-group" id="sub-group1">
           <div class="sub-photo">
             <img src="./assets/kitchen.jpg" class="show-photo" alt="house">
           </div>
@@ -97,7 +97,7 @@
             <img src="./assets/breakfast.jpg" class="show-photo" alt="house">
           </div>
         </div>
-        <div class="sub-photo-group">
+        <div class="sub-photo-group" id="sub-group2">
             <div class="sub-photo">
               <img src="./assets/villa.jpg" class="show-photo" alt="house">
             </div>
@@ -213,8 +213,12 @@
                 </div>
               </div>
             </div>
-            <div id="side-calendar" style="border: 1px solid;">
-              </div>
+            <div class="side-calendar" id="side-checkin">
+
+            </div>
+            <div class="side-calendar" id="side-checkout">
+
+            </div>
             <div class="sr-people">
               <span>인원</span>
               <div class="guest-box">
@@ -229,7 +233,7 @@
               </div>
             </div>
             <div class="btnbox">
-              <button type="submit" class="submitBtn"><span>예약 요청</span></button>
+              <button type="submit" class="submitBtn" id=""><span>예약 요청</span></button>
             </div>
           </form>
           <div class="confirm-message">
@@ -876,6 +880,7 @@
       </div>
       <div class="recommend-list">
         <div class="recommend-group">
+          <div class="recommend-slide">
           <div class="recommend-item">
             <div class="recommend-img">
               <img src="./assets/hotel-1979406_1920.jpg">
@@ -969,15 +974,110 @@
               </div>
             </div>
           </div>
-          <div class="next-group">
-              <span>
-                <button type="button" class="rc-next-btn">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-              </span>
+          <div class="recommend-item">
+              <div class="recommend-img">
+                <img src="./assets/pool.jpg">
+              </div>
+              <div class="text-box">
+                <div class="house-type">
+                  <span>부티크 호텔</span>
+                </div>
+                <div class="house-title">
+                  <span>서귀포 더 히든클리프</span>
+                </div>
+                <div class="house-introduce">
+                  <p>인원 2명·침실 1개·호텔 내 수영장 </p>
+                  <p>무선 인터넷·주방·단독 욕실 사용 </p>
+                </div>
+                <div class="score-price">
+                  <span class="score">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </span>
+                  <span class="rv-number">301</span>
+                  <div class="recommend-price">
+                    <span class="krw-price">₩251,401</span>
+                    <span>/박</span>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="recommend-item">
+                <div class="recommend-img">
+                  <img src="./assets/pool.jpg">
+                </div>
+                <div class="text-box">
+                  <div class="house-type">
+                    <span>부티크 호텔</span>
+                  </div>
+                  <div class="house-title">
+                    <span>서귀포 더 히든클리프</span>
+                  </div>
+                  <div class="house-introduce">
+                    <p>인원 2명·침실 1개·호텔 내 수영장 </p>
+                    <p>무선 인터넷·주방·단독 욕실 사용 </p>
+                  </div>
+                  <div class="score-price">
+                    <span class="score">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="rv-number">301</span>
+                    <div class="recommend-price">
+                      <span class="krw-price">₩251,401</span>
+                      <span>/박</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="recommend-item">
+                  <div class="recommend-img">
+                    <img src="./assets/pool.jpg">
+                  </div>
+                  <div class="text-box">
+                    <div class="house-type">
+                      <span>부티크 호텔</span>
+                    </div>
+                    <div class="house-title">
+                      <span>서귀포 더 히든클리프</span>
+                    </div>
+                    <div class="house-introduce">
+                      <p>인원 2명·침실 1개·호텔 내 수영장 </p>
+                      <p>무선 인터넷·주방·단독 욕실 사용 </p>
+                    </div>
+                    <div class="score-price">
+                      <span class="score">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </span>
+                      <span class="rv-number">301</span>
+                      <div class="recommend-price">
+                        <span class="krw-price">₩251,401</span>
+                        <span>/박</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+           </div>
+          <div class="next-group">
+            <span>
+              <button type="button" class="rc-next-btn" id="recommend-room-next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </span>
+          </div>
         </div>
-      </div>
       <div class="activities">
         <div class="recommend-title">
           <span>숙소 주변의 즐길 거리</span>
@@ -1377,8 +1477,6 @@
                           </div>
                         </div>
                       </div>
-                      <div id="side-calendar" style="border: 1px solid;">
-                        </div>
                       <div class="sr-people">
                         <span>인원</span>
                         <div class="guest-box">
