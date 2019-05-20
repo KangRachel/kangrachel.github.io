@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- <script src="./calendar.js"></script> -->
   <title>서귀포의 아담하고 접근성좋은 아파트</title>
 </head>
 <body>
@@ -371,84 +372,40 @@
           <div class="pre-month">
             <div class="calendar-month">
               <span class="left-icon">
-                <button type="button" class="pre-btn" name="pre-btn">
+                <button type="button" class="pre-btn" name="pre-btn" @click="prevCalendar">
                     <i class="fas fa-arrow-left"></i>
                 </button>
               </span>
-              <span class="pre-year-month">
-                2019년 4월
+              <span class="pre-year-month" id="year-month">
+                yyyy년 m월
               </span>
               <span class="right-icon2">
-                  <button type="button" class="next-btn" name="next-btn">
+                  <button type="button" class="next-btn" name="next-btn" @click="nextCalendar">
                       <i class="fas fa-arrow-right"></i>
                   </button>
                 </span>
             </div>
             <div class="calendar-days">
-              <ul>
-                <li>일</li>
-                <li>월</li>
-                <li>화</li>
-                <li>수</li>
-                <li>목</li>
-                <li>금</li>
-                <li>토</li>
-              </ul>
             </div>
             <div>
-              <table class="calendar">
-                <tr>
-                  <td>&nbsp;</td>
-                  <td class="not-av">1</td>
-                  <td class="not-av">2</td>
-                  <td class="not-av">3</td>
-                  <td class="not-av">4</td>
-                  <td class="not-av">5</td>
-                  <td class="not-av">6</td>
-                </tr>
-                <tr>
-                  <td class="not-av">7</td>
-                  <td class="not-av">8</td>
-                  <td class="not-av">9</td>
-                  <td class="not-av">10</td>
-                  <td class="not-av">11</td>
-                  <td class="not-av">12</td>
-                  <td class="not-av">13</td>
-                </tr>
-                <tr>
-                  <td class="not-av">14</td>
-                  <td class="not-av">15</td>
-                  <td class="not-av">16</td>
-                  <td class="not-av">17</td>
-                  <td class="not-av">18</td>
-                  <td class="not-av">19</td>
-                  <td class="not-av">20</td>
-                </tr>
-                <tr>
-                  <td class="not-av">21</td>
-                  <td class="not-av">22</td>
-                  <td class="not-av">23</td>
-                  <td class="not-av">24</td>
-                  <td class="not-av">25</td>
-                  <td class="not-av">26</td>
-                  <td td class="available">27</td>
-                </tr>
-                <tr>
-                  <td td class="available">28</td>
-                  <td td class="available">29</td>
-                  <td class="not-av">30</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                </tr>
+              <table class="calendar" id="calendar">
+                  <tr class="days">
+                    <td>일</td>
+                    <td>월</td>
+                    <td>화</td>
+                    <td>수</td>
+                    <td>목</td>
+                    <td>금</td>
+                    <td>토</td>
+                  </tr>
               </table>
+              {{ this.buildCalendar }}
             </div>
           </div>
           <div class="next-month">
             <div class="next-calendar-month">
-              <span class="next-year-month">
-                2019년 5월
+              <span class="next-year-month" id="next-year-month">
+                yyyy년 m월
               </span>
               <span class="right-icon">
                 <button type="button" class="next-btn" name="next-btn">
@@ -457,63 +414,19 @@
               </span>
             </div>
             <div class="calendar-days">
-              <ul>
-                <li>일</li>
-                <li>월</li>
-                <li>화</li>
-                <li>수</li>
-                <li>목</li>
-                <li>금</li>
-                <li>토</li>
-              </ul>
             </div>
             <div>
-              <table class="calendar">
-                <tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td class="available">1</td>
-                  <td class="available">2</td>
-                  <td class="available">3</td>
-                  <td class="available">4</td>
-                </tr>
-                <tr>
-                  <td class="available">5</td>
-                  <td class="available">6</td>
-                  <td class="available">7</td>
-                  <td class="available">8</td>
-                  <td class="not-av">9</td>
-                  <td class="not-av">10</td>
-                  <td class="available">11</td>
-                </tr>
-                <tr>
-                  <td class="available">12</td>
-                  <td class="available">13</td>
-                  <td class="available">14</td>
-                  <td class="available">15</td>
-                  <td class="not-av">16</td>
-                  <td class="not-av">17</td>
-                  <td class="available">18</td>
-                </tr>
-                <tr>
-                  <td class="available">19</td>
-                  <td class="available">20</td>
-                  <td class="available">21</td>
-                  <td class="available">22</td>
-                  <td class="not-av">23</td>
-                  <td class="not-av">24</td>
-                  <td class="not-av">25</td>
-                </tr>
-                <tr>
-                  <td class="not-av">26</td>
-                  <td class="not-av">27</td>
-                  <td class="available">28</td>
-                  <td class="available">29</td>
-                  <td class="available">30</td>
-                  <td class="available">31</td>
-                  <td>&nbsp;</td>
-                </tr>
+              <table class="calendar" id="next-calendar">
+                  <tr class="days">
+                    <td>일</td>
+                    <td>월</td>
+                    <td>화</td>
+                    <td>수</td>
+                    <td>목</td>
+                    <td>금</td>
+                    <td>토</td>
+                  </tr>
+                
               </table>
             </div>
           </div>
@@ -1196,6 +1109,9 @@
           hostLevel: 1,
           hostName: 'KYJ',
           hostPhoto: './assets/megane.png',
+          today: new Date(),
+          date: new Date(),
+          calendar: this.buildCalendar,
           activityItems: [
           {
               type: '액티비티',
@@ -1527,14 +1443,95 @@
                 }
               }
             }
+          },
+          buildCalendar() {
+            var today = new Date();
+            var date = new Date();
+            var doMonth = new Date(this.today.getFullYear(), this.today.getMonth(),1);
+            var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() +1, 0);
+            var tblCalendar = document.querySelector('#calendar');
+            var tblCalendarYM = document.querySelector('#year-month');
+            tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth()+1) + '월';
 
-          }
+              console.log(today.getDate());
+            while (tblCalendar.rows.length > 2) {
+              tblCalendar.deleteRow(tblCalendar.rows.length -1);
+            }
 
+            var row = null;
 
-        },
-        
-      }
-    )
+            row = tblCalendar.insertRow();
+
+            var cnt = 0;
+            console.log(doMonth.getDay());
+            for(var i = 0; i < doMonth.getDay(); i++) {
+              cell = row.insertCell();
+              cnt = cnt + 1;
+              cell.classList.add('empty-cell')
+              console.log(cell)
+            }
+
+            for(var j = 1; j <= lastDate.getDate(); j++) {
+              cell = row.insertCell();
+              cell.innerHTML = j;
+              cnt = cnt + 1;
+              if(cnt%7 == 0) {
+                row = calendar.insertRow();
+              }
+              cell.classList.add('available')
+            } 
+          },
+          nextCalendarBuild() {
+            var today = new Date();
+            var date = new Date();
+            var doMonth = new Date(this.today.getFullYear(), this.today.getMonth(),1);
+            var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() +1, 0);
+            var tblCalendar = document.querySelector('#next-calendar');
+            var tblCalendarYM = document.querySelector('#next-year-month');
+            tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth()+2) + '월';
+            while (tblCalendar.rows.length > 2) {
+              tblCalendar.deleteRow(tblCalendar.rows.length -1);
+            }
+
+            var row = null;
+
+            row = tblCalendar.insertRow();
+
+            var cnt = 0;
+            console.log(doMonth.getDay());
+            for(var i = 0; i < doMonth.getDay(); i++) {
+              cell = row.insertCell();
+              cnt = cnt + 1;
+              cell.classList.add('empty-cell')
+              console.log(cell)
+            }
+
+            for(var j = 1; j <= lastDate.getDate(); j++) {
+              cell = row.insertCell();
+              cell.innerHTML = j;
+              cnt = cnt + 1;
+              if(cnt%7 == 0) {
+                row = calendar.insertRow();
+              }
+              cell.classList.add('available')
+            } 
+          },
+          prevCalendar() {
+            var today = new Date();
+            var date = new Date();
+            today = new Date(today.getFullYear(), today.getMonth() -1, today.getDate());
+            this.buildCalendar();
+          },
+
+          nextCalendar() {
+            var today = new Date();
+            var date = new Date();
+            today = new Date(today.getFullYear(), today.getMonth() +1, today.getDate());
+            this.buildCalendar();
+           },
+    }
+  }
+  )
   </script>
 </body>
 </html>
