@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,72 +8,74 @@
   <link rel="stylesheet" type="text/css" href="./reset.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" type="text/css" href="./media.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- <script src="./calendar.js"></script> -->
   <title>서귀포의 아담하고 접근성좋은 아파트</title>
 </head>
+
 <body>
   <div id="app">
-  <section class="header">
-    <div class="logo">
+    <section class="header">
+      <div class="logo">
         <span>
           <a href="#"><i class="fab fa-airbnb"></i></a>
         </span>
-    </div>
-    <div id="fixed-nav" style="display:none;" ref="FixedNav">
-      <div class="wrap">
-        <div class="fixed-nav-list">
-          <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#room-explain" id="nav-room-explain" ref="navRoomExplain">개요</a>
-          </span>
-          <span>·</span>
-          <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#review" id="nav-review" ref="navReview">후기</a>
-          </span>
-          <span>·</span>
-          <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#host" id="nav-host" ref="navHost">호스트</a>
-          </span>
-          <span>·</span>
-          <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#location" id="nav-location" ref="navLocation">위치</a>
-          </span>
-          <span>·</span>
-          <span class="fixed-nav-item">
-            <a class="nav-item-btn" href="#refund" id="nav-refund" ref="navRefund">환불정책</a>
-          </span>
-        </div>
-        <div class="nav-btn">
-          <button class="sub-item-btn">
-            <span><i class="far fa-share-square"></i></span>
-            <span>공유하기</span>
-          </button>
-          <button class="sub-item-btn">
-            <span><i class="far fa-heart"></i></span>
-            <span>저장</span>
-          </button>
-        </div>
-      </div>  
-    </div>
-    <div class="search-box">
-      <div class="search-bar">
-        <span class="search-icon"><i class="fas fa-search"></i></span>
-        <input type="text" id="search" placeholder="검색" name="query">
       </div>
-    </div>
-    <div class="nav-bar">
-      <ul>
-        <li class="nav-item"><a href="#">호스트가 되어보세요</a></li>
-        <li class="nav-item"><a href="#">도움말</a></li>
-        <li class="nav-item"><a href="#">회원가입</a></li>
-        <li class="nav-item"><a href="#">로그인</a></li>
-      </ul>
-    </div>
-  </section>
-  <section class="photo">
-    <div class="above-img-btn">
+      <div class="fixed-nav" id="fixed-nav" style="display:none;" ref="FixedNav">
+        <div class="wrap">
+          <div class="fixed-nav-list">
+            <span class="fixed-nav-item">
+              <a class="nav-item-btn" href="#room-explain" id="nav-room-explain" ref="navRoomExplain">개요</a>
+            </span>
+            <span>·</span>
+            <span class="fixed-nav-item">
+              <a class="nav-item-btn" href="#review" id="nav-review" ref="navReview">후기</a>
+            </span>
+            <span>·</span>
+            <span class="fixed-nav-item">
+              <a class="nav-item-btn" href="#host" id="nav-host" ref="navHost">호스트</a>
+            </span>
+            <span>·</span>
+            <span class="fixed-nav-item">
+              <a class="nav-item-btn" href="#location" id="nav-location" ref="navLocation">위치</a>
+            </span>
+            <span>·</span>
+            <span class="fixed-nav-item">
+              <a class="nav-item-btn" href="#refund" id="nav-refund" ref="navRefund">환불정책</a>
+            </span>
+          </div>
+          <div class="nav-btn">
+            <button class="sub-item-btn">
+              <span><i class="far fa-share-square"></i></span>
+              <span>공유하기</span>
+            </button>
+            <button class="sub-item-btn">
+              <span><i class="far fa-heart"></i></span>
+              <span>저장</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="search-box">
+        <div class="search-bar">
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+          <input type="text" class="top-search" id="search" placeholder="검색" name="query">
+        </div>
+      </div>
+      <div class="nav-bar">
+        <ul>
+          <li class="nav-item"><a href="#">호스트가 되어보세요</a></li>
+          <li class="nav-item"><a href="#">도움말</a></li>
+          <li class="nav-item"><a href="#">회원가입</a></li>
+          <li class="nav-item"><a href="#">로그인</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="photo">
+      <div class="above-img-btn">
         <button class="sub-item-btn">
           <span><i class="far fa-share-square"></i></span>
           <span>공유하기</span>
@@ -81,754 +84,761 @@
           <span><i class="far fa-heart"></i></span>
           <span>저장</span>
         </button>
-    </div>
-    <div class="above-img-btn2">
-      <button class="sub-item-btn">
-        <span>사진보기</span>
-      </button>
-    </div>
-    <div class="photo-group">
-      <div class="main-photo">
-        <img src="./assets/bedroom-416062_1280.jpg" class="show-photo" alt="house-main" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
       </div>
-      <div class="main-photo2">
-        <div class="sub-photo-group" id="sub-group1">
-          <div class="sub-photo">
-            <img src="./assets/kitchen.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
-          </div>
-          <div class="sub-photo">
-            <img src="./assets/breakfast.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
-          </div>
+      <div class="above-img-btn2">
+        <button class="sub-item-btn">
+          <span>사진보기</span>
+        </button>
+      </div>
+      <div class="photo-group">
+        <div class="main-photo">
+          <img src="./assets/bedroom-416062_1280.jpg" class="show-photo" alt="house-main" @mouseover="shadowPhoto"
+            @mouseout="removeShadowPhoto">
         </div>
-        <div class="sub-photo-group" id="sub-group2">
+        <div class="main-photo2">
+          <div class="sub-photo-group" id="sub-group1">
             <div class="sub-photo">
-              <img src="./assets/villa.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
+              <img src="./assets/kitchen.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto"
+                @mouseout="removeShadowPhoto">
             </div>
             <div class="sub-photo">
-              <img src="./assets/toilet.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto" @mouseout="removeShadowPhoto">
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="content" id="room-explain">
-    <div class="wrap">
-      <div class="room-content">
-        <div class="title">
-          <h2>{{ title }}</h2>
-          <span>{{ location }}</span>
-        </div>
-      <div class="profile-host">
-        <img :src="hostPhoto">
-        <span>{{ hostName }}</span>
-      </div>
-      <div class="alert">
-          <div class="alert-text">
-            <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
-            <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
-          </div>
-          <div class="thumbs-up">
-            <span><i class="far fa-thumbs-up"></i></span>
-          </div>
-      </div>
-      <div class="room">
-        <div class="room-icon">
-            <span><i class="fas fa-home"></i></span>
-        </div>
-        <div class="room-text">
-          <div class="room-info">
-            <span v-if="roomType === 1">아파트 전체</span>
-            <span v-else-if="roomType === 2">아파트 방하나</span>
-            <span v-else-if="roomType === 3">단독 독채</span>
-          </div>
-          <div class="room-detail">
-            <span>인원 6명</span>
-            <span>아파트 전체</span>
-            <span>침대 2개</span>
-            <span>욕실 1개</span>
-          </div>
-        </div>
-      </div>
-      <div class="room">
-          <div class="room-icon">
-              <span><i class="fas fa-trophy"></i></span>
-          </div>
-          <div class="room-text">
-            <div class="room-info">
-              <span v-if="hostLevel === 1">{{ hostName }}님은 슈퍼호스트입니다</span>
-              <span v-else>{{ hostName }}님은 호스트입니다</span>
-            </div>
-            <div class="room-detail">
-              <span>슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.</span>
+              <img src="./assets/breakfast.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto"
+                @mouseout="removeShadowPhoto">
             </div>
           </div>
-        </div>
-        <div class="room">
-          <div class="room-icon">
-              <span><i class="fas fa-broom"></i></span>
-          </div>
-          <div class="room-text">
-            <div class="room-info">
-              <span>높은 청결도</span>
+          <div class="sub-photo-group" id="sub-group2">
+            <div class="sub-photo">
+              <img src="./assets/villa.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto"
+                @mouseout="removeShadowPhoto">
             </div>
-            <div class="room-detail">
-              <span>최근 게스트 9명이 이 숙소가 티 없이 깨끗하다고 후기를 남겼습니다.</span>
-            </div>
-          </div>
-        </div>
-        <div class="room">
-          <div class="room-icon">
-            <span><i class="fas fa-bell"></i></span>
-          </div>
-          <div class="room-text">
-            <div class="room-info">
-              <span>셀프 체크인</span>
-            </div>
-            <div class="room-detail">
-              <span>열쇠 보관함을 이용해 체크인하세요.</span>
+            <div class="sub-photo">
+              <img src="./assets/toilet.jpg" class="show-photo" alt="house" @mouseover="shadowPhoto"
+                @mouseout="removeShadowPhoto">
             </div>
           </div>
         </div>
       </div>
-      <div class="side-reservation" id="side-reservation">
-        <div class="sr-info">
-          <div class="sr-price">
-            <span class="reservation-price">₩51,401</span>
-            <span>/박</span>
+    </section>
+    <section class="content" id="room-explain">
+      <div class="wrap">
+        <div class="room-content">
+          <div class="title">
+            <h2>{{ title }}</h2>
+            <span>{{ location }}</span>
           </div>
-          <div class="sr-score">
-            <span class="score">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </span>
-            <span class="rv-number">179</span>
+          <div class="profile-host">
+            <img :src="hostPhoto">
+            <span>{{ hostName }}</span>
           </div>
-        </div>
-        <div class="book-request">
-          <form id="booking">
-            <div id="checkin-out">
-              <div class="datebox">
-                <span>날짜</span>
-                <div class="dateItem">
-                  <input id="date-from" type="text" value="체크인" name="checkinDate">
-                  <span><i class="fas fa-arrow-right"></i></span>
-                  <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
-                </div>
+          <div class="alert">
+            <div class="alert-text">
+              <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
+              <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
+            </div>
+            <div class="thumbs-up">
+              <span><i class="far fa-thumbs-up"></i></span>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room-icon">
+              <span><i class="fas fa-home"></i></span>
+            </div>
+            <div class="room-text">
+              <div class="room-info">
+                <span v-if="roomType === 1">아파트 전체</span>
+                <span v-else-if="roomType === 2">아파트 방하나</span>
+                <span v-else-if="roomType === 3">단독 독채</span>
+              </div>
+              <div class="room-detail">
+                <span>인원 6명</span>
+                <span>아파트 전체</span>
+                <span>침대 2개</span>
+                <span>욕실 1개</span>
               </div>
             </div>
-            <div class="side-calendar" id="side-checkin">
-
+          </div>
+          <div class="room">
+            <div class="room-icon">
+              <span><i class="fas fa-trophy"></i></span>
             </div>
-            <div class="side-calendar" id="side-checkout">
-
+            <div class="room-text">
+              <div class="room-info">
+                <span v-if="hostLevel === 1">{{ hostName }}님은 슈퍼호스트입니다</span>
+                <span v-else>{{ hostName }}님은 호스트입니다</span>
+              </div>
+              <div class="room-detail">
+                <span>슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.</span>
+              </div>
             </div>
-            <div class="sr-people">
-              <span>인원</span>
-              <div class="guest-box">
-                <select id="persons" name="persons">
+          </div>
+          <div class="room">
+            <div class="room-icon">
+              <span><i class="fas fa-broom"></i></span>
+            </div>
+            <div class="room-text">
+              <div class="room-info">
+                <span>높은 청결도</span>
+              </div>
+              <div class="room-detail">
+                <span>최근 게스트 9명이 이 숙소가 티 없이 깨끗하다고 후기를 남겼습니다.</span>
+              </div>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room-icon">
+              <span><i class="fas fa-bell"></i></span>
+            </div>
+            <div class="room-text">
+              <div class="room-info">
+                <span>셀프 체크인</span>
+              </div>
+              <div class="room-detail">
+                <span>열쇠 보관함을 이용해 체크인하세요.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="side-reservation" id="side-reservation">
+          <div class="sr-info">
+            <div class="sr-price">
+              <span class="reservation-price">₩51,401</span>
+              <span>/박</span>
+            </div>
+            <div class="sr-score">
+              <span class="score">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+              <span class="rv-number">179</span>
+            </div>
+          </div>
+          <div class="book-request">
+            <form id="booking">
+              <div id="checkin-out">
+                <div class="datebox">
+                  <span>날짜</span>
+                  <div class="dateItem">
+                    <input id="date-from" type="text" value="체크인" name="checkinDate">
+                    <span><i class="fas fa-arrow-right"></i></span>
+                    <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
+                  </div>
+                </div>
+              </div>
+              <div class="side-calendar" id="side-checkin">
+
+              </div>
+              <div class="side-calendar" id="side-checkout">
+
+              </div>
+              <div class="sr-people">
+                <span>인원</span>
+                <div class="guest-box">
+                  <select id="persons" name="persons">
                     <option value="1" selected>게스트 1명</option>
                     <option value="2">게스트 2명</option>
                     <option value="3">게스트 3명</option>
                     <option value="4">게스트 4명</option>
                     <option value="5">게스트 5명</option>
                     <option value="6">게스트 6명</option>
-                </select>
+                  </select>
+                </div>
+              </div>
+              <div class="btnbox">
+                <button type="submit" class="submitBtn" id=""><span>예약 요청</span></button>
+              </div>
+            </form>
+            <div class="confirm-message">
+              <span>예약 확정 전에는 요금이 청구되지 않습니다</span>
+            </div>
+            <div class="added-message" id="message-box" style="display:none; opacity: 0;">
+              <div class="added-message-text">
+                <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
+                <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
+              </div>
+              <div class="thumbs-up">
+                <span><i class="far fa-thumbs-up"></i></span>
               </div>
             </div>
-            <div class="btnbox">
-              <button type="submit" class="submitBtn" id=""><span>예약 요청</span></button>
-            </div>
-          </form>
-          <div class="confirm-message">
-            <span>예약 확정 전에는 요금이 청구되지 않습니다</span>
-          </div>
-          <div class="added-message" id="message-box" style="display:none; opacity: 0;">
-            <div class="added-message-text">
-              <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
-              <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
-            </div>
-            <div class="thumbs-up">
-              <span><i class="far fa-thumbs-up"></i></span>
-            </div>
           </div>
         </div>
-      </div>
-        <div class="room-explain">
-        <div class="translate-btn">
-          <button type="button" name="translate" id="text-translate-btn" @click="translate">
-            <span>이 설명을 한국어로 번역하기</span>
-          </button>
-        </div>
-        <div ref="englishExplain" id="english-explain" class="explain-text" style="display:inline-block;">
-          <p>Location, Location, Location - 10 minute bus ride (1 stop) to Seogwipo city. Bus stop is a 10 mins walk from house and frequency is every few minutes for 24 hours. Super safe and Quiet neighborhood.<br>
-            Brand new, very clean, studio apartment with a private bath room, kitchenette and private work space. The studio is renovated with natural stone floors, high end finishings and closets, throughout the apartment.
-          </p>
-        </div>
-        <div ref="koreanExplain" id="korean-explain" class="explain-text" style="display:none;">
-          <p>장소 그리고 장소 역시나 장소 - 버스로 10분이면 서귀포 시내에 이동할 수 있으며 버스 정류장까지는 도보로 10분이 소요됩니다. 또한 버스는 24시간 운행되며 몇 분 단위로 운행됩니다. 주변이 매우 조용하며 안전합니다.
-            아파트는 리모델링 직후로 매우 새 건물이며 깨끗하고 오피스텔식 아파트이며, 방에 개인 화장실이 있으며 주방, 개인 작업공간이 딸려 있습니다. 자연 친화적 디자인의 석재 계단과 붙박이장이 있습니다. </p>
-        </div>
-        <div class="explain-more">
-          <span>
-            <a href="#room-detail-btn">
-            <button id ="room-detail-btn" class="popup-btn" @click="popupRoom">이 공간 자세히 알아보기</button>
-          </a>
-          </span>
-        </div>
-        <div class="contact-host">
-          <span>호스트에게 연락하기</span>
-        </div>
-      </div>
-      <div class="amenity">
-        <div class="amenity-title">
-          <span>편의시설</span>
-        </div>
-        <div class="amenity-content">
-          <div class="content-group">
-            <div class="amenity-list">
-              <span><i class="far fa-snowflake"></i></span>
-              <span>에어컨</span>
+        <div class="room-infomation">
+          <div class="room-explain">
+            <div class="translate-btn">
+              <button type="button" name="translate" id="text-translate-btn" @click="translate">
+                <span>이 설명을 한국어로 번역하기</span>
+              </button>
             </div>
-            <div class="amenity-list">
-              <span><i class="fas fa-shower"></i></span>
-              <span>필수 품목</span>
+            <div ref="englishExplain" id="english-explain" class="explain-text" style="display:inline-block;">
+              <p>Location, Location, Location - 10 minute bus ride (1 stop) to Seogwipo city. Bus stop is a 10 mins walk
+                from house and frequency is every few minutes for 24 hours. Super safe and Quiet neighborhood.<br>
+                Brand new, very clean, studio apartment with a private bath room, kitchenette and private work space.
+                The
+                studio is renovated with natural stone floors, high end finishings and closets, throughout the
+                apartment.
+              </p>
+            </div>
+            <div ref="koreanExplain" id="korean-explain" class="explain-text" style="display:none;">
+              <p>장소 그리고 장소 역시나 장소 - 버스로 10분이면 서귀포 시내에 이동할 수 있으며 버스 정류장까지는 도보로 10분이 소요됩니다. 또한 버스는 24시간 운행되며 몇 분 단위로
+                운행됩니다.
+                주변이 매우 조용하며 안전합니다.
+                아파트는 리모델링 직후로 매우 새 건물이며 깨끗하고 오피스텔식 아파트이며, 방에 개인 화장실이 있으며 주방, 개인 작업공간이 딸려 있습니다. 자연 친화적 디자인의 석재 계단과 붙박이장이
+                있습니다. </p>
+            </div>
+            <div class="explain-more">
+              <span>
+                <a href="#room-detail-btn">
+                  <button id="room-detail-btn" class="popup-btn" @click="popupRoom">이 공간 자세히 알아보기</button>
+                </a>
+              </span>
+            </div>
+            <div class="contact-host">
+              <span>호스트에게 연락하기</span>
             </div>
           </div>
-          <div class="content-group">
-            <div class="amenity-list">
-              <span><i class="fas fa-wifi"></i></span>
-              <span>와이파이</span>
-            </div>
-            <div class="amenity-list">
-              <span><i class="fas fa-thermometer-half"></i></span>
-              <span>난방</span>
-            </div>
+        </div>
+        <div class="amenity">
+          <div class="amenity-title">
+            <span>편의시설</span>
           </div>
-          <div class="content-group">
-            <div class="amenity-list">
-              <span><i class="fas fa-air-freshener"></i></span>
-              <span><del>이산화탄소 감지기</del></span>
+          <div class="amenity-content">
+            <div class="content-group">
+              <div class="amenity-list">
+                <span class="amenity-icon"><i class="far fa-snowflake"></i></span>
+                <span class="amenity-item">에어컨</span>
+              </div>
+              <div class="amenity-list">
+                <span class="amenity-icon"><i class="fas fa-shower"></i></span>
+                <span class="amenity-item">필수 품목</span>
+              </div>
             </div>
-            <div>
+            <div class="content-group">
+              <div class="amenity-list">
+                <span class="amenity-icon"><i class="fas fa-wifi"></i></span>
+                <span class="amenity-item">와이파이</span>
+              </div>
+              <div class="amenity-list">
+                <span class="amenity-icon"><i class="fas fa-thermometer-half"></i></span>
+                <span class="amenity-item">난방</span>
+              </div>
+            </div>
+            <div class="content-group">
+              <div class="amenity-list">
+                <span class="amenity-icon"><i class="fas fa-air-freshener"></i></span>
+                <span class="amenity-item"><del>이산화탄소 감지기</del></span>
+              </div>
+              <div>
                 <span class="carbon-check">
                   숙소에 일산화탄소 경보기가 설치되어 있는지 호스트가 신고하지 않았습니다.
                 </span>
-            </div>
-          </div>
-          <div class="view-all">
-            <span><button id="amenity-popup-btn" class="popup-btn" @click="amenityPopup"><a href="#amenity-popup-btn">18개의 편의시설 모두보기</a></button></span>
-          </div>
-        </div>
-        <div class="bedding">
-          <div class="amenity-title">
-            <span>침대 / 침구</span>
-          </div>
-        <div class="amenity-content">
-          <div class="room-bed">
-            <div>
-              <span class="bed-icon">
-                <i class="fas fa-bed"></i>
-                <i class="fas fa-bed"></i>
-              </span>
-              <div class="bed-info">
-              <span class="first-room">
-                1번 침실
-              </span>
-              <span class="bed-type">
-                싱글 베드 2개
-              </span>
               </div>
             </div>
+            <div class="view-all">
+              <span><button id="amenity-popup-btn" class="popup-btn" @click="amenityPopup"><a
+                    href="#amenity-popup-btn">18개의 편의시설 모두보기</a></button></span>
+            </div>
           </div>
-          <div class="room-bed">
-              <div>
-                <span class="bed-icon">
-                  <i class="fas fa-bed"></i>
-                  <i class="fas fa-bed"></i>
-                </span>
-                <div class="bed-info">
-                <span class="first-room">
-                  2번 침실
-                </span>
-                <span class="bed-type">
-                  싱글 베드 2개
-                </span>
+          <div class="bedding">
+            <div class="amenity-title">
+              <span>침대 / 침구</span>
+            </div>
+            <div class="amenity-content">
+              <div class="room-bed">
+                <div>
+                  <span class="bed-icon">
+                    <i class="fas fa-bed"></i>
+                    <i class="fas fa-bed"></i>
+                  </span>
+                  <div class="bed-info">
+                    <span class="first-room">
+                      1번 침실
+                    </span>
+                    <span class="bed-type">
+                      싱글 베드 2개
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="room-bed">
+                <div>
+                  <span class="bed-icon">
+                    <i class="fas fa-bed"></i>
+                    <i class="fas fa-bed"></i>
+                  </span>
+                  <div class="bed-info">
+                    <span class="first-room">
+                      2번 침실
+                    </span>
+                    <span class="bed-type">
+                      싱글 베드 2개
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-        </div>
-      </div>
-      <div class="reservation-check">
-        <div class="amenity-title">
-          <span>예약 가능 여부</span>
-        </div>
-        <div>
-          <span>2일전에 업데이트 됨</span>
-        </div>
-        <div class="calendar-box">
-          <div class="pre-month">
-            <div class="calendar-month">
-              <span class="left-icon">
-                <button type="button" class="pre-btn" name="pre-btn" @click="prevCalendar">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-              </span>
-              <span class="pre-year-month" id="year-month">
-                yyyy년 m월
-              </span>
-              <span class="right-icon2">
-                  <button type="button" class="next-btn" name="next-btn" @click="nextCalendar">
+          </div>
+          <div class="reservation-check">
+            <div class="reservation-title">
+              <span>예약 가능 여부</span>
+            </div>
+            <div class="date-update">
+              <span>2일전에 업데이트 됨</span>
+            </div>
+            <div class="calendar-box">
+              <div class="pre-month">
+                <div class="calendar-month">
+                  <span class="left-icon">
+                    <button type="button" class="pre-btn" name="pre-btn" @click="prevCalendar">
+                      <i class="fas fa-arrow-left"></i>
+                    </button>
+                  </span>
+                  <span class="pre-year-month" id="year-month">
+                    yyyy년 m월
+                  </span>
+                  <span class="right-icon2">
+                    <button type="button" class="next-btn" name="next-btn" @click="nextCalendar">
                       <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </span>
+                </div>
+                <div>
+                  <table class="calendar" id="calendar">
+                    <tr class="days">
+                      <td>일</td>
+                      <td>월</td>
+                      <td>화</td>
+                      <td>수</td>
+                      <td>목</td>
+                      <td>금</td>
+                      <td>토</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="next-month">
+                <div class="next-calendar-month">
+                  <span class="next-year-month" id="next-year-month">
+                    yyyy년 m월
+                  </span>
+                  <span class="right-icon">
+                    <button type="button" class="next-btn" name="next-btn" @click="nextCalendar">
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </span>
+                </div>
+                <div>
+                  <table class="calendar" id="next-calendar">
+                    <tr class="days">
+                      <td>일</td>
+                      <td>월</td>
+                      <td>화</td>
+                      <td>수</td>
+                      <td>목</td>
+                      <td>금</td>
+                      <td>토</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="content" id="review">
+          <div>
+            <div class="review-content">
+              <div class="review-total">
+                <div class="review-top">
+                <div>
+                  <span class="how-many-reviews">
+                    후기 179개
+                  </span>
+                </div>
+                <div>
+                  <span class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="review-search">
+                <div class="review-search-box">
+                  <div class="review-search-bar">
+                    <span class="search-icon"><i class="fas fa-search"></i></span>
+                    <input type="text" id="review-search" placeholder="후기검색" name="query">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="score-detail">
+                <div class="detail-row">
+                  <div class="detail-subject">
+                    <span class="detail-title">정확성</span>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                  <div class="detail-subject">
+                    <span class="detail-title">위치</span>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-subject">
+                    <span class="detail-title">의사소통</span>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </span>
+                  </div>
+                  <div class="detail-subject">
+                    <span class="detail-title">체크인</span>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-subject">
+                    <span class="detail-title">청결도</span>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                  <div class="detail-subject">
+                    <span class="detail-title">가치</span>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="customers-box">
+                <div v-for="customerReview in customerReviewList" class="review-item">
+                  <div class="review-profile">
+                    <div class="customer-photo">
+                      <img :src="customerReview.userPhoto" alt="geust">
+                    </div>
+                    <div class="customer-detail">
+                      <div class="customer-name">
+                        <span>{{ customerReview.userId }}</span>
+                      </div>
+                      <div class="review-date">
+                        <span>{{ customerReview.reviewYear }}년 {{ customerReview.reviewMonth }}월</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-text">
+                    <p>{{ customerReview.reviewText }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="review-nav">
+                <ul>
+                  <li><button type="button" id="now-review-page" class="review-nav-btn">1</button></li>
+                  <li><button type="button" class="review-nav-btn">2</button></li>
+                  <li><button type="button" class="review-nav-btn">3</button></li>
+                  <li><button type="button" class="review-nav-btn">4</button></li>
+                  <li>...</li>
+                  <li><button type="button" class="review-nav-btn">9</button></li>
+                  <li><button type="button" id="next-nav" class="review-nav-btn"><i
+                        class="fas fa-chevron-right"></i></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content" id="host">
+          <div class="about-host">
+            <div>
+              <div class="host-detail">
+                <div class="host-name">
+                  <span>호스트: KYJ님</span>
+                </div>
+                <div class="profile-host">
+                  <img src="./assets/megane.png">
+
+                </div>
+              </div>
+              <div class="host-info">
+                <span>
+                  Jeju-shi, 한국 · 회원 가입: 2015년 5월
+                </span>
+              </div>
+              <div class="verified-host">
+                <span><i class="fas fa-star"></i></span>
+                <span>후기 179개</span>
+                <span><i class="fas fa-check-circle"></i></span>
+                <span>인증됨</span>
+              </div>
+              <div class="host-text">
+                <p>안녕하세요 HOST KYJ입니다. 아름다운 제주 서귀포에서 게스트를 위한 아파트를 운영하고 있습니다. 공항까지 차로 약 60분이 소요되며 인근 시설로는 서귀포 올레시장, 올레
+                  7코스등이 있습니다. 편안한 여행을 위해 최선을 다하겠습니다.</p>
+              </div>
+            </div>
+            <div class="host-contact">
+              <div class="host-response">
+                <span>응답률:<strong>100%</strong></span>
+              </div>
+              <div class="host-response">
+                <span>응답에 소요된 시간:<strong>1시간 이내</strong></span>
+              </div>
+              <div class="host-btn-box">
+                <button type="button" class="contact-host-btn" id="contact-host-btn">호스트에게 연락하기</button>
+              </div>
+            </div>
+            <div class="warning">
+              <p><strong>언제나 에어비앤비를 통해 대화를 나누세요</strong>
+                · 안전한 결제를 위해 에어비앤비 웹사이트나 앱 외부에서 송금하거나 대화를 나누지 마세요.
+                <a href="#">더 알아보기</a>
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="location-section" id="location">
+          <div class="location">
+            <div class="location-info">
+              <span>지역정보</span>
+            </div>
+            <div>
+              <p>KYJ님의 아파트는 한국 제주특별자치도의 서귀포시에 위치하고 있습니다.</p>
+              <p>공항과 차로 60분 거리이며 서귀포 시내와 가깝습니다.</p>
+              <div>
+                <div id="more-read-lo">
+                  <p>제주공항에서 공항버스 100번, 혹은 공항 택시를 이용하여 </p>
+                  <p>이중섭거리에서 하차하시면 됩니다. 약 60분 소요</p>
+                  <p>유동커피 바로 옆 건물입니다.</p>
+                </div>
+                <input type="button" class="location-more" id="location-more" value="이 지역 자세히 알아보기" @click="locationMore">
+              </div>
+            </div>
+            <div class="location-map" id="map"> </div>
+            <div>
+              <p>정확한 위치 정보는 예약이 확정된 후 알려드립니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="refund-section" id="refund">
+          <div class="refund">
+            <div class="refund-condition">
+              <span>환불 정책</span>
+            </div>
+            <div class="conditions">
+              <span>숙소 이용 규칙</span>
+            </div>
+            <div>
+              <p>흡연, 파티 또는 이벤트 금지</p>
+              <p>체크인 시간 : 14:00 , 체크아웃 시간 : 11:00 까지</p>
+              <p>키 패드로 셀프 체크인</p>
+            </div>
+            <input type="button" class="refund-more" id="refund-more" value="숙소 이용규칙 모두 보기" @click="readMoreRefund">
+            <div id="more-read-refund" class="more-read-refund">
+              <div>
+                <p>체크인, 체크아웃 시간을 잘 지켜주세요.</p>
+                <p>외출시 에어컨과 보일러 조명을 꺼주세요. </p>
+                <p>현관문이 닫혔나 꼭 확인해주시고 주무시기전 외등을 꼭 소등해주세요.</p>
+              </div>
+              <div>
+                <p>펜션에 숙박하시는 손님 외 외부손님 출입금지, 실내흡연금지, 촛불금지, 염색금지,냄새가 심한 요리(고기구이, 생선구이, 튀김등)조리금지 입니다. </p>
+                <p>다음 손님을 위해 꼭 지켜주세요. 위반시 강제퇴실의 사유가 될 수 있습니다.</p>
+              </div>
+              <div>
+                <p>그릇이나 실내물건 파손시 꼭 연락해주세요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cancle-reservation">
+            <div class="conditions">
+              <span>예약 취소</span>
+            </div>
+            <div>
+              <p>일반 정책</p>
+              <p>체크인 5일 전까지 예약을 취소하면 에어비앤비 서비스 수수료을 제외한 요금이 환불됩니다.</p>
+            </div>
+            <div>
+              <div id="read-more-condition" style="display: none; opacity: 0;">
+                <span>엄격 규칙</span>
+                <p>체크인 30일 전까지 예약을 취소하면 모든 수수료를 포함한 요금 전액이 환불됩니다.</p>
+                <p>체크인까지 30일이 남지 않은 시점에 예약을 취소하면 수수료를 포함한 총 숙박 요금의 50%가 환불됩니다.</p>
+                <p>숙박 중 예약을 취소하면 일부 환불을 요청할 수 있습니다.</p>
+                <span><a href="#">자세히 보기</a></span>
+              </div>
+              <span>
+                <input type="button" class="condition-more" id="condition-more" value="정책 자세히 읽기" onclick="moreCondition(event)">
+              </span>
+            </div>
+          </div>
+      </div>
+    </section>
+    </section>
+    <section class="recommendation">
+      <div class="wrap">
+        <div class="recommend-title">
+          <span>추천 숙소 더 보기</span>
+        </div>
+        <div class="recommend-list">
+          <div class="recommend-group">
+            <div class="recommend-slide">
+              <div v-for="recommendRoom in recommendRoomList" class="recommend-item">
+                <div class="recommend-img">
+                  <img :src="recommendRoom.image">
+                </div>
+                <div class="text-box">
+                  <div class="house-type">
+                    <span>{{ recommendRoom.type }}</span>
+                  </div>
+                  <div class="house-title">
+                    <span>{{ recommendRoom.title }}</span>
+                  </div>
+                  <div class="house-introduce">
+                    <p>인원 {{ recommendRoom.persons }}명·침실 {{ recommendRoom.bedroom }}개·{{ recommendRoom.feature }} </p>
+                    <p>{{ recommendRoom.internet }}·{{ recommendRoom.kitchen }}·{{ recommendRoom.showerRoom }} </p>
+                  </div>
+                  <div class="score-price">
+                    <span class="score">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="rv-number">{{ recommendRoom.score }}</span>
+                    <div class="recommend-price">
+                      <span class="krw-price">₩{{ recommendRoom.price }}</span>
+                      <span>/박</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="next-group">
+            <span>
+              <button type="button" class="rc-next-btn" id="recommend-room-next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="activities">
+          <div class="recommend-title">
+            <span>숙소 주변의 즐길 거리</span>
+          </div>
+          <div class="activity-list">
+            <div class="activity-group">
+              <div v-for="activityItem in activityItems" class="activity-item">
+                <div class="activity-img">
+                  <img :src="activityItem.image">
+                </div>
+                <div class="activity-text">
+                  <div class="activity-type">
+                    <span>{{ activityItem.type }}</span>
+                  </div>
+                  <div class="activity-title">
+                    <span>{{ activityItem.title }}</span>
+                  </div>
+                  <div class="activity-price">
+                    <span>1인당 ₩{{ activityItem.price }}</span>
+                  </div>
+                  <div class="activity-score">
+                    <span class="score">{{ activityItem.score }}<i class="fas fa-star"></i></span>
+                    <span class="activity-language">({{ activityItem.review }}) {{ activityItem.language }}로 진행</span>
+                  </div>
+                </div>
+              </div>
+              <div class="next-group">
+                <span>
+                  <button type="button" class="rc-next-btn">
+                    <i class="fas fa-chevron-right"></i>
                   </button>
                 </span>
+              </div>
             </div>
-            <div class="calendar-days">
-            </div>
-            <div>
-              <table class="calendar" id="calendar">
-                  <tr class="days">
-                    <td>일</td>
-                    <td>월</td>
-                    <td>화</td>
-                    <td>수</td>
-                    <td>목</td>
-                    <td>금</td>
-                    <td>토</td>
-                  </tr>
-              </table>
-              {{ this.buildCalendar }}
-            </div>
-          </div>
-          <div class="next-month">
-            <div class="next-calendar-month">
-              <span class="next-year-month" id="next-year-month">
-                yyyy년 m월
-              </span>
-              <span class="right-icon">
-                <button type="button" class="next-btn" name="next-btn">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-              </span>
-            </div>
-            <div class="calendar-days">
-            </div>
-            <div>
-              <table class="calendar" id="next-calendar">
-                  <tr class="days">
-                    <td>일</td>
-                    <td>월</td>
-                    <td>화</td>
-                    <td>수</td>
-                    <td>목</td>
-                    <td>금</td>
-                    <td>토</td>
-                  </tr>
-                
-              </table>
-            </div>
-          </div>
           </div>
         </div>
-      </div>
-    <section class="content" id="review">
-      <div>
-        <div class="review-content">
-          <div class="review-total">
-            <div>
-            <span class="how-many-reviews">
-              후기 179개
-            </span>
-            </div>
-            <div>
-            <span class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+        <div class="options">
+          <div class="options-title">
+            <span>서귀포 지역 및 인근의 다른 옵션 살펴보기</span>
+          </div>
+          <div class="option-more">
+            <span>
+              서귀포시 서귀동 숙소 더보기
+              <a>Apartment</a>
+              <a>Bed and breakfasts</a>
+              <a>Lofts</a>
+              <a>Villas</a>
+              <a>Hotel</a>
             </span>
           </div>
-          <div class="review-search-box">
-              <div class="review-search-bar">
-                <span class="search-icon"><i class="fas fa-search"></i></span>
-                <input type="text" id="review-search" placeholder="후기검색" name="query">
-              </div>
+          <div class="other-locations">
+            <div class="other-list">
+              <ul>
+                <li><a href="#">Aewol</a></li>
+                <li><a href="#">Gujua</a></li>
+                <li><a href="#">Hamdok</a></li>
+                <li><a href="#">Hado</a></li>
+                <li><a href="#">Hagwi</a></li>
+                <li><a href="#">Hanlim</a></li>
+              </ul>
             </div>
-          </div>
-          <div class="score-detail">
-            <div class="detail-row">
-              <div class="detail-subject">
-                <span class="detail-title">정확성</span>
-                <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-              </div>
-              <div class="detail-subject">
-                <span class="detail-title">위치</span>
-                <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-              </div>
+            <div class="other-list">
+              <ul>
+                <li><a href="#">Jochun</a></li>
+                <li><a href="#">Sehwa</a></li>
+                <li><a href="#">Jeju-shi</a></li>
+                <li><a href="#">Sungsan</a></li>
+                <li><a href="#">Daejung</a></li>
+                <li><a href="#">Pyosun</a></li>
+              </ul>
             </div>
-            <div class="detail-row">
-              <div class="detail-subject">
-                <span class="detail-title">의사소통</span>
-                <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </span>
-              </div>
-              <div class="detail-subject">
-                <span class="detail-title">체크인</span>
-                <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-              </div>
+            <div class="other-list">
+              <ul>
+                <li><a href="#">Namwon</a></li>
+                <li><a href="#">Hyupjae</a></li>
+                <li><a href="#">Seogwipo-shi</a></li>
+                <li><a href="#">Gangjung</a></li>
+                <li><a href="#">Wimi</a></li>
+                <li><a href="#">Huae</a></li>
+              </ul>
             </div>
-            <div class="detail-row">
-              <div class="detail-subject">
-                <span class="detail-title">청결도</span>
-                <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-              </div>
-              <div class="detail-subject">
-                <span class="detail-title">가치</span>
-                <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="customers-box">
-            <div 
-            v-for="customerReview in customerReviewList"
-            class="review-item">
-              <div class="review-profile">
-                <div class="customer-photo">
-                  <img :src="customerReview.userPhoto" alt="geust">
-                </div>
-                <div class="customer-detail">
-                  <div class="customer-name">
-                    <span>{{ customerReview.userId }}</span>
-                  </div>
-                  <div class="review-date">
-                    <span>{{ customerReview.reviewYear }}년 {{ customerReview.reviewMonth }}월</span>
-                  </div>
-              </div>
-              </div>
-              <div class="review-text">
-                <p>{{ customerReview.reviewText }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="review-nav">
-            <ul>
-              <li><button type="button" id="now-review-page" class="review-nav-btn">1</button></li>
-              <li><button type="button" class="review-nav-btn">2</button></li>
-              <li><button type="button" class="review-nav-btn">3</button></li>
-              <li><button type="button" class="review-nav-btn">4</button></li>
-              <li>...</li>
-              <li><button type="button" class="review-nav-btn">9</button></li>
-              <li><button type="button" id="next-nav" class="review-nav-btn"><i class="fas fa-chevron-right"></i></button></li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="content" id="host">
-      <div class="about-host">
-        <div>
-          <div class="host-detail">
-            <div class="host-name">
-              <span>호스트: KYJ님</span>
-            </div>
-            <div class="profile-host">
-              <img src="./assets/megane.png">
-            
-            </div>
-          </div>
-          <div class="host-info">
-            <span>
-              Jeju-shi, 한국 · 회원 가입: 2015년 5월
-            </span>
-          </div>
-          <div class="verified-host">
-            <span><i class="fas fa-star"></i></span>
-            <span>후기 179개</span>
-            <span><i class="fas fa-check-circle"></i></span>
-            <span>인증됨</span>
-          </div>
-          <div class="host-text">
-            <p>안녕하세요 HOST KYJ입니다. 아름다운 제주 서귀포에서 게스트를 위한 아파트를 운영하고 있습니다. 공항까지 차로 약 60분이 소요되며 인근 시설로는 서귀포 올레시장, 올레 7코스등이 있습니다. 편안한 여행을 위해 최선을 다하겠습니다.</p>
-          </div>
-        </div>
-      <div class="host-contact">
-        <div class="host-response">
-          <span>응답률:<strong>100%</strong></span>
-        </div>
-        <div class="host-response">
-          <span>응답에 소요된 시간:<strong>1시간 이내</strong></span>
-        </div>
-        <div>
-          <button type="button" id="contact-host-btn">호스트에게 연락하기</button>
-        </div>
-      </div>
-    <div class="warning">
-     <p><strong>언제나 에어비앤비를 통해 대화를 나누세요</strong> 
-      · 안전한 결제를 위해 에어비앤비 웹사이트나 앱 외부에서 송금하거나 대화를 나누지 마세요.
-      <a href="#">더 알아보기</a>
-    </p>
-    </div>
-    </div>
-  </section>
-  <section id="location">
-    <div class="location">
-      <div class="location-info">
-        <span>지역정보</span>
-      </div>
-      <div>
-      <p>KYJ님의 아파트는 한국 제주특별자치도의 서귀포시에 위치하고 있습니다.</p>
-      <p>공항과 차로 60분 거리이며 서귀포 시내와 가깝습니다.</p>
-      <div>
-        <div id="more-read-lo" style="display:none; opacity: 0;" >
-          <p>제주공항에서 공항버스 100번, 혹은 공항 택시를 이용하여 </p>
-          <p>이중섭거리에서 하차하시면 됩니다. 약 60분 소요</p>
-          <p>유동커피 바로 옆 건물입니다.</p>
-        </div>
-        <input type="button" id="location-more" value="이 지역 자세히 알아보기" 
-        @click="locationMore">
-      </div>
-      </div>
-        <div class="location-map" id="map"> </div>
-      <div>
-        <p>정확한 위치 정보는 예약이 확정된 후 알려드립니다.</p>
-      </div>
-    </div>
-  </section>
-  <section id="refund">
-    <div class="refund">
-      <div class="refund-condition">
-        <span>환불 정책</span>
-      </div>
-      <div class="conditions">
-        <span>숙소 이용 규칙</span>
-      </div>
-      <div>
-        <p>흡연, 파티 또는 이벤트 금지</p>
-        <p>체크인 시간 : 14:00 , 체크아웃 시간 : 11:00 까지</p>
-        <p>키 패드로 셀프 체크인</p>
-      </div>
-        <input type="button" id="refund-more" value="숙소 이용규칙 모두 보기" 
-        @click="readMoreRefund">
-      <div id="more-read-refund" style="display:none; opacity: 0;">
-        <div>
-          <p>체크인, 체크아웃 시간을 잘 지켜주세요.</p>
-          <p>외출시 에어컨과 보일러 조명을 꺼주세요. </p>
-          <p>현관문이 닫혔나 꼭 확인해주시고 주무시기전 외등을 꼭 소등해주세요.</p>
-        </div>
-        <div>
-           <p>펜션에 숙박하시는 손님 외 외부손님 출입금지, 실내흡연금지, 촛불금지, 염색금지,냄새가 심한 요리(고기구이, 생선구이, 튀김등)조리금지 입니다. </p>
-           <p>다음 손님을 위해 꼭 지켜주세요. 위반시 강제퇴실의 사유가 될 수 있습니다.</p>
-        </div>
-        <div>
-          <p>그릇이나 실내물건 파손시 꼭 연락해주세요.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cancle-reservation">
-      <div class="conditions">
-        <span>예약 취소</span>
-      </div>
-      <div>
-        <p>일반 정책</p>
-        <p>체크인 5일 전까지 예약을 취소하면 에어비앤비 서비스 수수료을 제외한 요금이 환불됩니다.</p>
-      </div>
-      <div>
-        <div id="read-more-condition" style="display: none; opacity: 0;">
-          <span>엄격 규칙</span>
-          <p>체크인 30일 전까지 예약을 취소하면 모든 수수료를 포함한 요금 전액이 환불됩니다.</p>
-          <p>체크인까지 30일이 남지 않은 시점에 예약을 취소하면 수수료를 포함한 총 숙박 요금의 50%가 환불됩니다.</p>
-          <p>숙박 중 예약을 취소하면 일부 환불을 요청할 수 있습니다.</p>
-          <span><a href="#">자세히 보기</a></span>
-        </div>
-      <span>
-        <input type="button" id="condition-more" value="정책 자세히 읽기" onclick="moreCondition(event)">
-      </span>
-      </div>
-    </div>
-  </div>
-  </section>
-  </section>
-  <section class="recommendation">
-    <div class="wrap">
-      <div class="recommend-title">
-        <span>추천 숙소 더 보기</span>
-      </div>
-      <div class="recommend-list">
-        <div class="recommend-group">
-          <div class="recommend-slide">
-            <div 
-            v-for="recommendRoom in recommendRoomList"
-            class="recommend-item">
-              <div class="recommend-img">
-                <img :src="recommendRoom.image">
-              </div>
-              <div class="text-box">
-                <div class="house-type">
-                  <span>{{ recommendRoom.type }}</span>
-                </div>
-                <div class="house-title">
-                  <span>{{ recommendRoom.title }}</span>
-                </div>
-                <div class="house-introduce">
-                  <p>인원 {{ recommendRoom.persons }}명·침실 {{ recommendRoom.bedroom }}개·{{ recommendRoom.feature }} </p>
-                  <p>{{ recommendRoom.internet }}·{{ recommendRoom.kitchen }}·{{ recommendRoom.showerRoom }} </p>
-                </div>
-                <div class="score-price">
-                  <span class="score">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                  </span>
-                  <span class="rv-number">{{ recommendRoom.score }}</span>
-                  <div class="recommend-price">
-                    <span class="krw-price">₩{{ recommendRoom.price }}</span>
-                    <span>/박</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  
-        </div>
-        <div class="next-group">
-          <span>
-            <button type="button" class="rc-next-btn" id="recommend-room-next-btn">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </span>
-        </div>
-      </div>
-      <div class="activities">
-        <div class="recommend-title">
-          <span>숙소 주변의 즐길 거리</span>
-        </div>
-        <div class="activity-list">
-          <div class="activity-group">
-            <div
-              v-for="activityItem in activityItems"
-              class="activity-item">
-              <div class="activity-img">
-                <img :src="activityItem.image">
-              </div>
-              <div class="activity-text">
-                <div class="activity-type">
-                  <span>{{ activityItem.type }}</span>
-                </div>
-                <div class="activity-title">
-                  <span>{{ activityItem.title }}</span>
-                </div>
-                <div class="activity-price">
-                  <span>1인당 ₩{{ activityItem.price }}</span>
-                </div>
-                <div class="activity-score">
-                  <span class="score">{{ activityItem.score }}<i class="fas fa-star"></i></span>
-                  <span class="activity-language">({{ activityItem.review }}) {{ activityItem.language }}로 진행</span>
-                </div>
-              </div>
-            </div>     
-            <div class="next-group">
-              <span>
-                <button type="button" class="rc-next-btn">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="options">
-        <div class="options-title">
-          <span>서귀포 지역 및 인근의 다른 옵션 살펴보기</span>
-        </div>
-        <div class="option-more">
-          <span>
-            서귀포시 서귀동 숙소 더보기 
-            <a>Apartment</a>
-            <a>Bed and breakfasts</a>
-            <a>Lofts</a>
-            <a>Villas</a>
-            <a>Hotel</a>
-          </span>
-        </div>
-        <div class="other-locations">
-          <div class="other-list">
-            <ul>
-              <li><a href="#">Aewol</a></li>
-              <li><a href="#">Gujua</a></li>
-              <li><a href="#">Hamdok</a></li>
-              <li><a href="#">Hado</a></li>
-              <li><a href="#">Hagwi</a></li>
-              <li><a href="#">Hanlim</a></li>
-            </ul>
-          </div>
-          <div class="other-list">
-            <ul>
-              <li><a href="#">Jochun</a></li>
-              <li><a href="#">Sehwa</a></li>
-              <li><a href="#">Jeju-shi</a></li>
-              <li><a href="#">Sungsan</a></li>
-              <li><a href="#">Daejung</a></li>
-              <li><a href="#">Pyosun</a></li>
-            </ul>
-          </div>
-          <div class="other-list">
-              <ul>
-              <li><a href="#">Namwon</a></li>
-              <li><a href="#">Hyupjae</a></li>
-              <li><a href="#">Seogwipo-shi</a></li>
-              <li><a href="#">Gangjung</a></li>
-              <li><a href="#">Wimi</a></li>
-              <li><a href="#">Huae</a></li>
-            </ul>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="footer">
+    <section class="footer">
       <div class="wrap" id="footer-nav">
         <div class="footer-item">
           <div class="footer-category">
-          <span>에어비앤비</span>
+            <span>에어비앤비</span>
           </div>
           <div class="footer-list">
             <ul>
@@ -842,7 +852,7 @@
         </div>
         <div class="footer-item">
           <div class="footer-category">
-          <span>여행하기</span>
+            <span>여행하기</span>
           </div>
           <div class="footer-list">
             <ul>
@@ -859,7 +869,7 @@
         </div>
         <div class="footer-item">
           <div class="footer-category">
-          <span>호스팅하기</span>
+            <span>호스팅하기</span>
           </div>
           <div class="footer-list">
             <ul>
@@ -874,12 +884,12 @@
         </div>
         <div class="footer-item">
           <div class="footer-category">
-          <span id="icon-link">
+            <span id="icon-link">
               <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-twitter-square"></i></a>
               <a href="#"><i class="fab fa-github-square"></i></a>
-          </span>
+            </span>
           </div>
           <div class="footer-list">
             <ul>
@@ -890,12 +900,12 @@
           </div>
         </div>
       </div>
-      <div class="wrap" id="reserved">
-        <div>
-          <span><i class="fab fa-airbnb"></i>©2019 Airbnb, Inc. All rights reserved.</span>
-        </div>
-      </div>
     </section>
+    <div class="wrap reserved" id="reserved">
+      <div>
+        <span><i class="fab fa-airbnb"></i>©2019 Airbnb, Inc. All rights reserved.</span>
+      </div>
+    </div>
     <div class="bottom-nav">
       <div class="bottom-reservation">
         <div class="bottom-nav-item">
@@ -906,62 +916,63 @@
             <span>/박</span>
           </div>
           <div class="sr-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </span>
-                <span class="rv-number">173</span>
+            <span class="score">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </span>
+            <span class="rv-number">173</span>
           </div>
         </div>
         <div class="bottom-btnbox">
-            <button type="submit" class="submit-request" id="reservation-request-btn" @click="reservationRequestPopup"><span>예약 요청</span></button>
-          </div>
+          <button type="submit" class="submit-request" id="reservation-request-btn"
+            @click="reservationRequestPopup"><span>예약 요청</span></button>
+        </div>
       </div>
-  </div>
-  <div class="layer-popup" id="room-detail-popup">
-    <div class="popup-bg">
-      <div class="popup-content">
-        <div class="popup-text">
-          <div class="close-btn-box">
-            <button id="close-room-btn" class="close-btn" @click="closePopupRoom">X</button>
-          </div>
-          <span class="popup-title">숙소 설명</span>
-          <div class="popup-phrase">
-          <p>서귀포 시내에 위치한 아파트입니다. 제주공항에서 차로 50분 소요되며 버스로는 약 60분 정도 소요됩니다.
-            걸어서 10분거리에 버스 정류장이 2군데 있어 제주시, 제주공항, 서귀포시에 위치한 다양한 관광 명소를 이동하는데 매우 편리합니다.
-            서귀포 올레시장과도 매우 가깝고, 근처에 맛집이 매우 많습니다.
-          </p>
-          </div>
-          <div class="popup-phrase">
-            <span>숙소</span>
-            <p>
-              침실은 총 2개이며 아파트 전체를 이용하실 수 있습니다. 침대는 전부 더블 퀸 침대로 2명씩 이용 가능하시며 
-              간이 이불을 사용하시어 거실에서 주무실 경우 총 6명까지 숙박이 가능합니다. 호텔식 침구 관리로 매 손님 맞이 전
-              깨끗하게 세탁된 침구 세트가 늘 준비되어 있습니다. 숙소 선택시 걱정되는 위생 부분에서는 안심하셔도 좋습니다.
-              샤워 시 필요한 용품과 주방에 식기가 준비되어 있습니다. 
-            </p>
-          </div>
-          <div class="popup-phrase">
-            <span>기타사항</span>
-            <p>
-              실내에서는 흡연을 엄격하게 금지하고 있습니다. 흡연은 아파트 1층 정원쪽에 흡연실이 있으니 흡연실에서 부탁드립니다.
-              바베큐 또한 실내에서는 금지되어 있사오니 1층 정원의 바베큐 시설을 이용해 주시기 바랍니다
-            </p>
-            <p>
-              독채 숙소가 아닌 아파트형 숙소이므로 늦은시간에는 옆 방 소음 문ㅈ제가 발생할 수 있습니다. 옆방의 게스트 분들을 배려하여
-              23시 이후에는 큰 소리를 자제해 주시기 바랍니다. 서귀포 항이 바로 앞에 있어 신선한 횟집이 많으며
-              서귀포 올레시장에서 신선한 회를 저렴하게 포장하여 실내에서 드실 수 있습니다. 
-              저희 숙소는 주차장을 제공하고 있습니다. 아파트 내 실외 주차장과, 아파트 뒤 공원에 위치한 무료 공영 주차장을 사용하실 수 있습니다.
-            </p>
+    </div>
+    <div class="layer-popup" id="room-detail-popup">
+      <div class="popup-bg">
+        <div class="popup-content">
+          <div class="popup-text">
+            <div class="close-btn-box">
+              <button id="close-room-btn" class="close-btn" @click="closePopupRoom">X</button>
+            </div>
+            <span class="popup-title">숙소 설명</span>
+            <div class="popup-phrase">
+              <p>서귀포 시내에 위치한 아파트입니다. 제주공항에서 차로 50분 소요되며 버스로는 약 60분 정도 소요됩니다.
+                걸어서 10분거리에 버스 정류장이 2군데 있어 제주시, 제주공항, 서귀포시에 위치한 다양한 관광 명소를 이동하는데 매우 편리합니다.
+                서귀포 올레시장과도 매우 가깝고, 근처에 맛집이 매우 많습니다.
+              </p>
+            </div>
+            <div class="popup-phrase">
+              <span>숙소</span>
+              <p>
+                침실은 총 2개이며 아파트 전체를 이용하실 수 있습니다. 침대는 전부 더블 퀸 침대로 2명씩 이용 가능하시며
+                간이 이불을 사용하시어 거실에서 주무실 경우 총 6명까지 숙박이 가능합니다. 호텔식 침구 관리로 매 손님 맞이 전
+                깨끗하게 세탁된 침구 세트가 늘 준비되어 있습니다. 숙소 선택시 걱정되는 위생 부분에서는 안심하셔도 좋습니다.
+                샤워 시 필요한 용품과 주방에 식기가 준비되어 있습니다.
+              </p>
+            </div>
+            <div class="popup-phrase">
+              <span>기타사항</span>
+              <p>
+                실내에서는 흡연을 엄격하게 금지하고 있습니다. 흡연은 아파트 1층 정원쪽에 흡연실이 있으니 흡연실에서 부탁드립니다.
+                바베큐 또한 실내에서는 금지되어 있사오니 1층 정원의 바베큐 시설을 이용해 주시기 바랍니다
+              </p>
+              <p>
+                독채 숙소가 아닌 아파트형 숙소이므로 늦은시간에는 옆 방 소음 문ㅈ제가 발생할 수 있습니다. 옆방의 게스트 분들을 배려하여
+                23시 이후에는 큰 소리를 자제해 주시기 바랍니다. 서귀포 항이 바로 앞에 있어 신선한 횟집이 많으며
+                서귀포 올레시장에서 신선한 회를 저렴하게 포장하여 실내에서 드실 수 있습니다.
+                저희 숙소는 주차장을 제공하고 있습니다. 아파트 내 실외 주차장과, 아파트 뒤 공원에 위치한 무료 공영 주차장을 사용하실 수 있습니다.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="layer-popup" id="amenity-detail-popup">
+    <div class="layer-popup" id="amenity-detail-popup">
       <div class="popup-bg">
         <div class="popup-content">
           <div class="popup-text">
@@ -1022,70 +1033,69 @@
       </div>
     </div>
     <div class="layer-popup" id="reservation-request">
-        <div class="popup-bg">
-          <div class="popup-content">
-            <div class="popup-text">
-              <div class="close-btn-box">
-                <button id="close-reservation-btn" class="close-btn" @click="closeReservationRequestPopup">X</button>
-              </div>
-              <div class="popup-inner-text">
-                <div class="side-reservation" id="footer-reservation">
-                  <div class="sr-info">
-                    <div class="sr-price">
-                      <span class="reservation-price">₩51,401</span>
-                      <span>/박</span>
-                    </div>
-                    <div class="sr-score">
-                      <span class="score">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                      </span>
-                      <span class="rv-number">179</span>
-                    </div>
+      <div class="popup-bg">
+        <div class="popup-content">
+          <div class="popup-text">
+            <div class="close-btn-box">
+              <button id="close-reservation-btn" class="close-btn" @click="closeReservationRequestPopup">X</button>
+            </div>
+            <div class="popup-inner-text">
+              <div class="side-reservation" id="footer-reservation">
+                <div class="sr-info">
+                  <div class="sr-price">
+                    <span class="reservation-price">₩51,401</span>
+                    <span>/박</span>
                   </div>
-                  <div class="book-request">
-                    <form id="booking">
-                      <div id="checkin-out">
-                        <div class="datebox">
-                          <span>날짜</span>
-                          <div class="dateItem">
-                            <input id="date-from" type="text" value="체크인" name="checkinDate">
-                            <span><i class="fas fa-arrow-right"></i></span>
-                            <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
-                          </div>
+                  <div class="sr-score">
+                    <span class="score">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="rv-number">179</span>
+                  </div>
+                </div>
+                <div class="book-request">
+                  <form id="booking">
+                    <div id="checkin-out">
+                      <div class="datebox">
+                        <span>날짜</span>
+                        <div class="dateItem">
+                          <input id="date-from" type="text" value="체크인" name="checkinDate">
+                          <span><i class="fas fa-arrow-right"></i></span>
+                          <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
                         </div>
                       </div>
-                      <div class="sr-people">
-                        <span>인원</span>
-                        <div class="guest-box">
-                          <select id="persons" name="persons">
-                              <option value="1" selected>게스트 1명</option>
-                              <option value="2">게스트 2명</option>
-                              <option value="3">게스트 3명</option>
-                              <option value="4">게스트 4명</option>
-                              <option value="5">게스트 5명</option>
-                              <option value="6">게스트 6명</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="btnbox">
-                        <button type="submit" class="submitBtn"><span>예약 요청</span></button>
-                      </div>
-                    </form>
-                    <div class="confirm-message">
-                      <span>예약 확정 전에는 요금이 청구되지 않습니다</span>
                     </div>
-                    <div class="added-message" id="message-box" style="display:none; opacity: 0;">
-                      <div class="added-message-text">
-                        <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
-                        <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
+                    <div class="sr-people">
+                      <span>인원</span>
+                      <div class="guest-box">
+                        <select id="persons" name="persons">
+                          <option value="1" selected>게스트 1명</option>
+                          <option value="2">게스트 2명</option>
+                          <option value="3">게스트 3명</option>
+                          <option value="4">게스트 4명</option>
+                          <option value="5">게스트 5명</option>
+                          <option value="6">게스트 6명</option>
+                        </select>
                       </div>
-                      <div class="thumbs-up">
-                        <span><i class="far fa-thumbs-up"></i></span>
-                      </div>
+                    </div>
+                    <div class="btnbox">
+                      <button type="submit" class="submitBtn"><span>예약 요청</span></button>
+                    </div>
+                  </form>
+                  <div class="confirm-message">
+                    <span>예약 확정 전에는 요금이 청구되지 않습니다</span>
+                  </div>
+                  <div class="added-message" id="message-box" style="display:none; opacity: 0;">
+                    <div class="added-message-text">
+                      <span class="alert-message">이 숙소에 많은 사람들이 관심을 보이고 있습니다.</span>
+                      <span class="small-message">지난 주에 500회 이상 조회되었습니다.</span>
+                    </div>
+                    <div class="thumbs-up">
+                      <span><i class="far fa-thumbs-up"></i></span>
                     </div>
                   </div>
                 </div>
@@ -1095,443 +1105,446 @@
         </div>
       </div>
     </div>
+  </div>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4f623d5f5c6cafb06ab93f6de3618e1"></script>
   <script src="main.js"></script>
   <script>
-    var app = new Vue(
-      {
-        el: '#app',
-        data: {
-          title: '서귀포의 아담하고 접근성 좋은 아파트',
-          location: '제주 서귀포',
-          roomType: 3,
-          infoDetail: '인원 6명 아파트 전체 침대 2개 욕실 1개',
-          hostLevel: 1,
-          hostName: 'KYJ',
-          hostPhoto: './assets/megane.png',
-          today: new Date(),
-          date: new Date(),
-          calendar: this.buildCalendar,
-          activityItems: [
+    var app = new Vue({
+      el: '#app',
+      data: {
+        title: '서귀포의 아담하고 접근성 좋은 아파트',
+        location: '제주 서귀포',
+        roomType: 3,
+        infoDetail: '인원 6명 아파트 전체 침대 2개 욕실 1개',
+        hostLevel: 1,
+        hostName: 'KYJ',
+        hostPhoto: './assets/megane.png',
+        today: new Date(),
+        date: new Date(),
+        calendar: this.buildCalendar,
+        activityItems: [{
+            type: '액티비티',
+            title: '제주 조랑말 승마',
+            price: 40000,
+            score: 4.40,
+            language: '한국어',
+            review: 5,
+            image: './assets/horse.jpg'
+          },
           {
-              type: '액티비티',
-              title: '제주 조랑말 승마',
-              price: 40000,
-              score: 4.40,
-              language: '한국어',
-              review: 5,
-              image: './assets/horse.jpg'
-            },
-            {
-              type: '커피 클래스',
-              title: '제주에서 키운 원두로 로스팅부터 드립까지',
-              price: 40000,
-              score: 4.96,
-              language: '한국어, 영어',
-              review: 128,
-              image: './assets/coffee.jpg'
-            },
-            {
-              type: '액티비티',
-              title: '제주 바다 요트투어',
-              price: 70000,
-              score: 4.80,
-              language: '한국어',
-              review: 38,
-              image: './assets/fishing.jpg'
-            },
-            {
-              type: '액티비티',
-              title: '제주 바닷속 스쿠버 다이빙',
-              price: 90000,
-              score: 4.12,
-              language: '한국어, 영어',
-              review: 98,
-              image: './assets/scuba.jpg'
-            },
-            {
-              type: '사진 촬영',
-              title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
-              price: 30000,
-              score: 4.96,
-              language: '한국어, 영어',
-              review: 98,
-              image: './assets/snap.jpg'
-            },
-            
-          ],
-          recommendRoomList: [
-            {
-              type: '주택의 개인실',
-              title: '제주시 독채 펜션',
-              persons: 4,
-              bedroom: 2,
-              feature: '건물 내 무료주차',
-              internet: '무선 인터넷',
-              kitchen: '주방',
-              showerRoom: '단독 욕실 사용',
-              score: '173',
-              price: '51410',
-              image: './assets/hotel-1979406_1920.jpg'
-            },
-            {
-              type: '주택의 개인실',
-              title: '제주시 아파트먼트',
-              persons: 4,
-              bedroom: 2,
-              feature: '건물 내 무료주차',
-              internet: '무선 인터넷',
-              kitchen: '주방',
-              showerRoom: '단독 욕실 사용',
-              score: '256',
-              price: '60000',
-              image: './assets/hotel-1749602_1920.jpg'
-            },
-            {
-              type: '부티크 호텔',
-              title: '서귀포 더 히든클리프',
-              persons: 2,
-              bedroom: 1,
-              feature: '호텔 내 수영장',
-              internet: '무선 인터넷',
-              kitchen: '주방',
-              showerRoom: '단독 욕실 사용',
-              score: '256',
-              price: '60000',
-              image: './assets/hotel-1749602_1920.jpg'
-            },
-            {
-              type: '주택의 개인실',
-              title: '제주시 독채 펜션',
-              persons: 4,
-              bedroom: 2,
-              feature: '건물 내 무료주차',
-              internet: '무선 인터넷',
-              kitchen: '주방',
-              showerRoom: '단독 욕실 사용',
-              score: '173',
-              price: '51410',
-              image: './assets/hotel-1979406_1920.jpg'
-            },
-            {
-              type: '주택의 개인실',
-              title: '제주시 아파트먼트',
-              persons: 4,
-              bedroom: 2,
-              feature: '건물 내 무료주차',
-              internet: '무선 인터넷',
-              kitchen: '주방',
-              showerRoom: '단독 욕실 사용',
-              score: '256',
-              price: '60000',
-              image: './assets/hotel-1749602_1920.jpg'
-            },
-            {
-              type: '부티크 호텔',
-              title: '서귀포 더 히든클리프',
-              persons: 2,
-              bedroom: 1,
-              feature: '호텔 내 수영장',
-              internet: '무선 인터넷',
-              kitchen: '주방',
-              showerRoom: '단독 욕실 사용',
-              score: '256',
-              price: '60000',
-              image: './assets/hotel-1749602_1920.jpg'
-            },
-          ],
-          customerReviewList: [
-            {
-              userId: 'Benjamin',
-              reviewYear: 2019,
-              reviewMonth: 3,
-              userPhoto: './assets/profile1.png',
-              reviewText:'길찾기가 조금 어려웠으나 깨끗한 최고의 숙소였습니다. 특히 건조까지되는 세탁기 덕분에 편리하였습니다. 다음에 서귀포에 간다면 다시 가고싶습니다.'
-            },
-            {
-              userId: 'Miya',
-              reviewYear: 2019,
-              reviewMonth: 3,
-              userPhoto: './assets/profile2.png',
-              reviewText:'서귀포 올 때 꼭 다시 들리고 싶은 숙소에요. 골든 리트리버 강아지가 반겨주는데 넘 예쁘고 말도 잘 들어요. 이거저거 많이 물어봤는데 주인 분들도 친절하게 다 알려주시고요 바베큐때문에 주변에 장 볼수있는곳도 알려주셨는데 저렴하고 좋았어요. 바닷가도 아주 가깝고요. 졸업 여행으로 왔는데 친구들끼리 너무 좋은 추억 만들고 갑니다. 감사합니다 ^^'
-            },
-            {
-              userId: 'Maria',
-              reviewYear: 2019,
-              reviewMonth: 3,
-              userPhoto: './assets/profile3.png',
-              reviewText:'위치나 접근성이 좋았어요 너무나 친절하신 호스트님 덕분에 숙소도 깨끗하고 난방도 잘 챙겨주셔서 가족여행 잘 쉬다가 왔네요^^'
-            },
-            {
-              userId: 'Robert',
-              reviewYear: 2019,
-              reviewMonth: 3,
-              userPhoto: './assets/profile4.png',
-              reviewText:'집이 정말 이뻐요! 아름다운 정원에서의 고기 파티는 잊을 수 없을것 같아요~ 호스트 분들도 정말 편안하게 대해주셨습니다! 저희가 시끄러운 편은 아니지만 어떠한 터치도 없이 자유롭게 해주셨구요! 충분한 타월 갯수, 빵빵한 에어컨, 엄청 편한 복층구조, 깔끔한 디자인과 모든 필요한 주방용품들 까지! 또 한번 들르고 싶어요~ 그날까지 잘 지내세요:-)'
-            },
-            {
-              userId: 'Stella Yang',
-              reviewYear: 2019,
-              reviewMonth: 3,
-              userPhoto: './assets/profile5.png',
-              reviewText:'강아지가 없어서 아쉬웠지만 채우리와 상추와 함께 보낸 시간은 아이들 기억에 오래 남을 듯 합니다. 사진보다 공간은 좀 더 넓은 듯 하였고 모든 시설들이 깨끗했습니다. 한가지 아쉬웠던점은 우리가 한라산 등반을 하고 온터라 다리가 아파서 2층 침실로 향하는 계단을 거의 기어올라가다 시피 했어요. 앞으로 한라산은 마지막날 가야되겠어요'
-            },
-            {
-              userId: 'Jonathan',
-              reviewYear: 2019,
-              reviewMonth: 2,
-              userPhoto: './assets/profile6.png',
-              reviewText:'부모님 대신해서 예약한 건데 정말 좋았다고 하시네요. 특히 아침 토스트가 맛있으셨나봐요. 잘 해주셔서 감사합니다'
-            },
-            {
-              userId: 'Heeju',
-              reviewYear: 2019,
-              reviewMonth: 2,
-              userPhoto: './assets/profile7.png',
-              reviewText:'집이 정말 이뻐요! 아름다운 정원에서의 고기 파티는 잊을 수 없을것 같아요~ 호스트 분들도 정말 편안하게 대해주셨습니다! 저희가 시끄러운 편은 아니지만 어떠한 터치도 없이 자유롭게 해주셨구요! 충분한 타월 갯수, 빵빵한 에어컨, 엄청 편한 복층구조, 깔끔한 디자인과 모든 필요한 주방용품들 까지! 또 한번 들르고 싶어요~ 그날까지 잘 지내세요:-)'
-            },
-            
-          ]
-        },
-        mounted() {
-            window.addEventListener('scroll', this.appearFixedNav);
-            window.addEventListener('scroll', this.coloredNavbar);
-        },
-        methods: {
-          translate() {
-            console.log('translate')
-            var btnText = document.querySelector('#text-translate-btn span');
-            var beforeTranslate = this.$refs.englishExplain;
-            var afterTranslate = this.$refs.koreanExplain;
-            if (beforeTranslate.style.display != 'inline-block') {
-              afterTranslate.style.display = 'none';
-              beforeTranslate.style.display = 'inline-block';
-              btnText.innerHTML = '이 설명을 한국어로 번역하기';
-            } else {
-              afterTranslate.style.display ='inline-block';
-              beforeTranslate.style.display ='none';
-              btnText.innerHTML = '원문으로 보기';
-            }
+            type: '커피 클래스',
+            title: '제주에서 키운 원두로 로스팅부터 드립까지',
+            price: 40000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 128,
+            image: './assets/coffee.jpg'
           },
-          popupRoom() {
-            var popupRoomBtn = document.querySelector('#room-detail-btn');
-            var bodyTag = document.querySelector('body');
-            var roomdetail = document.querySelector('#room-detail-popup');
-            bodyTag.style.position = 'fixed';
-            roomdetail.style.display = 'block';
+          {
+            type: '액티비티',
+            title: '제주 바다 요트투어',
+            price: 70000,
+            score: 4.80,
+            language: '한국어',
+            review: 38,
+            image: './assets/fishing.jpg'
           },
-          closePopupRoom () {
-            var closeBtn = document.querySelector('#close-room-btn');
-            var bodyTag = document.querySelector('body');
-            var roomdetail = document.querySelector('#room-detail-popup');
-            bodyTag.style.position = 'relative';
-            roomdetail.style.display = 'none';
+          {
+            type: '액티비티',
+            title: '제주 바닷속 스쿠버 다이빙',
+            price: 90000,
+            score: 4.12,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/scuba.jpg'
           },
-          amenityPopup() {
-            var popupAmenityBtn = document.querySelector('#amenity-popup-btn');
-            var bodyTag = document.querySelector('body');
-            var amenityDetail = document.querySelector('#amenity-detail-popup');
-            bodyTag.style.position = 'fixed';
-            amenityDetail.style.display = 'block';
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
           },
-          closeAmenityPopup() {
-            var closeAmenityBtn = document.querySelector('#amenity-close-btn');
-            var bodyTag = document.querySelector('body');
-            var amenityDetail = document.querySelector('#amenity-detail-popup');
-            bodyTag.style.position = 'relative';
-            amenityDetail.style.display = 'none';
-          },
-          appearFixedNav() {
-              var fixedNavBar = this.$refs.FixedNav;
-              if (window.scrollY >= 650) {
-                fixedNavBar.style.display = 'block';
-              } else {
-                fixedNavBar.style.display = 'none';
-              }
-          },
-          coloredNavbar() {
-            var navRoomExplain = this.$refs.navRoomExplain;
-            var navReview = this.$refs.navReview;
-            var navHost = this.$refs.navHost;
-            var navLocation = this.$refs.navLocation;
-            var navRefund = this.$refs.navRefund;
 
-            var navList = [navRoomExplain, navReview, navHost, navLocation, navRefund];
-            for (i = 0; navList.length > i; i++) {
+        ],
+        recommendRoomList: [{
+            type: '주택의 개인실',
+            title: '제주시 독채 펜션',
+            persons: 4,
+            bedroom: 2,
+            feature: '건물 내 무료주차',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '173',
+            price: '51410',
+            image: './assets/hotel-1979406_1920.jpg'
+          },
+          {
+            type: '주택의 개인실',
+            title: '제주시 아파트먼트',
+            persons: 4,
+            bedroom: 2,
+            feature: '건물 내 무료주차',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
+          {
+            type: '부티크 호텔',
+            title: '서귀포 더 히든클리프',
+            persons: 2,
+            bedroom: 1,
+            feature: '호텔 내 수영장',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
+          {
+            type: '주택의 개인실',
+            title: '제주시 독채 펜션',
+            persons: 4,
+            bedroom: 2,
+            feature: '건물 내 무료주차',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '173',
+            price: '51410',
+            image: './assets/hotel-1979406_1920.jpg'
+          },
+          {
+            type: '주택의 개인실',
+            title: '제주시 아파트먼트',
+            persons: 4,
+            bedroom: 2,
+            feature: '건물 내 무료주차',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
+          {
+            type: '부티크 호텔',
+            title: '서귀포 더 히든클리프',
+            persons: 2,
+            bedroom: 1,
+            feature: '호텔 내 수영장',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
+        ],
+        customerReviewList: [{
+            userId: 'Benjamin',
+            reviewYear: 2019,
+            reviewMonth: 3,
+            userPhoto: './assets/profile1.png',
+            reviewText: '길찾기가 조금 어려웠으나 깨끗한 최고의 숙소였습니다. 특히 건조까지되는 세탁기 덕분에 편리하였습니다. 다음에 서귀포에 간다면 다시 가고싶습니다.'
+          },
+          {
+            userId: 'Miya',
+            reviewYear: 2019,
+            reviewMonth: 3,
+            userPhoto: './assets/profile2.png',
+            reviewText: '서귀포 올 때 꼭 다시 들리고 싶은 숙소에요. 골든 리트리버 강아지가 반겨주는데 넘 예쁘고 말도 잘 들어요. 이거저거 많이 물어봤는데 주인 분들도 친절하게 다 알려주시고요 바베큐때문에 주변에 장 볼수있는곳도 알려주셨는데 저렴하고 좋았어요. 바닷가도 아주 가깝고요. 졸업 여행으로 왔는데 친구들끼리 너무 좋은 추억 만들고 갑니다. 감사합니다 ^^'
+          },
+          {
+            userId: 'Maria',
+            reviewYear: 2019,
+            reviewMonth: 3,
+            userPhoto: './assets/profile3.png',
+            reviewText: '위치나 접근성이 좋았어요 너무나 친절하신 호스트님 덕분에 숙소도 깨끗하고 난방도 잘 챙겨주셔서 가족여행 잘 쉬다가 왔네요^^'
+          },
+          {
+            userId: 'Robert',
+            reviewYear: 2019,
+            reviewMonth: 3,
+            userPhoto: './assets/profile4.png',
+            reviewText: '집이 정말 이뻐요! 아름다운 정원에서의 고기 파티는 잊을 수 없을것 같아요~ 호스트 분들도 정말 편안하게 대해주셨습니다! 저희가 시끄러운 편은 아니지만 어떠한 터치도 없이 자유롭게 해주셨구요! 충분한 타월 갯수, 빵빵한 에어컨, 엄청 편한 복층구조, 깔끔한 디자인과 모든 필요한 주방용품들 까지! 또 한번 들르고 싶어요~ 그날까지 잘 지내세요:-)'
+          },
+          {
+            userId: 'Stella Yang',
+            reviewYear: 2019,
+            reviewMonth: 3,
+            userPhoto: './assets/profile5.png',
+            reviewText: '강아지가 없어서 아쉬웠지만 채우리와 상추와 함께 보낸 시간은 아이들 기억에 오래 남을 듯 합니다. 사진보다 공간은 좀 더 넓은 듯 하였고 모든 시설들이 깨끗했습니다. 한가지 아쉬웠던점은 우리가 한라산 등반을 하고 온터라 다리가 아파서 2층 침실로 향하는 계단을 거의 기어올라가다 시피 했어요. 앞으로 한라산은 마지막날 가야되겠어요'
+          },
+          {
+            userId: 'Jonathan',
+            reviewYear: 2019,
+            reviewMonth: 2,
+            userPhoto: './assets/profile6.png',
+            reviewText: '부모님 대신해서 예약한 건데 정말 좋았다고 하시네요. 특히 아침 토스트가 맛있으셨나봐요. 잘 해주셔서 감사합니다'
+          },
+          {
+            userId: 'Heeju',
+            reviewYear: 2019,
+            reviewMonth: 2,
+            userPhoto: './assets/profile7.png',
+            reviewText: '집이 정말 이뻐요! 아름다운 정원에서의 고기 파티는 잊을 수 없을것 같아요~ 호스트 분들도 정말 편안하게 대해주셨습니다! 저희가 시끄러운 편은 아니지만 어떠한 터치도 없이 자유롭게 해주셨구요! 충분한 타월 갯수, 빵빵한 에어컨, 엄청 편한 복층구조, 깔끔한 디자인과 모든 필요한 주방용품들 까지! 또 한번 들르고 싶어요~ 그날까지 잘 지내세요:-)'
+          },
+
+        ]
+      },
+      mounted() {
+        window.addEventListener('scroll', this.appearFixedNav);
+        window.addEventListener('scroll', this.coloredNavbar);
+        this.buildCalendar();
+        this.nextCalendarBuild();
+      },
+      methods: {
+        translate() {
+          console.log('translate')
+          var btnText = document.querySelector('#text-translate-btn span');
+          var beforeTranslate = this.$refs.englishExplain;
+          var afterTranslate = this.$refs.koreanExplain;
+          if (beforeTranslate.style.display != 'inline-block') {
+            afterTranslate.style.display = 'none';
+            beforeTranslate.style.display = 'inline-block';
+            btnText.innerHTML = '이 설명을 한국어로 번역하기';
+          } else {
+            afterTranslate.style.display = 'inline-block';
+            beforeTranslate.style.display = 'none';
+            btnText.innerHTML = '원문으로 보기';
+          }
+        },
+        popupRoom() {
+          var popupRoomBtn = document.querySelector('#room-detail-btn');
+          var bodyTag = document.querySelector('body');
+          var roomdetail = document.querySelector('#room-detail-popup');
+          bodyTag.style.position = 'fixed';
+          roomdetail.style.display = 'block';
+        },
+        closePopupRoom() {
+          var closeBtn = document.querySelector('#close-room-btn');
+          var bodyTag = document.querySelector('body');
+          var roomdetail = document.querySelector('#room-detail-popup');
+          bodyTag.style.position = 'relative';
+          roomdetail.style.display = 'none';
+        },
+        amenityPopup() {
+          var popupAmenityBtn = document.querySelector('#amenity-popup-btn');
+          var bodyTag = document.querySelector('body');
+          var amenityDetail = document.querySelector('#amenity-detail-popup');
+          bodyTag.style.position = 'fixed';
+          amenityDetail.style.display = 'block';
+        },
+        closeAmenityPopup() {
+          var closeAmenityBtn = document.querySelector('#amenity-close-btn');
+          var bodyTag = document.querySelector('body');
+          var amenityDetail = document.querySelector('#amenity-detail-popup');
+          bodyTag.style.position = 'relative';
+          amenityDetail.style.display = 'none';
+        },
+        appearFixedNav() {
+          var fixedNavBar = this.$refs.FixedNav;
+          if (window.scrollY >= 650) {
+            fixedNavBar.style.display = 'block';
+          } else {
+            fixedNavBar.style.display = 'none';
+          }
+        },
+        coloredNavbar() {
+          var navRoomExplain = this.$refs.navRoomExplain;
+          var navReview = this.$refs.navReview;
+          var navHost = this.$refs.navHost;
+          var navLocation = this.$refs.navLocation;
+          var navRefund = this.$refs.navRefund;
+
+          var navList = [navRoomExplain, navReview, navHost, navLocation, navRefund];
+          for (i = 0; navList.length > i; i++) {
             var navItem = navList[i];
             if (window.scrollY >= 705 && window.scrollY < 2266) {
-                console.log('navItem');
-                navItem.style.color = '#006A70';
-                navList[0].style.color = '#484848';
-              } else if (window.scrollY >= 2266 && window.scrollY < 3729) {
-                navItem.style.color = '#006A70';
-                navList[1].style.color = '#484848';
-              } else if (window.scrollY >= 3730 && window.scrollY < 4280) {
-                navItem.style.color = '#006A70';
-                navList[2].style.color = '#484848';
-              } else if (window.scrollY >= 4280 && window.scrollY < 4690) {
-                navItem.style.color = '#006A70';
-                navList[3].style.color = '#484848';
+              console.log('navItem');
+              navItem.style.color = '#006A70';
+              navList[0].style.color = '#484848';
+            } else if (window.scrollY >= 2266 && window.scrollY < 3729) {
+              navItem.style.color = '#006A70';
+              navList[1].style.color = '#484848';
+            } else if (window.scrollY >= 3730 && window.scrollY < 4280) {
+              navItem.style.color = '#006A70';
+              navList[2].style.color = '#484848';
+            } else if (window.scrollY >= 4280 && window.scrollY < 4690) {
+              navItem.style.color = '#006A70';
+              navList[3].style.color = '#484848';
             } else {
               navItem.style.color = '#006A70';
               navList[4].style.color = '#484848';
             }
           }
-          },
-          reservationRequestPopup() {
-            var reservationRequestBtn = document.querySelector('#reservation-request-btn');
-            var popupRequest = document.querySelector('#reservation-request');
-            var bodyTag = document.querySelector('body');
-            bodyTag.style.position = 'fixed';
-            popupRequest.style.display = 'block';
-          },
-          closeReservationRequestPopup() {
-            var closeRequestBtn = document.querySelector('#close-reservation-btn');
-            var popupRequest = document.querySelector('#reservation-request');
-            var bodyTag = document.querySelector('body');
-            bodyTag.style.position = 'relative';
-            popupRequest.style.display = 'none';
-          },
-          locationMore() {
-            var moreReadLocationBtn = document.getElementById('more-read-lo');
-            var target = event.srcElement;
-            if (moreReadLocationBtn.style.display != 'block') {
-              moreReadLocationBtn.style.display = 'block';
-              moreReadLocationBtn.style.opacity = '1';
-              target.value = '숨기기';
-            } else {
-              document.getElementById('more-read-lo').style.display = 'none';
-              document.getElementById('more-read-lo').style.opacity = '0';
-              target.value = '이 지역 자세히 알아보기';
-            }
-          },
-          readMoreRefund() {
-            var moreReadRefundBtn = document.getElementById('more-read-refund');
-            var target = event.srcElement;
-            if (moreReadRefundBtn.style.display != 'block') {
-              moreReadRefundBtn.style.display = 'block';
-              moreReadRefundBtn.style.opacity = '1';
-              target.value = '이용 규칙 숨기기';
-            } else { 
-              moreReadRefundBtn.style.display = 'none';
-              moreReadRefundBtn.style.opacity = '0';
-              target.value = '숙소 이용규칙 모두 보기';
-            }
-          },
-          shadowPhoto() {
-            var photoList = document.querySelectorAll('.show-photo');
-            for (var i = 0; i < photoList.length; i++) {
-              var photo = photoList[i];
-              var shadowPhotoList = document.querySelectorAll('.show-photo');
-              for (var j = 0; j < shadowPhotoList.length; j++) {
+        },
+        reservationRequestPopup() {
+          var reservationRequestBtn = document.querySelector('#reservation-request-btn');
+          var popupRequest = document.querySelector('#reservation-request');
+          var bodyTag = document.querySelector('body');
+          bodyTag.style.position = 'fixed';
+          popupRequest.style.display = 'block';
+        },
+        closeReservationRequestPopup() {
+          var closeRequestBtn = document.querySelector('#close-reservation-btn');
+          var popupRequest = document.querySelector('#reservation-request');
+          var bodyTag = document.querySelector('body');
+          bodyTag.style.position = 'relative';
+          popupRequest.style.display = 'none';
+        },
+        locationMore() {
+          var moreReadLocationBtn = document.getElementById('more-read-lo');
+          var target = event.srcElement;
+          if (moreReadLocationBtn.classList.contains('show-read-lo')) {
+            moreReadLocationBtn.classList.remove('show-read-lo');
+          } else {
+            moreReadLocationBtn.classList.add('show-read-lo');
+          }
+          // if (moreReadLocationBtn.style.display != 'block') {
+          //   moreReadLocationBtn.style.display = 'block';
+          //   moreReadLocationBtn.style.opacity = '1';
+          //   target.value = '숨기기';
+          // } else {
+          //   document.getElementById('more-read-lo').style.display = 'none';
+          //   document.getElementById('more-read-lo').style.opacity = '0';
+          //   target.value = '이 지역 자세히 알아보기';
+          // }
+        },
+        readMoreRefund() {
+          var moreReadRefundBtn = document.getElementById('more-read-refund');
+          var target = event.srcElement;
+          if (moreReadRefundBtn.style.display != 'block') {
+            moreReadRefundBtn.style.display = 'block';
+            moreReadRefundBtn.style.opacity = '1';
+            target.value = '이용 규칙 숨기기';
+          } else {
+            moreReadRefundBtn.style.display = 'none';
+            moreReadRefundBtn.style.opacity = '0';
+            target.value = '숙소 이용규칙 모두 보기';
+          }
+        },
+        shadowPhoto() {
+          var photoList = document.querySelectorAll('.show-photo');
+          for (var i = 0; i < photoList.length; i++) {
+            var photo = photoList[i];
+            var shadowPhotoList = document.querySelectorAll('.show-photo');
+            for (var j = 0; j < shadowPhotoList.length; j++) {
               var shadowPhoto = shadowPhotoList[j];
-                if (event.target != shadowPhoto) {
-                  shadowPhoto.style.opacity = '0.7';
-                }
+              if (event.target != shadowPhoto) {
+                shadowPhoto.style.opacity = '0.7';
               }
             }
-          },
-          removeShadowPhoto() {
-            var photoList = document.querySelectorAll('.show-photo');
-            for (var i = 0; i < photoList.length; i++) {
-              var photo = photoList[i];
-              var shadowPhotoList = document.querySelectorAll('.show-photo');
-              for (var j = 0; j < shadowPhotoList.length; j++) {
+          }
+        },
+        removeShadowPhoto() {
+          var photoList = document.querySelectorAll('.show-photo');
+          for (var i = 0; i < photoList.length; i++) {
+            var photo = photoList[i];
+            var shadowPhotoList = document.querySelectorAll('.show-photo');
+            for (var j = 0; j < shadowPhotoList.length; j++) {
               var shadowPhoto = shadowPhotoList[j];
-                if (event.target != shadowPhoto) {
-                  shadowPhoto.style.opacity = '1';
-                }
+              if (event.target != shadowPhoto) {
+                shadowPhoto.style.opacity = '1';
               }
             }
-          },
-          buildCalendar() {
-            var today = new Date();
-            var date = new Date();
-            var doMonth = new Date(this.today.getFullYear(), this.today.getMonth(),1);
-            var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() +1, 0);
-            var tblCalendar = document.querySelector('#calendar');
-            var tblCalendarYM = document.querySelector('#year-month');
-            tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth()+1) + '월';
+          }
+        },
+        buildCalendar() {
+          var doMonth = new Date(this.today.getFullYear(), this.today.getMonth(), 1);
+          var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() + 1, 0);
+          var tblCalendar = document.querySelector('#calendar');
+          var tblCalendarYM = document.querySelector('#year-month');
+          tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth() + 1) + '월';
 
-              console.log(today.getDate());
-            while (tblCalendar.rows.length > 2) {
-              tblCalendar.deleteRow(tblCalendar.rows.length -1);
+          while (tblCalendar.rows.length > 1) {
+            tblCalendar.deleteRow(tblCalendar.rows.length - 1);
+          }
+
+          var row = null;
+
+          row = tblCalendar.insertRow();
+
+          var cnt = 0;
+          for (var i = 0; i < doMonth.getDay(); i++) {
+            cell = row.insertCell();
+            cnt = cnt + 1;
+            cell.classList.add('empty-cell')
+          }
+
+          for (var j = 1; j <= lastDate.getDate(); j++) {
+            cell = row.insertCell();
+            cell.innerHTML = j;
+            cnt = cnt + 1;
+            if (cnt % 7 == 0) {
+              row = calendar.insertRow();
             }
+            cell.classList.add('available')
+          }
+        },
+        nextCalendarBuild() {
+          var doMonth = new Date(this.today.getFullYear(), this.today.getMonth() + 1, 1);
+          var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() + 2, 0);
+          var nextTblCalendar = document.querySelector('#next-calendar');
+          var tblCalendarYM = document.querySelector('#next-year-month');
+          tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth() + 2) + '월';
+          console.log(this.today.getMonth() + 2);
+          if (this.today.getMonth() + 2 == 13) {
+            tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + 1 + '월';
+          }
 
-            var row = null;
+          while (nextTblCalendar.rows.length > 1) {
+            nextTblCalendar.deleteRow(nextTblCalendar.rows.length - 1);
+          }
 
-            row = tblCalendar.insertRow();
+          var row = null;
 
-            var cnt = 0;
-            console.log(doMonth.getDay());
-            for(var i = 0; i < doMonth.getDay(); i++) {
-              cell = row.insertCell();
-              cnt = cnt + 1;
-              cell.classList.add('empty-cell')
-              console.log(cell)
+          row = nextTblCalendar.insertRow();
+
+          var cnt = 0;
+
+          for (var i = 0; i < doMonth.getDay(); i++) {
+            cell = row.insertCell();
+            cnt = cnt + 1;
+            cell.classList.add('empty-cell')
+
+          }
+
+          for (var j = 1; j <= lastDate.getDate(); j++) {
+            cell = row.insertCell();
+            cell.innerHTML = j;
+            cnt = cnt + 1;
+            if (cnt % 7 == 0) {
+              row = nextTblCalendar.insertRow();
             }
+            cell.classList.add('available')
+          }
+        },
+        prevCalendar() {
 
-            for(var j = 1; j <= lastDate.getDate(); j++) {
-              cell = row.insertCell();
-              cell.innerHTML = j;
-              cnt = cnt + 1;
-              if(cnt%7 == 0) {
-                row = calendar.insertRow();
-              }
-              cell.classList.add('available')
-            } 
-          },
-          nextCalendarBuild() {
-            var today = new Date();
-            var date = new Date();
-            var doMonth = new Date(this.today.getFullYear(), this.today.getMonth(),1);
-            var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() +1, 0);
-            var tblCalendar = document.querySelector('#next-calendar');
-            var tblCalendarYM = document.querySelector('#next-year-month');
-            tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth()+2) + '월';
-            while (tblCalendar.rows.length > 2) {
-              tblCalendar.deleteRow(tblCalendar.rows.length -1);
-            }
+          this.today = new Date(this.today.getFullYear(), this.today.getMonth() - 1, this.today.getDate());
+          this.buildCalendar();
+          this.nextCalendarBuild();
+        },
 
-            var row = null;
-
-            row = tblCalendar.insertRow();
-
-            var cnt = 0;
-            console.log(doMonth.getDay());
-            for(var i = 0; i < doMonth.getDay(); i++) {
-              cell = row.insertCell();
-              cnt = cnt + 1;
-              cell.classList.add('empty-cell')
-              console.log(cell)
-            }
-
-            for(var j = 1; j <= lastDate.getDate(); j++) {
-              cell = row.insertCell();
-              cell.innerHTML = j;
-              cnt = cnt + 1;
-              if(cnt%7 == 0) {
-                row = calendar.insertRow();
-              }
-              cell.classList.add('available')
-            } 
-          },
-          prevCalendar() {
-            var today = new Date();
-            var date = new Date();
-            today = new Date(today.getFullYear(), today.getMonth() -1, today.getDate());
-            this.buildCalendar();
-          },
-
-          nextCalendar() {
-            var today = new Date();
-            var date = new Date();
-            today = new Date(today.getFullYear(), today.getMonth() +1, today.getDate());
-            this.buildCalendar();
-           },
-    }
-  }
-  )
+        nextCalendar() {
+          // var today = new Date();
+          // var date = new Date();
+          this.today = new Date(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
+          this.buildCalendar();
+          this.nextCalendarBuild();
+        },
+      }
+    })
   </script>
 </body>
+
 </html>

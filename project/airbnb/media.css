@@ -18,9 +18,7 @@
     .nav-bar {
         display: none;
     }
-    .header {
-        padding-bottom: 15px;
-    }
+ 
     
     .room-content, .room-explain {
         float: initial;

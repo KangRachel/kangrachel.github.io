@@ -1,21 +1,27 @@
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #484848;
 }
 input {
     outline: none;
 }
+a {
+    text-decoration: none;
+}
 h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
 }
 p {
-    font-size: 18px;
+    font-size: 14px;
     margin: 8px 0 8px 0;
-    line-height: 26px;
+    font-weight: 400;
+    line-height: 18px;
 }
 strong {
     font-weight: 800;
 }
+
 .maintop {
     height: 691px;
 }
@@ -28,6 +34,14 @@ strong {
 .logo i {
     color: white;
     font-size: 40px;
+}
+.reservation h2, .title h2 {
+    font-size: 32px;
+}
+
+.reservation p {
+    font-size: 18px;
+    line-height: 22px;
 }
 .reserve-box {
     position: absolute;
@@ -59,10 +73,10 @@ strong {
     max-width: 1080px;
     height: 563px;
     margin: 0 auto;
-    padding: 64px 0 0 76px;
+    padding: 64px 0 0 0;
     z-index: 1;
 }
-#reservation {
+.reservation {
     position: absolute;
     top: 50%;
 	left: 50%;
@@ -75,10 +89,10 @@ strong {
     margin-bottom: 64px;
     border-radius: 4px;
 }
-#reservation input {
+.reservation input {
     border: 0px;
 }
- div > span {
+.reservation span {
     display: block;
     margin: 10px 0 10px 0;
     font-size: 14px;
@@ -95,21 +109,19 @@ strong {
 }
 
 .datebox {
-    display: inline-block;
     width: 222px;
     float: left;
     margin : 10px 0 10px 0;
 }
 
-#check-in, #check-out {
+.date-checkin, .date-checkout {
     width: 202px;
-    border: 0px;
+    border: 0;
     font-size: 18px;
     padding: 11px 6px 11px 11px;
 }
 
 .people {
-    display: inline-block;
     width: 222px;
     float: left;
     margin : 5px 0 25px 0;
@@ -117,7 +129,7 @@ strong {
 .select-box, .dateItem, .destination, .guest-box {
     border: 1px solid rgb(235, 235, 235);
 }
-.select-box > select, #persons {
+.select-box > select, .persons {
     display: inline-block;
     width: 210px;
     height: 40px;
@@ -128,9 +140,9 @@ strong {
     background: url('./assets/caret-down-solid.svg') no-repeat 95% 50%; 
 }
 .btnbox {
-    margin : 10px 0 10px 0;
-    align-items: center;
     width: 444px;
+    padding-top: 25px;
+    display: inline-block;
 }
 .submitBtn {
     background: rgb(255, 90, 95);
@@ -138,18 +150,21 @@ strong {
     height: 50px;
     padding: 10px 22px;
     border-radius: 4px;
-    margin: 10px 0;
-    border: 0px
+    border: 0px;
 }
 .submitBtn > span, .submit-request span {
     font-size: 18px;
     font-weight: bold;
     color: white;
-    letter-spacing: 3px;
+    margin:0;
 }
 
 .title {
     margin: 10px 0;
+}
+.title span {
+    display: inline-block;
+    padding: 10px 0;
 }
 .photoreview {
     margin: 0 auto;
@@ -158,7 +173,6 @@ strong {
     height: 100%;
 }
 .card-container {
-    display: inline-block;
     float: left;
     vertical-align: top;
 }
@@ -184,23 +198,26 @@ strong {
     margin: 10px 0;
 }
 .profile-img {
-    display: inline-block;
     float: left;
 }
 .profile-img img {
     width: 48px;
     border-radius: 50%;
     border: 1px solid #cccccc;
-    margin-right: 30px;
+    margin-right: 15px;
 }
 .profilebox {
     width: 100px;
     display: inline-block;
+    padding: 5px 0;
 }
 .country span {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
+}
+.score i {
+    color: #006a70;
 }
 
 .introduction > .wrap {
@@ -216,18 +233,16 @@ strong {
     height: 220px;
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
-    margin-bottom: 20px; 
     padding: 10px 0;
 }
 .intro-item {
-    display: inline-block;
     float: left;
     width: 333px;
-    padding: 10px;
+    padding: 30px 12px;
 }
 .icon-box > i {
-    font-size: 3em;
-    padding-bottom: 20px;
+    font-size: 40px;
+    padding-bottom: 10px;
     color: #60B6B5;
 }
 .text-box, .popular-title  > h3 {
@@ -235,15 +250,12 @@ strong {
     font-weight: 600;
     padding: 3px 0;
 }
-.text-box > p {
-    font-size: 16px;
-}
-#popular {
+.popular {
     height: auto;
     clear: both;
+    padding-top: 50px;
 }
 .popular-item {
-    display: inline-block;
     float: left;
     width: 262px;
 }
@@ -271,35 +283,32 @@ strong {
 .super-host {
     display: inline;
     padding: 0 5px;
+}
 
-}
-.view-all {
-    clear: both;
-    padding-top: 25px;
-}
 .view-all span, .contact-host span, .explain-more span, .popup-btn {
-    color: #60B6B5;
+    color: #008489;
     font-size: 17px;
     font-weight: 600;
-    letter-spacing: 1px;
     background: none;
-    border: none;
+    border: 0;
     padding: 0;
+    margin: 10px 0;
 }
-.view-all a {
-    text-decoration: none;
-    color: #60B6B5;
+.view-all i, .popup-btn a {
+    color: #008489;
 }
 .add-date .btnbox{
     margin: 30px 0;
 }
 .date-btn {
-    background: #60B6B5;
+    background: #008489;
     padding: 15px 22px;
     border-radius: 4px;
-    border: 0px;
+    border: 0;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
+}
+.date-btn span {
     color: white;
 }
 .introduction {
@@ -314,47 +323,44 @@ strong {
     float: left;
 }
 .footer-category > span {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 20px
+    display: inline-block;
+    padding: 10px 0;
 }
 .footer-list  li {
-    color: grey;
     font-weight: 500;
-    letter-spacing: 1px;
-    padding: 5px 0;
+    padding: 3px 0;
     font-size: 14px;
 }
- a {
-    text-decoration: none;
-    color: grey;
+.footer-list a {
+    color: #767676;
 }
-#icon-link a {
+.icon-link a {
     text-decoration: none;
-    color: grey;
+    color: #767676;
     font-size: 25px;
     padding: 0 3px;
 }
-#reserved {
+.reserved {
     height: 60px;
     padding-top: 32px;
     border-bottom: 0;
     clear: both;
     border-top: 1px solid #cccccc;
 }
-#reserved span {
+.reserved span {
     color: grey;
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 500;
 }
 
-#reserved i {
+.reserved i {
     font-size: 20px;
     padding: 0px 5px;
 }
-li span {
+.new-icon {
     display: inline-block;
     background: #006a70;
     border-radius: 4px;
@@ -369,7 +375,7 @@ li span {
 }
 
 /* 상세페이지 */
-#fixed-nav {
+.fixed-nav {
     position: fixed;
     background: white;
     width: 100%;
@@ -377,13 +383,16 @@ li span {
     border-bottom: 1px solid #cccccc;
     z-index: 1;
 }
-#fixed-nav .wrap {
+.fixed-nav .wrap {
     height: auto;
     padding: 0;
 }
 .fixed-nav-list {
     width: 80%;
     float: left;
+}
+.header i {
+    padding: 10px 0;
 }
 .fixed-nav-list span {
     display: inline-block;
@@ -406,8 +415,8 @@ li span {
     display: inline-block;
 }
 .sub-item-btn {
-    border: none;
-    margin: 15px 10px 10px 10px;
+    border: 0;
+    margin: 10px;
 }
 .nav-btn span {
     font-size: 14px;
@@ -416,22 +425,21 @@ li span {
 
 .header {
     width: 100%;
-    height: 50%;
+    height: 85px;
 }
 .header .logo {
-    float: left;
-    margin-top: 15px
+    margin-top: 5px
 }
 
 .header > .logo i {
     color: red;
     margin: 0 20px;
-    font-weight: 400;
+    font-size: 35px;
 }
 .search-box {
     display: inline-block;
     margin-left: 100px;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .search-bar {
     display: inline-block;
@@ -441,32 +449,30 @@ li span {
 
 }
 .search-icon {
-    display: inline-block;
     font-size: 1.3em;
     color: grey;
     float: left;
 }
-#search {
+.top-search {
     padding: 10px;
-    border: none;
+    border: 0;
     font-size: 16px;
     font-weight: 600;
-    width: 250px;
-    transition: all 0.5s;
+    width: 364px;
+    transition: all 0.3s;
 }
-#search:focus {
-    width: 320px;
-    transition: all 0.5s;
+.top-search:focus {
+    width: 500px;
+    transition: all 0.3s;
 }
 .nav-bar {
     float: right;
-    padding: 5px 15px;
-    display: inline-block;
+    padding: 3px 15px;
 
 }
 .nav-item {
     display: inline-block;
-    padding: 40px 10px;
+    padding: 30px 10px;
 }
 
 .nav-item:hover {
@@ -477,16 +483,10 @@ li span {
     display: inline-block;
     position: relative;
     width: 100%;
-    background: black;
-
+    height: 595px;
+    border: 1px solid #484848;
 }
-
-.main-photo, .sub-photo {
-
-}
-
 .main-photo, .main-photo2 {
-    display: inline-block;
     float: left;
     width: 50%;
     height: 595px;
@@ -509,7 +509,6 @@ li span {
     margin: auto;
 }
 .sub-photo-group {
-    display: inline-block;
     float: left;
     width: 50%;
     height: 595px;
@@ -517,6 +516,7 @@ li span {
 .sub-photo {
     height: 50%;
     overflow: hidden;
+    border: 1px solid #484848;
 }
 
 .sub-photo img {
@@ -544,10 +544,12 @@ li span {
 }
 .content .wrap {
     height: 100%;
+    padding-top: 35px;
 }
 .room-content .title {
     display: inline-block;
 }
+
 .room {
     display: block;
     padding: 15px 0;
@@ -555,15 +557,24 @@ li span {
 .room span {
     display: inline;
 }
+
+.profile {
+    margin: 15px 0;
+}
 .profile-host {
     float: right;
+    width: 60px;
 }
 .profile-host span {
-    text-align: center;
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+    color: #767676;
+    font-size: 14px;
 }
 .profile-host img {
     display: inline-block;
-    width: 55px;
+    width: 64px;
     border-radius: 50%;
     margin: 0 auto;
     border: 1px solid #cccccc;
@@ -586,7 +597,6 @@ li span {
     margin: 0;
 }
 .thumbs-up {
-    display: inline-block;
     float: right;
 }
 .thumbs-up span {
@@ -597,25 +607,20 @@ li span {
 .room-icon {
     display: inline-block;
     vertical-align: top;
-    padding-bottom: 30px;
+    padding: 0 15px 30px 0;
+    font-size: 12px;
 }
 .room-text {
     display: inline-block;
     width: 85%;
 }
-.room-text span, .dateItem span, .alert-message {
-    display: inline;
-    font-size: 18px;
-    padding: 5px;
-    letter-spacing: 1px;
-    font-weight: 500;
-}
+
 .room-info {
     padding-bottom: 5px;
 }
 .room-detail {
     display: inline-block;
-    padding-bottom: 5px;
+    padding: 5px 0;
 }
 #side-reservation {
     border: 1px solid #e4e4e4;
@@ -642,10 +647,10 @@ li span {
 }
 
 .reservation-price {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 800;
 }
 .booking .dateItem{
-    display: inline-block;
     width: 300px;
     float: left;
     margin : 10px 0 10px 0;
@@ -689,9 +694,9 @@ li span {
 }
 
 .room-explain {
-    clear: both;
     width: 58%;
-    border-bottom: #cccccc 1px solid;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cccccc;
 }
 .translate-btn button {
     width: 90%;
@@ -704,10 +709,10 @@ li span {
     padding-bottom: 15px;
 }
 
-.amenity-title {
+.amenity-title, .reservation-title , .date-update {
     padding: 10px 0;
 }
-.amenity-title span, .popup-phrase span {
+.amenity-title span, .popup-phrase span, .reservation-title span {
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 600;
@@ -715,9 +720,15 @@ li span {
 .amenity-list {
     display: inline-block;
     width: 49%;
+    padding: 10px 0;
 }
-
-.amenity-list span, .carbon-check, .bed-type{
+.amenity-icon {
+    width: 20px;
+}
+.carbon-check {
+    font-size: 14px;
+}
+.amenity-list span, .bed-type{
     display: inline-block;
     color: #484848;
     font-weight: 400;
@@ -753,7 +764,6 @@ li span {
 }
 .reservation-check {
     clear: both;
-    display: inline-block;
     padding-bottom: 30px;
 }
 .amenity-title span, .pre-month li, .next-month li,
@@ -765,45 +775,50 @@ li span {
 .pre-month li, .next-month li {
     padding-right: 9px;
 }
-.pre-year-month {
-    padding: 0 25px;
+.next-year-month, .pre-year-month {
+    padding: 0 65px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .calendar-month {
-    padding-bottom: 10px;
+    float: left;
 }
 .calendar-days {
     line-height: 10px;
 }
 .pre-month, .next-month {
-    display: inline-block;
     float: left;
-    margin: 0 50px;
+    margin: 0 10px;
+}
+.calendar-box {
+    display: inline-block;
+    padding-top: 20px;
 }
 .calendar-box ul {
     padding-left: 8px;
 }
 .pre-btn, .next-btn {
-    padding: 5px 10px;
+    padding: 10px 15px;
     background: white;
     border: 1px solid #cccccc;
+    border-radius: 4px;
 }
 .pre-btn i, .next-btn i {
-    font-size: 12px;
+    font-size: 14px;
 }
 .next-calendar-month {
-    padding: 0 0 10px 55px;
-}
-.right-icon {
-    padding-left: 30px;
+    float: right;
 }
 .right-icon2 {
     display: none;
+}
+.calendar td {
+    padding: 13px;
 }
 .not-av, .available {
     text-align: center;
     border: 2px solid white;
     border-radius: 4px;
-    padding: 8px 5px;
     width: 4px;
     height: 4px;
     font-size: 14px;
@@ -824,24 +839,27 @@ li span {
     display: inline-block;
     padding-top: 30px;
 }
-.review-total div {
+.review-top div {
     display: inline-block;
 }
 .review-total {
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
     border-top: 1px solid #cccccc;
-
+    display: inline-block;
+    width: 100%;
+}
+.review-top {
+    float: left;
+    padding: 10px 0;
 }
 .how-many-reviews, .host-name span, 
 .location-info span, .refund-condition span, 
 .recommend-title span, .options-title span,
 .popup-title {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 800;
-    letter-spacing: 1px;
 }
-
 .review-stars {
     display: inline-block;
     font-size: 14px;
@@ -860,9 +878,10 @@ li span {
 }
 .review-search-bar .search-icon {
     font-size: 1em;
+    padding: 10px 0;
 }
 #review-search {
-    border: none;
+    border: 0;
     padding: 10px;
     font-size: 13px;
 }
@@ -886,6 +905,9 @@ li span {
     float: right;
     padding: 12px 0;
 }
+.review-stars i {
+    color: #006a70;
+}
 .detail-title {
     padding: 15px 0;
     letter-spacing: 1px;
@@ -904,22 +926,20 @@ li span {
     border-radius: 50%;
     border: 1px solid #cccccc;
 }
-.customer-name span, .review-date span, .host-info span, 
-.verified-host span, .host-response span {
-    letter-spacing: 1px;
+.customer-name {
+    font-weight: 600;
 }
 .review-date span{
-    font-size: 10px;
-    font-weight: 400;
-}
-.content p, .recommendation p {
     font-size: 14px;
     font-weight: 400;
-    color: #484848;
-    line-height: 18px;
 }
-.recommendation span {
-    letter-spacing: 1px;
+.review-text p, .host-info span, .content p {
+    font-size: 16px;
+    line-height: 1.375em;
+}
+.conditions span, .house-title span, 
+.activity-title span {
+    font-weight: 800;
 }
 .review-nav li {
     display: inline-block;
@@ -955,14 +975,16 @@ li span {
 .host-response span {
     font-weight: 400;
 }
-.host-call {
+.host-call, .verified-host, .host-response,
+.host-btn-box, .recommend-title {
     padding: 10px 0;
 }
-#contact-host-btn {
+.contact-host-btn {
     border: #006a70 solid 1px;
     color: #006a70;
     border-radius: 4px;
     padding: 7px 15px;
+    font-size: 14px;
 }
 .host-contact {
     padding: 20px 0;
@@ -983,13 +1005,13 @@ li span {
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
-#location-more, #refund-more, #cancle-more,
-#condition-more {
+.location-more, .refund-more, 
+.condition-more {
     font-size: 14px;
     font-weight: 600;
     color: #60B6B5;
-    border: none;
-    outline: none;
+    border: 0;
+    padding: 0;
 }
 .location-map {
     width: 100%;
@@ -1016,7 +1038,6 @@ li span {
     width: 100%;
 }
 .score-price .recommend-price {
-    display: inline-block;
     float: right;
 }
 .score-price span {
@@ -1032,7 +1053,7 @@ li span {
     margin: 1px 0;
 }
 .text-box {
-    padding: 10px;
+    padding: 10px 0;
 }
 .krw-price {
     font-size: 14px;
@@ -1053,7 +1074,7 @@ li span {
 }
 
 .rc-next-btn {
-    border: none;
+    border: 0;
     font-size: 16px;
 }
 .activity-list {
@@ -1148,15 +1169,28 @@ li span {
     padding: 10px 22px;
     border-radius: 4px;
     margin: 10px 0;
-    border: 0px
+    border: 0px;
 }
-#more-read-lo, #more-read-refund,
+#more-read-lo, .more-read-refund,
 #read-more-condition{
     padding: 15px 0;
     transition-property: opacity;
     transition-duration: 3s;
     background: white;
     display: inline-block;
+}
+.more-read-refund {
+    display: none;
+    opacity: 0;
+}
+#more-read-lo {
+    display: none;
+    opacity: 0;
+}
+
+.show-read-lo {
+    display: inline-block;
+    opacity: 1;
 }
 
 #read-more-condition a {
@@ -1305,4 +1339,8 @@ li span {
 }
 #sr-request-btn {
     width: 294px;
+}
+.days td {
+    text-align: center;
+    font-size: 11px;
 }

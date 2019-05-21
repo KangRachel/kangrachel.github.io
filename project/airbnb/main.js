@@ -228,7 +228,9 @@
           marker.setMap(map);
   
 
-   
+   var nextSlideBtn = document.querySelector(.rc-next-btn);
+
+   next
     
 
     

@@ -1,424 +1,433 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>여행은 살아보는 거야 - 에어비앤비</title>
-    <link rel="stylesheet" type="text/css" href="./reset.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="stylesheet" type="text/css" href="./media.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>여행은 살아보는 거야 - 에어비앤비</title>
+  <link rel="stylesheet" type="text/css" href="./reset.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./media.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
 <body>
-    <section class="maintop" id="main">
-        <div class="bg-img">
-            <div class="img-box">
-            <img class="main-img" src="./assets/maintop.jpg">
-            <div class="logo">
-              <span>
-                <a href="#"><i class="fab fa-airbnb"></i></a>
-              </span>
-            </div>
-            <div class="reserve-box">
-            <div id="reservation">
-                <h2>에어비앤비에서 한국의 숙소을(를) 찾아보세요</h2>
-                <p>혼자 하는 여행에 적합한 개인실부터 여럿이 함께하는 여행에 좋은 집, 전체 숙소까지 에어비엔비엔 다 있습니다.</p><br>
-                <form>
-                <div class="reserve-item">
-                    <div class="where-to-go">
-                    <span>목적지</span>
-                    </div>
-                    <div class="destination">
-                    <input type="text" value="모든 위치" name="destination" maxlength="255">
-                    </div>
-                    <div id="checkin-out">
-                        <div class="datebox">
-                        <span>체크인</span>
-                        <div class="dateItem">
-                        <input id="check-in" type="date" placeholder="년/월/일" name="checkinDate">
-                        </div>
-                        </div>
-                        <div class="datebox">
-                          <span>체크아웃</span>
-                          <div class="dateItem">
-                            <input id="check-out" type="date" placeholder="년/월/일" name="checkoutDate">
-                          </div>
-                        </div>
-                      </div>
-                    <div id="people">
-                        <div class="people">
-                          <span>어른</span>
-                        <div class="select-box">
-                            <select name="adult">
-                                <option value="1" selected>어른 1명</option>
-                                <option value="2">어른 2명</option>
-                                <option value="3">어른 3명</option>
-                                <option value="4">어른 4명</option>
-                                <option value="5">어른 5명</option>
-                                <option value="6">어른 6명</option>
-                                <option value="7">어른 7명</option>
-                            </select>  
-                        </div>
-                        </div>
-                        <div class="people">
-                          <span>어린이</span>
-                        <div class="select-box">
-                            <select name="kids">
-                                <option value="1" selected>어린이 0명</option>
-                                <option value="1">어린이 1명</option>
-                                <option value="2">어린이 2명</option>
-                                <option value="3">어린이 3명</option>
-                                <option value="4">어린이 4명</option>
-                                <option value="5">어린이 5명</option>
-                                <option value="6">어린이 6명</option>
-                                <option value="7">어린이 7명</option>
-                            </select>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="btnbox">
-                    <button type="submit" class="submitBtn"><span>검색</span></button>
-                    </div>
-                </form>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </section>
-    <section class="content">
-        <div class="wrap">
-          <div class="review">
-            <div class="title">
-                <h2>한국 숙소에 직접 다녀간 게스트의 후기</h2>
-            </div>
-            <div>
-                <p><i class="far fa-thumbs-up"></i>한국의 숙소는 <strong>1,000,000개</strong> 이상의 후기에서 별 5개중 <strong>4.7개</strong>를 받았습니다</p></div>
-            <div class="photoreview">
-                <div class="card-container">
-                    <div class="card-item">
-                        <div class="card-img">
-                            <a href="#">
-                                <img src="./assets/bedroom-416062_1280.jpg">
-                            </a>
-                        </div>
-                        <div class="score">
-                            <span>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                        </div>
-                        <div class="text">
-                            <p>찾기 쉬운 위치에 있어요. 저희는 동백역에서 내려서 걸어갔는데 한 4~5분 정도 걸었던 것 같네요. 그리고 바로 옆 건물에 홈플러스가 있어요. 주의해야할 점은 일요일은...</p>
-                        </div>
-                        <div class="profile">
-                            <div class="profile-img">
-                                <img src="./assets/megane.png">
-                            </div>
-                            <div class="profilebox">
-                                <div class="name"><span>강연주</span></div>
-                                <div class="country"><span>한국</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-item">
-                        <div class="card-img">
-                            <a href="#">
-                                <img src="./assets/bedroom-416062_1280.jpg">
-                            </a>
-                        </div>
-                        <div class="score">
-                            <span>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                        </div>
-                        <div class="text">
-                            <p>모든게 만족스러웠습니다. 깨끗하고 전망좋은 방, 방안의 작은 소품 하나 하나 호스트님의 배려가 곳곳에서 느껴졌답니다. 주말밤이었는데도 조용함에 품격이 있었구요,</p>
-                        </div>
-                        <div class="profile">
-                            <div class="profile-img">
-                                <img src="./assets/megane.png">
-                            </div>
-                            <div class="profilebox">
-                                <div class="name"><span>강연주</span></div>
-                                <div class="country"><span>한국</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-item">
-                        <div class="card-img">
-                            <a href="#">
-                                <img src="./assets/room-2269594_1920.jpg">
-                            </a>
-                        </div>
-                        <div class="score">
-                            <span>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                        </div>
-                        <div class="text">
-                            <p>11시 넘어 밤늦게 도착하였는데도, 너무너무나 반갑고 친절하게 맞이해주셔서 감사했습니다 ~ 방도 너무너무 좋아서 감탄을연발했어요 ㅎㅎ</p>
-                        </div>
-                        <div class="profile">
-                            <div class="profile-img">
-                                <img src="./assets/megane.png">
-                            </div>
-                            <div class="profilebox">
-                                <div class="name"><span>강연주</span></div>
-                                <div class="country"><span>한국</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-    </section>
-    <section class="introduction">
-        <div class="wrap">
-              <div class="title">
-                <h2>에어비앤비와 함께하는 여행</h2>
-              </div>
-            <div class="intro-box">
-              <div class="intro-item">
-                  <div class="icon-box">
-                      <i class="far fa-clock"></i>
-                  </div>
-                  <div class="text-box">
-                      <h3>24시간 연중무휴 지원</h3>
-                      <p>하루 24시간 언제나 여러분을 도와드립니다. 전 세계 어디에서나 언제든 에어비앤비 지원팀에 연락주세요.</p>
-                  </div>
-              </div>
-              <div class="intro-item">
-                  <div class="icon-box">
-                      <i class="fas fa-home"></i>
-                  </div>
-                  <div class="text-box">
-                      <h3>글로벌 호스팅 기준</h3>
-                      <p>게스트는 숙박 후 매번 호스트에 대한 후기를 작성합니다. 에어비앤비의 모든 호스트는 일정 수준 이상의 별점을 받고 호스팅 기준을 준수해야 합니다.</p>
-                  </div>
-              </div>
-              <div class="intro-item">
-                  <div class="icon-box">
-                      <i class="far fa-kiss-wink-heart"></i>
-                  </div>
-                  <div class="text-box">
-                      <h3>별점 5점 호스트</h3>
-                      <p>깔끔하게 정돈된 침대 시트에서부터 브런치 맛집 정보까지, 에어비앤비 호스트는 현지인의 강점을 살린 서비스를 풍성하게 제공합니다.</p>
-                  </div>
-              </div>
-            </div>
-        </div>
-        <div class="wrap" id="popular">
-          <div class="title">
-            <h2>한국 실시간 인기 숙소</h2>
-          </div>
-        <div class="popular-realtime">
-          <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/korean-jindo-1846176_1920.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>전체 · 서울</span>
-            </div>
-            <div class="popular-title">
-              <h3>(독채)청와대 5분 거리 한옥</h3>
-            </div>
-            <div class="popular-price">
-              <span>₩300,000원 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </span>
-              <span class="super-host">200 · 슈퍼호스트</span>
-            </div>
-          </div>
-        <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/bed-1846251_1920.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>서울특별시 · 아파트</span>
-            </div>
-            <div class="popular-title">
-              <h3>(Dwyane's luxury house (中文ok)</h3>
-            </div>
-            <div class="popular-price">
-              <span>₩230,000원 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </span>
-              <span class="super-host">175</span>
-            </div>
-          </div>
-        <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/korean-jindo-1846176_1920.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>집 전체 · 중구</span>
-            </div>
-            <div class="popular-title">
-              <h3>★ Myeong Dong ♥ Portable Wifi #1 ★</h3>               
-            </div>
-            <div class="popular-price">
-              <span>₩102,700 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </span>
-        
-              <span class="super-host">230 · 슈퍼호스트</span>
-            </div>
-          </div>
-        <div class="popular-item">
-            <div class="popular-card">
-              <a href="#"><img src="./assets/city-2669015_1920.jpg" alt="popular-place-korea"></a>
-            </div>
-            <div class="popular-types">
-              <span>개인실 · 종로구</span>
-            </div>
-            <div class="popular-title">
-              <h3>HANOK VILLAGE,OWN BED & LIVING ROOM</h3>
-            </div>
-            <div class="popular-price">
-              <span>₩75,000 / 박</span>
-            </div>
-            <div class="popular-score">
-              <span class="score">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </span>
-              <span class="super-host">197 · 슈퍼호스트</span>
-            </div>
-          </div>
-        </div>
-          <div class="view-all">
-            <a href="#">
-              <span>모두 보기 (1400개 이상)  <i class="fas fa-chevron-right"></i></span>
-            </a>
-          </div>
-        </div>
-        <div class="wrap">
-        <div class="add-date">
-          <div>
-            <h2>언제 여행하실 계획인가요?</h2>
-          </div>
-          <div><p>정확한 요금과 예약 가능 여부를 확인하려면 날짜를 입력하세요.</p>
-          </div>
-          <div class="btnbox">
-            <button class="date-btn" onclick="location.href='#main'"><span>날짜 추가</span></button>
-          </div>
-        </div>
-        </div>
-    </section>
-    <section class="footer">
-      <div class="wrap" id="footer-nav">
-        <div class="footer-item">
-          <div class="footer-category">
-          <span>에어비앤비</span>
-          </div>
-          <div class="footer-list">
-            <ul>
-              <li><a href="#">채용정보</a></li>
-              <li><a href="#">미디어</a></li>
-              <li><a href="#">정책</a></li>
-              <li><a href="#">도움말</a></li>
-              <li><a href="#">다양성과 소속감</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-item">
-          <div class="footer-category">
-          <span>여행하기</span>
-          </div>
-          <div class="footer-list">
-            <ul>
-              <li><a href="#">신뢰와 안전</a></li>
-              <li><a href="#">여행 크레딧</a></li>
-              <li><a href="#">Airbnb Citizen</a></li>
-              <li><a href="#">비즈니스 프로그램</a></li>
-              <li><a href="#">가이드북</a></li>
-              <li><a href="#">Airbnbmag</a></li>
-              <li><a href="#">에어비앤비 이벤트</a><span>NEW!</span></li>
-              <li><a href="#"><strong>한국의 변경된 환불 정책</strong></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-item">
-          <div class="footer-category">
-          <span>호스팅하기</span>
-          </div>
-          <div class="footer-list">
-            <ul>
-              <li><a href="#">호스팅의 장점</a></li>
-              <li><a href="#">호스팅의 기준</a></li>
-              <li><a href="#">책임감 있는 호스팅하기</a></li>
-              <li><a href="#">커뮤니티 센터</a></li>
-              <li><a href="#">트립 호스팅</a><span>NEW!</span></li>
-              <li><a href="#">Open Homes프로그램</a><span>NEW!</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-item">
-          <div class="footer-category">
-          <span id="icon-link">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter-square"></i></a>
-              <a href="#"><i class="fab fa-github-square"></i></a>
+  <section class="maintop" id="main">
+    <div class="bg-img">
+      <div class="img-box">
+        <img class="main-img" src="./assets/maintop.jpg">
+        <div class="logo">
+          <span>
+            <a href="#"><i class="fab fa-airbnb"></i></a>
           </span>
-          </div>
-          <div class="footer-list">
-            <ul>
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보 처리방침</a></li>
-              <li><a href="#">여행지 찾기</a></li>
-            </ul>
+        </div>
+        <div class="reserve-box">
+          <div class="reservation">
+            <h2>에어비앤비에서 한국의 숙소을(를) 찾아보세요</h2>
+            <p>혼자 하는 여행에 적합한 개인실부터 여럿이 함께하는 여행에 좋은 집, 전체 숙소까지 에어비엔비엔 다 있습니다.</p><br>
+            <form>
+              <div class="reserve-item">
+                <div class="where-to-go">
+                  <span>목적지</span>
+                </div>
+                <div class="destination">
+                  <input type="text" value="모든 위치" name="destination" maxlength="255">
+                </div>
+                <div id="checkin-out">
+                  <div class="datebox">
+                    <span>체크인</span>
+                    <div class="dateItem">
+                      <input class="date-checkin" id="check-in" type="date" placeholder="년/월/일" name="checkinDate">
+                    </div>
+                  </div>
+                  <div class="datebox">
+                    <span>체크아웃</span>
+                    <div class="dateItem">
+                      <input class="date-checkout" id="check-out" type="date" placeholder="년/월/일" name="checkoutDate">
+                    </div>
+                  </div>
+                </div>
+                <div id="people">
+                  <div class="people">
+                    <span>어른</span>
+                    <div class="select-box">
+                      <select name="adult">
+                        <option value="1" selected>어른 1명</option>
+                        <option value="2">어른 2명</option>
+                        <option value="3">어른 3명</option>
+                        <option value="4">어른 4명</option>
+                        <option value="5">어른 5명</option>
+                        <option value="6">어른 6명</option>
+                        <option value="7">어른 7명</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <span>어린이</span>
+                    <div class="select-box">
+                      <select name="kids">
+                        <option value="1" selected>어린이 0명</option>
+                        <option value="1">어린이 1명</option>
+                        <option value="2">어린이 2명</option>
+                        <option value="3">어린이 3명</option>
+                        <option value="4">어린이 4명</option>
+                        <option value="5">어린이 5명</option>
+                        <option value="6">어린이 6명</option>
+                        <option value="7">어린이 7명</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="btnbox">
+                  <button type="submit" class="submitBtn"><span>검색</span></button>
+                </div>
+            </form>
           </div>
         </div>
       </div>
-      <div class="wrap" id="reserved">
+    </div>
+  </div>
+  </div>
+  </section>
+  <section class="content">
+    <div class="wrap">
+      <div class="review">
+        <div class="title">
+          <h2>한국 숙소에 직접 다녀간 게스트의 후기</h2>
+        </div>
         <div>
-          <span><i class="fab fa-airbnb"></i>©2019 Airbnb, Inc. All rights reserved.</span>
+          <p><i class="far fa-thumbs-up"></i>한국의 숙소는 <strong>1,000,000개</strong> 이상의 후기에서 별 5개중
+            <strong>4.7개</strong>를 받았습니다</p>
+        </div>
+        <div class="photoreview">
+          <div class="card-container">
+            <div class="card-item">
+              <div class="card-img">
+                <a href="#">
+                  <img src="./assets/bedroom-416062_1280.jpg">
+                </a>
+              </div>
+              <div class="score">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p>찾기 쉬운 위치에 있어요. 저희는 동백역에서 내려서 걸어갔는데 한 4~5분 정도 걸었던 것 같네요. 그리고 바로 옆 건물에 홈플러스가 있어요. 주의해야할
+                  점은 일요일은...</p>
+              </div>
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="./assets/megane.png">
+                </div>
+                <div class="profilebox">
+                  <div class="name"><span>강연주</span></div>
+                  <div class="country"><span>한국</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card-item">
+              <div class="card-img">
+                <a href="#">
+                  <img src="./assets/bedroom-416062_1280.jpg">
+                </a>
+              </div>
+              <div class="score">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p>모든게 만족스러웠습니다. 깨끗하고 전망좋은 방, 방안의 작은 소품 하나 하나 호스트님의 배려가 곳곳에서 느껴졌답니다. 주말밤이었는데도 조용함에 품격이
+                  있었구요,</p>
+              </div>
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="./assets/megane.png">
+                </div>
+                <div class="profilebox">
+                  <div class="name"><span>강연주</span></div>
+                  <div class="country"><span>한국</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card-item">
+              <div class="card-img">
+                <a href="#">
+                  <img src="./assets/room-2269594_1920.jpg">
+                </a>
+              </div>
+              <div class="score">
+                <span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p>11시 넘어 밤늦게 도착하였는데도, 너무너무나 반갑고 친절하게 맞이해주셔서 감사했습니다 ~ 방도 너무너무 좋아서 감탄을연발했어요 ㅎㅎ</p>
+              </div>
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="./assets/megane.png">
+                </div>
+                <div class="profilebox">
+                  <div class="name"><span>강연주</span></div>
+                  <div class="country"><span>한국</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <section class="introduction">
+    <div class="wrap">
+      <div class="title">
+        <h2>에어비앤비와 함께하는 여행</h2>
+      </div>
+      <div class="intro-box">
+        <div class="intro-item">
+          <div class="icon-box">
+            <i class="far fa-clock"></i>
+          </div>
+          <div class="text-box">
+            <h3>24시간 연중무휴 지원</h3>
+            <p>하루 24시간 언제나 여러분을 도와드립니다. 전 세계 어디에서나 언제든 에어비앤비 지원팀에 연락주세요.</p>
+          </div>
+        </div>
+        <div class="intro-item">
+          <div class="icon-box">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="text-box">
+            <h3>글로벌 호스팅 기준</h3>
+            <p>게스트는 숙박 후 매번 호스트에 대한 후기를 작성합니다. 에어비앤비의 모든 호스트는 일정 수준 이상의 별점을 받고 호스팅 기준을 준수해야 합니다.</p>
+          </div>
+        </div>
+        <div class="intro-item">
+          <div class="icon-box">
+            <i class="far fa-kiss-wink-heart"></i>
+          </div>
+          <div class="text-box">
+            <h3>별점 5점 호스트</h3>
+            <p>깔끔하게 정돈된 침대 시트에서부터 브런치 맛집 정보까지, 에어비앤비 호스트는 현지인의 강점을 살린 서비스를 풍성하게 제공합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap popular" id="popular">
+      <div class="title">
+        <h2>한국 실시간 인기 숙소</h2>
+      </div>
+      <div class="popular-realtime">
+        <div class="popular-item">
+          <div class="popular-card">
+            <a href="#"><img src="./assets/korean-jindo-1846176_1920.jpg" alt="popular-place-korea"></a>
+          </div>
+          <div class="popular-types">
+            <span>전체 · 서울</span>
+          </div>
+          <div class="popular-title">
+            <h3>(독채)청와대 5분 거리 한옥</h3>
+          </div>
+          <div class="popular-price">
+            <span>₩300,000원 / 박</span>
+          </div>
+          <div class="popular-score">
+            <span class="score">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="super-host">200 · 슈퍼호스트</span>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="popular-card">
+            <a href="#"><img src="./assets/bed-1846251_1920.jpg" alt="popular-place-korea"></a>
+          </div>
+          <div class="popular-types">
+            <span>서울특별시 · 아파트</span>
+          </div>
+          <div class="popular-title">
+            <h3>(Dwyane's luxury house (中文ok)</h3>
+          </div>
+          <div class="popular-price">
+            <span>₩230,000원 / 박</span>
+          </div>
+          <div class="popular-score">
+            <span class="score">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </span>
+            <span class="super-host">175</span>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="popular-card">
+            <a href="#"><img src="./assets/korean-jindo-1846176_1920.jpg" alt="popular-place-korea"></a>
+          </div>
+          <div class="popular-types">
+            <span>집 전체 · 중구</span>
+          </div>
+          <div class="popular-title">
+            <h3>★ Myeong Dong ♥ Portable Wifi #1 ★</h3>
+          </div>
+          <div class="popular-price">
+            <span>₩102,700 / 박</span>
+          </div>
+          <div class="popular-score">
+            <span class="score">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+
+            <span class="super-host">230 · 슈퍼호스트</span>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="popular-card">
+            <a href="#"><img src="./assets/city-2669015_1920.jpg" alt="popular-place-korea"></a>
+          </div>
+          <div class="popular-types">
+            <span>개인실 · 종로구</span>
+          </div>
+          <div class="popular-title">
+            <h3>HANOK VILLAGE,OWN BED & LIVING ROOM</h3>
+          </div>
+          <div class="popular-price">
+            <span>₩75,000 / 박</span>
+          </div>
+          <div class="popular-score">
+            <span class="score">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="super-host">197 · 슈퍼호스트</span>
+          </div>
+        </div>
+      </div>
+      <div class="view-all">
+        <a href="#">
+          <span>모두 보기 (1400개 이상) <i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="add-date">
+        <div>
+          <h2>언제 여행하실 계획인가요?</h2>
+        </div>
+        <div>
+          <p>정확한 요금과 예약 가능 여부를 확인하려면 날짜를 입력하세요.</p>
+        </div>
+        <div class="btnbox">
+          <button class="date-btn" onclick="location.href='#main'"><span>날짜 추가</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="wrap" id="footer-nav">
+      <div class="footer-item">
+        <div class="footer-category">
+          <span>에어비앤비</span>
+        </div>
+        <div class="footer-list">
+          <ul>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">미디어</a></li>
+            <li><a href="#">정책</a></li>
+            <li><a href="#">도움말</a></li>
+            <li><a href="#">다양성과 소속감</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="footer-category">
+          <span>여행하기</span>
+        </div>
+        <div class="footer-list">
+          <ul>
+            <li><a href="#">신뢰와 안전</a></li>
+            <li><a href="#">여행 크레딧</a></li>
+            <li><a href="#">Airbnb Citizen</a></li>
+            <li><a href="#">비즈니스 프로그램</a></li>
+            <li><a href="#">가이드북</a></li>
+            <li><a href="#">Airbnbmag</a></li>
+            <li><a href="#">에어비앤비 이벤트</a><span class="new-icon">NEW!</span></li>
+            <li><a href="#"><strong>한국의 변경된 환불 정책</strong></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="footer-category">
+          <span>호스팅하기</span>
+        </div>
+        <div class="footer-list">
+          <ul>
+            <li><a href="#">호스팅의 장점</a></li>
+            <li><a href="#">호스팅의 기준</a></li>
+            <li><a href="#">책임감 있는 호스팅하기</a></li>
+            <li><a href="#">커뮤니티 센터</a></li>
+            <li><a href="#">트립 호스팅</a><span class="new-icon">NEW!</span></li>
+            <li><a href="#">Open Homes프로그램</a><span class="new-icon">NEW!</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="footer-category">
+          <span class="icon-link">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-github-square"></i></a>
+          </span>
+        </div>
+        <div class="footer-list">
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">여행지 찾기</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class="wrap reserved" id="reserved">
+      <div>
+        <span><i class="fab fa-airbnb"></i>©2019 Airbnb, Inc. All rights reserved.</span>
+      </div>
+    </div>
 </body>
+
 </html>
