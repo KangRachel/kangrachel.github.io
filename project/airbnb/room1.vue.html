@@ -24,38 +24,40 @@
           <a href="#"><i class="fab fa-airbnb"></i></a>
         </span>
       </div>
-      <div class="fixed-nav" id="fixed-nav" style="display:none;" ref="FixedNav">
+      <div class="fixed-nav" id="fixed-nav" ref="FixedNav">
         <div class="wrap">
-          <div class="fixed-nav-list">
-            <span class="fixed-nav-item">
-              <a class="nav-item-btn" href="#room-explain" id="nav-room-explain" ref="navRoomExplain">개요</a>
-            </span>
-            <span>·</span>
-            <span class="fixed-nav-item">
-              <a class="nav-item-btn" href="#review" id="nav-review" ref="navReview">후기</a>
-            </span>
-            <span>·</span>
-            <span class="fixed-nav-item">
-              <a class="nav-item-btn" href="#host" id="nav-host" ref="navHost">호스트</a>
-            </span>
-            <span>·</span>
-            <span class="fixed-nav-item">
-              <a class="nav-item-btn" href="#location" id="nav-location" ref="navLocation">위치</a>
-            </span>
-            <span>·</span>
-            <span class="fixed-nav-item">
-              <a class="nav-item-btn" href="#refund" id="nav-refund" ref="navRefund">환불정책</a>
-            </span>
-          </div>
-          <div class="nav-btn">
-            <button class="sub-item-btn">
-              <span><i class="far fa-share-square"></i></span>
-              <span>공유하기</span>
-            </button>
-            <button class="sub-item-btn">
-              <span><i class="far fa-heart"></i></span>
-              <span>저장</span>
-            </button>
+          <div class="nav-wrap">
+            <div class="fixed-nav-list">
+              <span class="fixed-nav-item">
+                <a class="nav-item-btn" href="#room-explain" id="nav-room-explain" ref="navRoomExplain">개요</a>
+              </span>
+              <span class="dot">·</span>
+              <span class="fixed-nav-item">
+                <a class="nav-item-btn" href="#review" id="nav-review" ref="navReview">후기</a>
+              </span>
+              <span class="dot">·</span>
+              <span class="fixed-nav-item">
+                <a class="nav-item-btn" href="#host" id="nav-host" ref="navHost">호스트</a>
+              </span>
+              <span class="dot">·</span>
+              <span class="fixed-nav-item">
+                <a class="nav-item-btn" href="#location" id="nav-location" ref="navLocation">위치</a>
+              </span>
+              <span class="dot">·</span>
+              <span class="fixed-nav-item">
+                <a class="nav-item-btn" href="#refund" id="nav-refund" ref="navRefund">환불정책</a>
+              </span>
+            </div>
+            <div class="nav-btn">
+              <button class="sub-item-btn">
+                <span><i class="far fa-share-square"></i></span>
+                <span>공유하기</span>
+              </button>
+              <button class="sub-item-btn">
+                <span><i class="far fa-heart"></i></span>
+                <span>저장</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -202,7 +204,7 @@
           <div class="sr-info">
             <div class="sr-price">
               <span class="reservation-price">₩51,401</span>
-              <span>/박</span>
+              <span class="per-night">/박</span>
             </div>
             <div class="sr-score">
               <span class="score">
@@ -216,14 +218,14 @@
             </div>
           </div>
           <div class="book-request">
-            <form id="booking">
-              <div id="checkin-out">
+            <form class="side-booking" id="booking">
+              <div class="checkin-out">
                 <div class="datebox">
                   <span>날짜</span>
                   <div class="dateItem">
-                    <input id="date-from" type="text" value="체크인" name="checkinDate">
+                    <input class="date-from" id="date-from" type="text" value="체크인" name="checkinDate">
                     <span><i class="fas fa-arrow-right"></i></span>
-                    <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
+                    <input class="date-to" id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
                   </div>
                 </div>
               </div>
@@ -236,7 +238,7 @@
               <div class="sr-people">
                 <span>인원</span>
                 <div class="guest-box">
-                  <select id="persons" name="persons">
+                  <select class="persons" id="persons" name="persons">
                     <option value="1" selected>게스트 1명</option>
                     <option value="2">게스트 2명</option>
                     <option value="3">게스트 3명</option>
@@ -450,30 +452,30 @@
             <div class="review-content">
               <div class="review-total">
                 <div class="review-top">
-                <div>
-                  <span class="how-many-reviews">
-                    후기 179개
-                  </span>
+                  <div>
+                    <span class="how-many-reviews">
+                      후기 179개
+                    </span>
+                  </div>
+                  <div>
+                    <span class="review-stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <span class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </span>
-                </div>
-              </div>
-              <div class="review-search">
-                <div class="review-search-box">
-                  <div class="review-search-bar">
-                    <span class="search-icon"><i class="fas fa-search"></i></span>
-                    <input type="text" id="review-search" placeholder="후기검색" name="query">
+                <div class="review-search">
+                  <div class="review-search-box">
+                    <div class="review-search-bar">
+                      <span class="search-icon"><i class="fas fa-search"></i></span>
+                      <input type="text" class="review-search-input" id="review-search" placeholder="후기검색" name="query">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
               <div class="score-detail">
                 <div class="detail-row">
                   <div class="detail-subject">
@@ -638,7 +640,8 @@
                   <p>이중섭거리에서 하차하시면 됩니다. 약 60분 소요</p>
                   <p>유동커피 바로 옆 건물입니다.</p>
                 </div>
-                <input type="button" class="location-more" id="location-more" value="이 지역 자세히 알아보기" @click="locationMore">
+                <input type="button" class="location-more" id="location-more" value="이 지역 자세히 알아보기"
+                  @click="locationMore">
               </div>
             </div>
             <div class="location-map" id="map"> </div>
@@ -681,23 +684,29 @@
               <span>예약 취소</span>
             </div>
             <div>
-              <p>일반 정책</p>
-              <p>체크인 5일 전까지 예약을 취소하면 에어비앤비 서비스 수수료을 제외한 요금이 환불됩니다.</p>
-            </div>
-            <div>
-              <div id="read-more-condition" style="display: none; opacity: 0;">
-                <span>엄격 규칙</span>
-                <p>체크인 30일 전까지 예약을 취소하면 모든 수수료를 포함한 요금 전액이 환불됩니다.</p>
-                <p>체크인까지 30일이 남지 않은 시점에 예약을 취소하면 수수료를 포함한 총 숙박 요금의 50%가 환불됩니다.</p>
-                <p>숙박 중 예약을 취소하면 일부 환불을 요청할 수 있습니다.</p>
-                <span><a href="#">자세히 보기</a></span>
+              <div class="condition-title">
+                <span>일반 정책</span>
               </div>
-              <span>
-                <input type="button" class="condition-more" id="condition-more" value="정책 자세히 읽기" onclick="moreCondition(event)">
-              </span>
+              <div class="condition-text">
+                <span>
+                  체크인 5일 전까지 예약을 취소하면 에어비앤비 서비스 수수료을 제외한 요금이 환불됩니다.
+                </span>
+              </div>
+              <div>
+                <div id="read-more-condition" style="display: none; opacity: 0;">
+                  <span>엄격 규칙</span>
+                  <p>체크인 30일 전까지 예약을 취소하면 모든 수수료를 포함한 요금 전액이 환불됩니다.</p>
+                  <p>체크인까지 30일이 남지 않은 시점에 예약을 취소하면 수수료를 포함한 총 숙박 요금의 50%가 환불됩니다.</p>
+                  <p>숙박 중 예약을 취소하면 일부 환불을 요청할 수 있습니다.</p>
+                  <span><a href="#">자세히 보기</a></span>
+                </div>
+                <span>
+                  <input type="button" class="condition-more" id="condition-more" value="정책 자세히 읽기"
+                    onclick="moreCondition(event)">
+                </span>
+              </div>
             </div>
           </div>
-      </div>
     </section>
     </section>
     <section class="recommendation">
@@ -734,7 +743,7 @@
                     <span class="rv-number">{{ recommendRoom.score }}</span>
                     <div class="recommend-price">
                       <span class="krw-price">₩{{ recommendRoom.price }}</span>
-                      <span>/박</span>
+                      <span class="per-night">/박</span>
                     </div>
                   </div>
                 </div>
@@ -862,7 +871,7 @@
               <li><a href="#">비즈니스 프로그램</a></li>
               <li><a href="#">가이드북</a></li>
               <li><a href="#">Airbnbmag</a></li>
-              <li><a href="#">에어비앤비 이벤트</a><span>NEW!</span></li>
+              <li><a href="#">에어비앤비 이벤트</a><span class="new-icon">NEW!</span></li>
               <li><a href="#"><strong>한국의 변경된 환불 정책</strong></a></li>
             </ul>
           </div>
@@ -877,14 +886,14 @@
               <li><a href="#">호스팅의 기준</a></li>
               <li><a href="#">책임감 있는 호스팅하기</a></li>
               <li><a href="#">커뮤니티 센터</a></li>
-              <li><a href="#">트립 호스팅</a><span>NEW!</span></li>
-              <li><a href="#">Open Homes프로그램</a><span>NEW!</span></li>
+              <li><a href="#">트립 호스팅</a><span class="new-icon">NEW!</span></li>
+              <li><a href="#">Open Homes프로그램</a><span class="new-icon">NEW!</span></li>
             </ul>
           </div>
         </div>
         <div class="footer-item">
           <div class="footer-category">
-            <span id="icon-link">
+            <span class="icon-link">
               <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -913,7 +922,7 @@
             <span class="reservation-price">
               ₩51,401
             </span>
-            <span>/박</span>
+            <span class="per-night">/박</span>
           </div>
           <div class="sr-score">
             <span class="score">
@@ -1032,19 +1041,19 @@
         </div>
       </div>
     </div>
-    <div class="layer-popup" id="reservation-request">
+    <div class="layer-popup reservation-request" id="reservation-request">
       <div class="popup-bg">
         <div class="popup-content">
           <div class="popup-text">
             <div class="close-btn-box">
               <button id="close-reservation-btn" class="close-btn" @click="closeReservationRequestPopup">X</button>
             </div>
-            <div class="popup-inner-text">
-              <div class="side-reservation" id="footer-reservation">
+            <div class="popup-reservation-text">
+              <div class="footer-reservation" id="footer-reservation">
                 <div class="sr-info">
                   <div class="sr-price">
                     <span class="reservation-price">₩51,401</span>
-                    <span>/박</span>
+                    <span class="per-night">/박</span>
                   </div>
                   <div class="sr-score">
                     <span class="score">
@@ -1058,21 +1067,27 @@
                   </div>
                 </div>
                 <div class="book-request">
-                  <form id="booking">
-                    <div id="checkin-out">
+                  <form class="side-booking" id="booking">
+                    <div class="checkin-out">
                       <div class="datebox">
                         <span>날짜</span>
                         <div class="dateItem">
-                          <input id="date-from" type="text" value="체크인" name="checkinDate">
+                          <input class="date-from" id="date-from" type="text" value="체크인" name="checkinDate">
                           <span><i class="fas fa-arrow-right"></i></span>
-                          <input id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
+                          <input class="date-to" id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
                         </div>
                       </div>
+                    </div>
+                    <div class="side-calendar" id="side-checkin">
+
+                    </div>
+                    <div class="side-calendar" id="side-checkout">
+
                     </div>
                     <div class="sr-people">
                       <span>인원</span>
                       <div class="guest-box">
-                        <select id="persons" name="persons">
+                        <select class="persons" id="persons" name="persons">
                           <option value="1" selected>게스트 1명</option>
                           <option value="2">게스트 2명</option>
                           <option value="3">게스트 3명</option>
@@ -1083,7 +1098,7 @@
                       </div>
                     </div>
                     <div class="btnbox">
-                      <button type="submit" class="submitBtn"><span>예약 요청</span></button>
+                      <button type="submit" class="submitBtn" id=""><span>예약 요청</span></button>
                     </div>
                   </form>
                   <div class="confirm-message">
@@ -1352,7 +1367,7 @@
         },
         appearFixedNav() {
           var fixedNavBar = this.$refs.FixedNav;
-          if (window.scrollY >= 650) {
+          if (window.scrollY >= 615) {
             fixedNavBar.style.display = 'block';
           } else {
             fixedNavBar.style.display = 'none';
@@ -1368,21 +1383,21 @@
           var navList = [navRoomExplain, navReview, navHost, navLocation, navRefund];
           for (i = 0; navList.length > i; i++) {
             var navItem = navList[i];
-            if (window.scrollY >= 705 && window.scrollY < 2266) {
+            if (window.scrollY >= 615 && window.scrollY < 2254) {
               console.log('navItem');
-              navItem.style.color = '#006A70';
+              navItem.style.color = '#008489';
               navList[0].style.color = '#484848';
-            } else if (window.scrollY >= 2266 && window.scrollY < 3729) {
-              navItem.style.color = '#006A70';
+            } else if (window.scrollY >= 2254 && window.scrollY < 3757) {
+              navItem.style.color = '#008489';
               navList[1].style.color = '#484848';
-            } else if (window.scrollY >= 3730 && window.scrollY < 4280) {
-              navItem.style.color = '#006A70';
+            } else if (window.scrollY >= 3757 && window.scrollY < 4250) {
+              navItem.style.color = '#008489';
               navList[2].style.color = '#484848';
-            } else if (window.scrollY >= 4280 && window.scrollY < 4690) {
-              navItem.style.color = '#006A70';
+            } else if (window.scrollY >= 4250 && window.scrollY < 4750) {
+              navItem.style.color = '#008489';
               navList[3].style.color = '#484848';
             } else {
-              navItem.style.color = '#006A70';
+              navItem.style.color = '#008489';
               navList[4].style.color = '#484848';
             }
           }

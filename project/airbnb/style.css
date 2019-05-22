@@ -70,10 +70,12 @@ strong {
 }
 .wrap{
     width: 100%;
-    max-width: 1080px;
+    max-width: 1032px;
     height: 563px;
     margin: 0 auto;
-    padding: 64px 0 0 0;
+    padding-top: 64px;
+    padding-right: 24px;
+    padding-left: 24px;
     z-index: 1;
 }
 .reservation {
@@ -275,10 +277,10 @@ strong {
     display: inline;
 }
 .rv-number, .popular-types, .super-host {
-    font-size: 0.8em;
-    color: grey;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 12px;
+}
+.rv-number{
+    vertical-align: text-bottom;
 }
 .super-host {
     display: inline;
@@ -337,9 +339,6 @@ strong {
     color: #767676;
 }
 .icon-link a {
-    text-decoration: none;
-    color: #767676;
-    font-size: 25px;
     padding: 0 3px;
 }
 .reserved {
@@ -370,27 +369,32 @@ strong {
     border: 0;
     margin: 0 3px;
 }
+.icon-link i{
+    font-size: 20px;
+}
 .footer {
     clear: both;
 }
 
 /* 상세페이지 */
 .fixed-nav {
+    display: none;
     position: fixed;
     background: white;
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #cccccc;
-    z-index: 1;
+    z-index: 2;
 }
+
 .fixed-nav .wrap {
     height: auto;
     padding: 0;
 }
 .fixed-nav-list {
-    width: 80%;
     float: left;
 }
+
 .header i {
     padding: 10px 0;
 }
@@ -399,20 +403,19 @@ strong {
     font-weight: 700;
     letter-spacing: 1px;
     z-index: 1;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .nav-item-btn {
     font-size: 14px;
-    font-weight: 600;
-    color: #006a70;
-    padding: 5px;
+    font-weight: 500;
+    color: #008489;
     display: inline-block;
 }
 .nav-item-btn:hover {
-    border-bottom: 1px solid #006a70;
+    border-bottom: 1px solid #008489;
 }
 .nav-btn {
-    display: inline-block;
+    float: right;
 }
 .sub-item-btn {
     border: 0;
@@ -444,7 +447,7 @@ strong {
 .search-bar {
     display: inline-block;
     padding: 3px 15px;
-    box-shadow: 0px 9px 13px 0 #cccccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border: 1px solid #EBEBEB
 
 }
@@ -467,18 +470,21 @@ strong {
 }
 .nav-bar {
     float: right;
-    padding: 3px 15px;
+    padding: 3px 0px;
 
 }
 .nav-item {
     display: inline-block;
     padding: 30px 10px;
+    font-size: 14px;
+}
+.nav-item a {
+    padding: 8px;
 }
 
 .nav-item:hover {
-    border-bottom: #cccccc solid 3px;
+    border-bottom: 2px solid rgb(118, 118, 118);
 }
-
 .photo {
     display: inline-block;
     position: relative;
@@ -491,10 +497,6 @@ strong {
     width: 50%;
     height: 595px;
     overflow: hidden;
-}
-
-.main-photo2 {
-    height: 595px;
     background: black;
 }
 .main-photo img {
@@ -518,7 +520,6 @@ strong {
     overflow: hidden;
     border: 1px solid #484848;
 }
-
 .sub-photo img {
     position: relative;
     top: 0;
@@ -529,13 +530,12 @@ strong {
     width: 130%;
     height: 100%;
 }
-
 .photo img:hover {
     transition: transform 0.3s linear;
     transform: scale(1.05);
 }
 .room-content, .amenity-content {
-    width: 58%;
+    width: 55%;
     float: left;
     padding-bottom: 10px;
 }
@@ -622,28 +622,33 @@ strong {
     display: inline-block;
     padding: 5px 0;
 }
-#side-reservation {
+.side-reservation {
     border: 1px solid #e4e4e4;
     border-radius: 4px;
     position: sticky;
     top: 75px;
-    margin-left: 70px;
-    padding: 0 20px 30px 20px;
+    margin-left: 80px;
+    padding: 0 24px 30px 24px;
     display: inline-block;
     z-index: -1;
-    width: 28%;
+    width: 326px;
 }
-.side-reservation {
-    position: relative;
-    z-index: 2;
+.book-request {
+    padding-top: 10px;
 }
 .sr-info {
     margin: 0 auto;
-    padding: 15px;
+    padding: 20px 0;
     border-bottom: 1px solid #cccccc;
+}
+.sr-score {
+    padding-top: 3px;
 }
 .sr-price span, .sr-score span {
     display: inline;
+}
+.per-night {
+    font-size: 12px;
 }
 
 .reservation-price {
@@ -655,31 +660,33 @@ strong {
     float: left;
     margin : 10px 0 10px 0;
 }
-#booking .datebox, #booking .people {
-    width: 290px;
+.side-booking .datebox, .side-booking .people, .sr-people, .sr-people .persons {
+    width: 100%;
 }
-#date-from, #date-to, #persons{
+.date-from, .date-to {
     display: inline-block;
-    width: 100px;
+    width: 126px;
     border: 0;
     padding: 10px;
     font-size: 16px;
     color: #484848;
 }
-#checkin-out {
+.datebox > span, .sr-people > span {
+    font-size: 12px;
+}
+.checkin-out {
     float: left;
-    display: inline-block;
+    width: 100%;;
 }
 .sr-people {
     clear: both;
     display: inline-block;
 }
-#persons {
-    width: 290px;
+.persons {
+    font-size: 16px;
 }
-
-#booking .btnbox, #booking .submitBtn {
-    width: 290px;
+.side-booking .btnbox, .side-booking .submitBtn {
+    width: 100%;
     height: 40px;
 }
 .confirm-message {
@@ -694,7 +701,7 @@ strong {
 }
 
 .room-explain {
-    width: 58%;
+    width: 55%;
     padding-bottom: 30px;
     border-bottom: 1px solid #cccccc;
 }
@@ -813,7 +820,7 @@ strong {
     display: none;
 }
 .calendar td {
-    padding: 13px;
+    padding: 11px;
 }
 .not-av, .available {
     text-align: center;
@@ -835,7 +842,7 @@ strong {
     background: rgb(204, 238, 235);
 }
 .review-content {
-    width: 58%;
+    width: 55%;
     display: inline-block;
     padding-top: 30px;
 }
@@ -880,7 +887,7 @@ strong {
     font-size: 1em;
     padding: 10px 0;
 }
-#review-search {
+.review-search-input {
     border: 0;
     padding: 10px;
     font-size: 13px;
@@ -915,7 +922,7 @@ strong {
     font-weight: 500;
 }
 .review-item {
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #cccccc;
 }
 .customer-photo, .customer-detail {
@@ -959,7 +966,7 @@ strong {
     border: 1px solid #006a70;
 }
 .about-host {
-    width: 58%;
+    width: 55%;
     padding-top: 50px;
     display: inline-block;
 }
@@ -1001,7 +1008,7 @@ strong {
 .location, .refund {
     clear: both;
     display: inline-block;
-    width: 58%;
+    width: 55%;
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
@@ -1018,7 +1025,7 @@ strong {
     height: 300px;
 }
 .conditions {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .recommend-item {
     display: inline-block;
@@ -1134,7 +1141,7 @@ strong {
     font-weight: 300;
 }
 .score-price .rv-number {
-    font-size: 11px;
+    font-size: 12px;
     color: #484848;
     padding-left: 3px;
 }
@@ -1159,7 +1166,6 @@ strong {
     display: inline-block;
 }
 .bottom-btnbox {
-    display: inline-block;
     float: right;
 }
 .submit-request{
@@ -1197,6 +1203,9 @@ strong {
     letter-spacing: 1px;
     color: #60B6B5;
 }
+.condition-text {
+    margin: 10px 0;
+}
 .side-calendar {
     width: 300px;
     z-index: 1;
@@ -1228,26 +1237,26 @@ strong {
 .above-img-btn {
     display: inline-block;
     position: absolute;
-    right: 55px;
+    right: 10px;
     top: 10px;
     z-index: 2;
 }
 .above-img-btn2 {
     display: inline-block;
     position: absolute;
-    right: 55px;
+    right: 10px;
     bottom: 10px;
     z-index: 1;
 }
-
 .above-img-btn button, .above-img-btn2 button {
-    padding: 10px;
+    padding: 6px 15px;
     background: white;
-    border: 1px solid #cccccc;
     border-radius: 4px;
 }
 .above-img-btn span, .above-img-btn2 span{
-    font-size: 15px;
+    font-size: 14px;
+    padding: 3px;
+    display: inline-block;
 }
 .layer-popup {
     display: none;
@@ -1325,7 +1334,7 @@ strong {
     padding-bottom: 30px;
 }
 
-#reservation-request .popup-text {
+.reservation-request .popup-text {
     width: 420px;
 }
 
@@ -1337,10 +1346,20 @@ strong {
     overflow: hidden;
     transform: translateX(0%);
 }
-#sr-request-btn {
-    width: 294px;
-}
+
 .days td {
     text-align: center;
     font-size: 11px;
+}
+.reservation-request .popup-text {
+    width: 376px;
+}
+
+.footer-reservation {
+    position: relative;
+    top: 0;
+    padding: 0 24px 30px 24px;
+    display: inline-block;
+    z-index: 1;
+    width: 326px;
 }

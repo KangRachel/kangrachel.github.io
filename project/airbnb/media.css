@@ -1,11 +1,15 @@
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1110px) {
   .card-item {
     width: 340px;
     height: 380px;
   }
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1127px) {
+    .nav-wrap {
+        width: 55%;
+        margin: 0 auto;
+    }
     .card-item {
         width: 50%;
     }
