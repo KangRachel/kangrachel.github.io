@@ -716,16 +716,21 @@
         </div>
         <div class="recommend-list">
           <div class="prev-group">
-          <span>
-            <button type="button" class="rc-next-btn" id="recommend-room-prev-btn" @click="showPrevRecommendRoom">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-          </span>
-        </div>
+            <span>
+              <button type="button" class="rc-next-btn" id="recommend-room-prev-btn" @click="showPrevRecommendRoom">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+            </span>
+          </div>
           <div class="recommend-group">
             <div class="recommend-slide">
               <div v-for="recommendRoom in recommendRoomList" class="unreveal-recommend-item" id="slide-item">
                 <div class="recommend-img">
+                  <span class="like-icon">
+                    <button type="button" class="room-like-btn">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </span>
                   <img :src="recommendRoom.image">
                 </div>
                 <div class="text-box">
@@ -770,35 +775,49 @@
             <span>숙소 주변의 즐길 거리</span>
           </div>
           <div class="activity-list">
+            <div class="prev-activity-group">
+              <span>
+                <button type="button" class="rc-next-btn" id="activity-prev-btn" @click="showPrevActivity">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+              </span>
+            </div>
             <div class="activity-group">
-              <div v-for="activityItem in activityItems" class="activity-item">
-                <div class="activity-img">
-                  <img :src="activityItem.image">
-                </div>
-                <div class="activity-text">
-                  <div class="activity-type">
-                    <span>{{ activityItem.type }}</span>
+              <div class="activity-slide">
+                <div v-for="activityItem in activityItems" class="activity-item" id="slide-activity-item">
+                  <div class="activity-img">
+                    <span class="like-icon">
+                      <button type="button" class="room-like-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </span>
+                    <img :src="activityItem.image">
                   </div>
-                  <div class="activity-title">
-                    <span>{{ activityItem.title }}</span>
-                  </div>
-                  <div class="activity-price">
-                    <span>1인당 ₩{{ activityItem.price }}</span>
-                  </div>
-                  <div class="activity-score">
-                    <span class="score">{{ activityItem.score }}<i class="fas fa-star"></i></span>
-                    <span class="activity-language">({{ activityItem.review }}) {{ activityItem.language }}로 진행</span>
+                  <div class="activity-text">
+                    <div class="activity-type">
+                      <span>{{ activityItem.type }}</span>
+                    </div>
+                    <div class="activity-title">
+                      <span>{{ activityItem.title }}</span>
+                    </div>
+                    <div class="activity-price">
+                      <span>1인당 ₩{{ activityItem.price }}</span>
+                    </div>
+                    <div class="activity-score">
+                      <span class="score">{{ activityItem.score }}<i class="fas fa-star"></i></span>
+                      <span class="activity-language">({{ activityItem.review }}) {{ activityItem.language }}로 진행</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="next-group">
+            </div>
+            <div class="next-activity-group">
                 <span>
-                  <button type="button" class="rc-next-btn">
+                  <button type="button" class="rc-next-btn" id="next-activity-btn" @click="showNextActivity">
                     <i class="fas fa-chevron-right"></i>
                   </button>
                 </span>
               </div>
-            </div>
           </div>
         </div>
         <div class="options">
@@ -1134,6 +1153,10 @@
     var app = new Vue({
       el: '#app',
       data: {
+        data: 0,
+        num : 0,
+        actCount: 0,
+        actNum: 0,
         title: '서귀포의 아담하고 접근성 좋은 아파트',
         location: '제주 서귀포',
         roomType: 3,
@@ -1179,6 +1202,114 @@
             language: '한국어, 영어',
             review: 98,
             image: './assets/scuba.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
+          },
+          {
+            type: '사진 촬영',
+            title: '제주의 감성을 오롯이 느낄 수 있는 스냅사진 촬영',
+            price: 30000,
+            score: 4.96,
+            language: '한국어, 영어',
+            review: 98,
+            image: './assets/snap.jpg'
           },
           {
             type: '사진 촬영',
@@ -1367,7 +1498,7 @@
         this.buildCalendar();
         this.nextCalendarBuild();
         this.slideItemDefault();
-        this.showSlideBtn();
+        this.activityItemDefault();
       },
       methods: {
         translate() {
@@ -1592,7 +1723,6 @@
           }
         },
         prevCalendar() {
-
           this.today = new Date(this.today.getFullYear(), this.today.getMonth() - 1, this.today.getDate());
           this.buildCalendar();
           this.nextCalendarBuild();
@@ -1605,91 +1735,108 @@
         },
         slideItemDefault() {
           var recommendItemList = document.querySelectorAll('#slide-item');
-            recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-        },
-        showSlideBtn() {
-          
+          recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
+          recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+          recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
         },
         showNextRecommendRoom() {
-          num = num - 10.444444444444;
-          data = data + 1;
+          this.num = this.num - 10.444444444444;
+          this.data = this.data + 1;
+          var nextRecommendBtn = document.querySelector('.next-group');
+          var prevRecommendBtn = document.querySelector('.prev-group');
           var slideX = document.querySelector('.recommend-slide');
-          slideX.style.transform = 'translateX('+num+'%)';
+          slideX.style.transform = 'translateX(' + this.num + '%)';
           var recommendItemList = document.querySelectorAll('#slide-item');
-          console.log(recommendItemList);
-          console.log(data);
-          console.log(recommendItemList[0])
-          if (data % 7 == 0) {
-            recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-          } else if (data % 7 == 1) {
-            recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
-          } else if (data % 7 == 2) {
-            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
-          } else if (data % 7 == 3) {
-            recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
-          } else if (data % 7 == 4) {
-            recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
-          } else if (data % 7 == 5) {
-            recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
-          } else {
-            recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
-            recommendItemList[8].classList.replace('unreveal-recommend-item', 'recommend-item');
+          if (this.data + 3 < recommendItemList.length) {
+            recommendItemList[this.data + 3].classList.replace('recommend-item', 'unreveal-recommend-item');
+            recommendItemList[this.data + 2].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (this.data + 3 == recommendItemList.length) {
+            recommendItemList[recommendItemList.length - 1].classList.replace('unreveal-recommend-item', 'recommend-item');
           }
-            if (data % 7 == 0) {
-            document.querySelector('.prev-group').style.display = 'none';
-          } else if (data % 7 == 6) {
-            document.querySelector('.next-group').style.display = 'none';
+          if (this.data == recommendItemList.length - 3) {
+            nextRecommendBtn.style.display = 'none';
           } else {
-            document.querySelector('.prev-group').style.display = 'inline-block';
-            document.querySelector('.next-group').style.display = 'inline-block';
+            nextRecommendBtn.style.display ='inline-block';
+          }
+          if (this.data == 0) {
+            prevRecommendBtn.style.display = 'none';
+          } else {
+            prevRecommendBtn.style.display ='inline-block';
           }
         },
         showPrevRecommendRoom() {
-        num = num + 10.444444444444;
-        data = data - 1;
-        var slideX = document.querySelector('.recommend-slide');
-        slideX.style.transform = 'translateX('+num+'%)';
-        var recommendItemList = document.querySelectorAll('#slide-item');
-  
-        if (data % 7 == 1) {
-          recommendItemList[4].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 2) {
-          recommendItemList[5].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 3) {
-          recommendItemList[6].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 4) {
-          recommendItemList[7].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 5) {
-          recommendItemList[8].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 6) {
-          recommendItemList[9].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 0) {
-          recommendItemList[3].classList.replace('recommend-item','unreveal-recommend-item');
+          this.num = this.num + 10.444444444444;
+          this.data = this.data - 1;
+          var prevRecommendBtn = document.querySelector('.prev-group');
+          var slideX = document.querySelector('.recommend-slide');
+          slideX.style.transform = 'translateX(' + this.num + '%)';
+          var recommendItemList = document.querySelectorAll('#slide-item');
+
+           if (this.data + 3 < recommendItemList.length) {
+            recommendItemList[this.data + 3].classList.replace('recommend-item', 'unreveal-recommend-item');
+            recommendItemList[this.data + 2].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (this.data + 3 == recommendItemList.length) {
+            recommendItemList[recommendItemList.length - 1].classList.replace('unreveal-recommend-item', 'recommend-item');
+          }
+          if (this.data <= 0) {
+            prevRecommendBtn.style.display = 'none';
+          } else {
+            prevRecommend.style.display ='inline-block';
+          }
+        },
+        activityItemDefault() {
+          var activityItemList = document.querySelectorAll('#slide-activity-item');
+          activityItemList[5].classList.replace('activity-item', 'unreveal-activity-item')
+        },
+        showNextActivity() {
+          console.log(this.actCount);
+          var slideX = document.querySelector('.activity-slide');
+          var nextActivityBtn = document.querySelector('.next-activity-group');
+          var prevActivityBtn = document.querySelector('.prev-activity-group');
+          this.actNum = this.actNum - 4.9;
+          this.actCount = this.actCount + 1;
+          slideX.style.transform = 'translateX(' + this.actNum + '%)';
+          var activityItemList = document.querySelectorAll('#slide-activity-item');
+          if (this.actCount + 5 < activityItemList.length) {
+            activityItemList[this.actCount + 5].classList.replace('activity-item', 'unreveal-activity-item');
+            activityItemList[this.actCount + 4].classList.replace('unreveal-activity-item', 'activity-item');
+          } else if (this.actCount + 5 == activityItemList.length) {
+            activityItemList[activityItemList.length - 1].classList.replace('unreveal-activity-item', 'activity-item');
+          }
+          console.log(activityItemList[activityItemList.length - 1]);
           
-        }
-        if (data % 7 == 0) {
-          document.querySelector('.prev-group').style.display = 'none';
-        } else if (data % 7 == 6) {
-          document.querySelector('.next-group').style.display = 'none';
-        } else {
-          document.querySelector('.prev-group').style.display = 'inline-block';
-          document.querySelector('.next-group').style.display = 'inline-block';
-        }
+          if (this.actCount == activityItemList.length - 5) {
+            nextActivityBtn.style.display = 'none';
+          } else {
+            nextActivityBtn.style.display ='inline-block';
+          }
+          if (this.actCount == 0) {
+            prevActivityBtn.style.display = 'none';
+          } else {
+            prevActivityBtn.style.display ='inline-block';
+          }
+        },
+        showPrevActivity() {
+          console.log(this.actCount);
+          var slideX = document.querySelector('.activity-slide');
+          var prevActivityBtn = document.querySelector('.prev-activity-group');
+          this.actNum = this.actNum + 4.9;
+          this.actCount = this.actCount - 1;
+          slideX.style.transform = 'translateX(' + this.actNum + '%)';
+          var activityItemList = document.querySelectorAll('#slide-activity-item');
+          if (this.actCount + 5 < activityItemList.length) {
+            activityItemList[this.actCount + 5].classList.replace('activity-item', 'unreveal-activity-item');
+            activityItemList[this.actCount + 4].classList.replace('unreveal-activity-item', 'activity-item');
+          } else if (this.actCount + 5 == activityItemList.length) {
+            activityItemList[activityItemList.length - 1].classList.replace('unreveal-activity-item', 'activity-item');
+          }
+          console.log(activityItemList[activityItemList.length - 1]);
+          
+          if (this.actCount <= 0) {
+            prevActivityBtn.style.display = 'none';
+          } else {
+            prevActivityBtn.style.display ='inline-block';
+          }
         }
       }
     })

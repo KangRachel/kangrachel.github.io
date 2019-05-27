@@ -198,93 +198,92 @@
 
      // 추천숙소 캐러셀
     
-    var num = 0;
-    var nextSlideBtn = document.querySelector('#recommend-room-next-btn');
-    var data = 0;
+    // var num = 0;
+    // var nextSlideBtn = document.querySelector('#recommend-room-next-btn');
+    // var data = 0;
 
-     nextSlideBtn.addEventListener('click', function () {
-      num = num - 10.444444444444;
-      data = data + 1;
-      var slideX = document.querySelector('.recommend-slide');
-      slideX.style.transform = 'translateX('+num+'%)';
-      var recommendItemList = document.querySelectorAll('#slide-item');
-      console.log(data);
-      if (data % 7 == 0) {
-        recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-      } else if (data % 7 == 1) {
-        recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
-      } else if (data % 7 == 2) {
-        recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
-      } else if (data % 7 == 3) {
-        recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
-      } else if (data % 7 == 4) {
-        recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
-      } else if (data % 7 == 5) {
-        recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
-      } else {
-        recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
-        recommendItemList[8].classList.replace('unreveal-recommend-item', 'recommend-item');
-        
-      } 
-      if (data % 7 == 0) {
-        document.querySelector('.prev-group').style.display = 'none';
-      } else if (data % 7 == 6) {
-        document.querySelector('.next-group').style.display = 'none';
-      } else {
-        document.querySelector('.prev-group').style.display = 'inline-block';
-        document.querySelector('.next-group').style.display = 'inline-block';
-      }
+    //  nextSlideBtn.addEventListener('click', function () {
+    //   num = num - 10.444444444444;
+    //   data = data + 1;
+    //   var slideX = document.querySelector('.recommend-slide');
+    //   slideX.style.transform = 'translateX('+num+'%)';
+    //   var recommendItemList = document.querySelectorAll('#slide-item');
+    //   console.log(data);
+    //   if (data % 7 == 0) {
+    //     recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } else if (data % 7 == 1) {
+    //     recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } else if (data % 7 == 2) {
+    //     recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } else if (data % 7 == 3) {
+    //     recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } else if (data % 7 == 4) {
+    //     recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } else if (data % 7 == 5) {
+    //     recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } else {
+    //     recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //     recommendItemList[8].classList.replace('unreveal-recommend-item', 'recommend-item');
+    //   } 
+    //   if (data % 7 == 0) {
+    //     document.querySelector('.prev-group').style.display = 'none';
+    //   } else if (data % 7 == 6) {
+    //     document.querySelector('.next-group').style.display = 'none';
+    //   } else {
+    //     document.querySelector('.prev-group').style.display = 'inline-block';
+    //     document.querySelector('.next-group').style.display = 'inline-block';
+    //   }
       
-    });
+    // });
     
     
-    var prevSlideBtn = document.querySelector('#recommend-room-prev-btn');
-    var recommendItemList = document.querySelectorAll('#slide-item');
-     prevSlideBtn.addEventListener('click', function () {
-        num = num + 10.444444444444;
-        data = data - 1;
-        var slideX = document.querySelector('.recommend-slide');
-        slideX.style.transform = 'translateX('+num+'%)';
-        console.log(data);
+    // var prevSlideBtn = document.querySelector('#recommend-room-prev-btn');
+    // var recommendItemList = document.querySelectorAll('#slide-item');
+    //  prevSlideBtn.addEventListener('click', function () {
+    //     num = num + 10.444444444444;
+    //     data = data - 1;
+    //     var slideX = document.querySelector('.recommend-slide');
+    //     slideX.style.transform = 'translateX('+num+'%)';
+    //     console.log(data);
   
-        if (data % 7 == 1) {
-          recommendItemList[4].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 2) {
-          recommendItemList[5].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 3) {
-          recommendItemList[6].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 4) {
-          recommendItemList[7].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 5) {
-          recommendItemList[8].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 6) {
-          recommendItemList[9].classList.replace('recommend-item','unreveal-recommend-item');
-        } else if (data % 7 == 0) {
-          recommendItemList[3].classList.replace('recommend-item','unreveal-recommend-item');
+    //     if (data % 7 == 1) {
+    //       recommendItemList[4].classList.replace('recommend-item','unreveal-recommend-item');
+    //     } else if (data % 7 == 2) {
+    //       recommendItemList[5].classList.replace('recommend-item','unreveal-recommend-item');
+    //     } else if (data % 7 == 3) {
+    //       recommendItemList[6].classList.replace('recommend-item','unreveal-recommend-item');
+    //     } else if (data % 7 == 4) {
+    //       recommendItemList[7].classList.replace('recommend-item','unreveal-recommend-item');
+    //     } else if (data % 7 == 5) {
+    //       recommendItemList[8].classList.replace('recommend-item','unreveal-recommend-item');
+    //     } else if (data % 7 == 6) {
+    //       recommendItemList[9].classList.replace('recommend-item','unreveal-recommend-item');
+    //     } else if (data % 7 == 0) {
+    //       recommendItemList[3].classList.replace('recommend-item','unreveal-recommend-item');
           
-        }
-        if (data % 7 == 0) {
-          document.querySelector('.prev-group').style.display = 'none';
-        } else if (data % 7 == 6) {
-          document.querySelector('.next-group').style.display = 'none';
-        } else {
-          document.querySelector('.prev-group').style.display = 'inline-block';
-          document.querySelector('.next-group').style.display = 'inline-block';
-        }
-    });
+    //     }
+    //     if (data % 7 == 0) {
+    //       document.querySelector('.prev-group').style.display = 'none';
+    //     } else if (data % 7 == 6) {
+    //       document.querySelector('.next-group').style.display = 'none';
+    //     } else {
+    //       document.querySelector('.prev-group').style.display = 'inline-block';
+    //       document.querySelector('.next-group').style.display = 'inline-block';
+    //     }
+    // });
 
     
  
