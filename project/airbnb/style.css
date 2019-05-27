@@ -177,6 +177,7 @@ strong {
 .card-container {
     float: left;
     vertical-align: top;
+    width: 33%;
 }
 .card-item {
     display: inline-block;
@@ -928,6 +929,9 @@ strong {
 .customer-photo, .customer-detail {
     display: inline-block;
 }
+.customer-detail {
+    padding: 0 10px;
+}
 .customer-photo img {
     width: 35px;
     border-radius: 50%;
@@ -979,6 +983,10 @@ strong {
 .verified-host span {
     display: inline-block;
 }
+.host-icon i {
+    font-size: 12px;
+    vertical-align: top;
+}
 .host-response span {
     font-weight: 400;
 }
@@ -1029,19 +1037,20 @@ strong {
 }
 .recommend-item {
     display: inline-block;
-    width: 15%;
+    width: 10%;
     border-radius: 4px;
     margin-right: 10px;
     border: 1px solid #cccccc;
 }
-.unvisible-recommend-item {
-    display: none;
-    width: 28%;
+.unreveal-recommend-item {
+    visibility: hidden;
+    display: inline-block;
+    width: 10%;
     border-radius: 4px;
     margin-right: 10px;
     border: 1px solid #cccccc;
 }
-.recommend-item img {
+.recommend-item img, .unreveal-recommend-item img {
     width: 100%;
 }
 .score-price .recommend-price {
@@ -1077,9 +1086,14 @@ strong {
     display: inline-block;
     position: absolute;
     top: 35%;
-    right: 3%;
+    right: -2%;
 }
-
+.prev-group {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: -3%;
+}
 .rc-next-btn {
     border: 0;
     font-size: 16px;
@@ -1198,7 +1212,6 @@ strong {
     display: inline-block;
     opacity: 1;
 }
-
 #read-more-condition a {
     letter-spacing: 1px;
     color: #60B6B5;
@@ -1223,6 +1236,7 @@ strong {
 
 .added-message .alert-message {
     font-size: 12px;
+    transition: all 1s ease 1s;
 }
 
 .added-message .small-message {
@@ -1230,9 +1244,6 @@ strong {
 }
 .added-message-text {
     display: inline-block;
-}
-#message-box {
-    transition: all 1s ease 1s;
 }
 .above-img-btn {
     display: inline-block;
@@ -1322,7 +1333,7 @@ strong {
 .amenity-popup-phrase {
     border-bottom: 1px solid #cccccc;
 }
-#location, #refund {
+.location-section, .refund-section {
     padding-top:30px;
 }
 #footer-reservation {
@@ -1342,9 +1353,10 @@ strong {
     position: relative;
 }
 .recommend-slide {
-    width: 200%;
+    width: 300%;
     overflow: hidden;
     transform: translateX(0%);
+    transition: all 1s;
 }
 
 .days td {

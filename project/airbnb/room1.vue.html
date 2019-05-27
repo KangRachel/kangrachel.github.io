@@ -597,9 +597,9 @@
                 </span>
               </div>
               <div class="verified-host">
-                <span><i class="fas fa-star"></i></span>
+                <span class="host-icon"><i class="fas fa-star"></i></span>
                 <span>후기 179개</span>
-                <span><i class="fas fa-check-circle"></i></span>
+                <span class="host-icon"><i class="fas fa-check-circle"></i></span>
                 <span>인증됨</span>
               </div>
               <div class="host-text">
@@ -715,9 +715,16 @@
           <span>추천 숙소 더 보기</span>
         </div>
         <div class="recommend-list">
+          <div class="prev-group">
+          <span>
+            <button type="button" class="rc-next-btn" id="recommend-room-prev-btn" @click="showPrevRecommendRoom">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+          </span>
+        </div>
           <div class="recommend-group">
             <div class="recommend-slide">
-              <div v-for="recommendRoom in recommendRoomList" class="recommend-item">
+              <div v-for="recommendRoom in recommendRoomList" class="unreveal-recommend-item" id="slide-item">
                 <div class="recommend-img">
                   <img :src="recommendRoom.image">
                 </div>
@@ -752,7 +759,7 @@
           </div>
           <div class="next-group">
             <span>
-              <button type="button" class="rc-next-btn" id="recommend-room-next-btn">
+              <button type="button" class="rc-next-btn" id="recommend-room-next-btn" @click="showNextRecommendRoom">
                 <i class="fas fa-chevron-right"></i>
               </button>
             </span>
@@ -1262,6 +1269,45 @@
             price: '60000',
             image: './assets/hotel-1749602_1920.jpg'
           },
+          {
+            type: '부티크 호텔',
+            title: '서귀포 더 히든클리프',
+            persons: 2,
+            bedroom: 1,
+            feature: '호텔 내 수영장',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
+          {
+            type: '부티크 호텔',
+            title: '서귀포 더 히든클리프',
+            persons: 2,
+            bedroom: 1,
+            feature: '호텔 내 수영장',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
+          {
+            type: '부티크 호텔',
+            title: '서귀포 더 히든클리프',
+            persons: 2,
+            bedroom: 1,
+            feature: '호텔 내 수영장',
+            internet: '무선 인터넷',
+            kitchen: '주방',
+            showerRoom: '단독 욕실 사용',
+            score: '256',
+            price: '60000',
+            image: './assets/hotel-1749602_1920.jpg'
+          },
         ],
         customerReviewList: [{
             userId: 'Benjamin',
@@ -1320,6 +1366,8 @@
         window.addEventListener('scroll', this.coloredNavbar);
         this.buildCalendar();
         this.nextCalendarBuild();
+        this.slideItemDefault();
+        this.showSlideBtn();
       },
       methods: {
         translate() {
@@ -1551,12 +1599,98 @@
         },
 
         nextCalendar() {
-          // var today = new Date();
-          // var date = new Date();
           this.today = new Date(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
           this.buildCalendar();
           this.nextCalendarBuild();
         },
+        slideItemDefault() {
+          var recommendItemList = document.querySelectorAll('#slide-item');
+            recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+        },
+        showSlideBtn() {
+          
+        },
+        showNextRecommendRoom() {
+          num = num - 10.444444444444;
+          data = data + 1;
+          var slideX = document.querySelector('.recommend-slide');
+          slideX.style.transform = 'translateX('+num+'%)';
+          var recommendItemList = document.querySelectorAll('#slide-item');
+          console.log(recommendItemList);
+          console.log(data);
+          console.log(recommendItemList[0])
+          if (data % 7 == 0) {
+            recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (data % 7 == 1) {
+            recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (data % 7 == 2) {
+            recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (data % 7 == 3) {
+            recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (data % 7 == 4) {
+            recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else if (data % 7 == 5) {
+            recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
+          } else {
+            recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
+            recommendItemList[8].classList.replace('unreveal-recommend-item', 'recommend-item');
+          }
+            if (data % 7 == 0) {
+            document.querySelector('.prev-group').style.display = 'none';
+          } else if (data % 7 == 6) {
+            document.querySelector('.next-group').style.display = 'none';
+          } else {
+            document.querySelector('.prev-group').style.display = 'inline-block';
+            document.querySelector('.next-group').style.display = 'inline-block';
+          }
+        },
+        showPrevRecommendRoom() {
+        num = num + 10.444444444444;
+        data = data - 1;
+        var slideX = document.querySelector('.recommend-slide');
+        slideX.style.transform = 'translateX('+num+'%)';
+        var recommendItemList = document.querySelectorAll('#slide-item');
+  
+        if (data % 7 == 1) {
+          recommendItemList[4].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 2) {
+          recommendItemList[5].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 3) {
+          recommendItemList[6].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 4) {
+          recommendItemList[7].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 5) {
+          recommendItemList[8].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 6) {
+          recommendItemList[9].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 0) {
+          recommendItemList[3].classList.replace('recommend-item','unreveal-recommend-item');
+          
+        }
+        if (data % 7 == 0) {
+          document.querySelector('.prev-group').style.display = 'none';
+        } else if (data % 7 == 6) {
+          document.querySelector('.next-group').style.display = 'none';
+        } else {
+          document.querySelector('.prev-group').style.display = 'inline-block';
+          document.querySelector('.next-group').style.display = 'inline-block';
+        }
+        }
       }
     })
   </script>

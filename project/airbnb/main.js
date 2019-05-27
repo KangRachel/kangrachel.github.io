@@ -66,7 +66,6 @@
       for (i = 0; navList.length > i; i++) {
         var navItem = navList[i];
         if (window.scrollY >= 705 && window.scrollY < 2266) {
-            console.log('navItem');
             navItem.style.color = '#006A70';
             navList[0].style.color = '#484848';
           } else if (window.scrollY >= 2266 && window.scrollY < 3729) {
@@ -198,39 +197,114 @@
     }
 
      // 추천숙소 캐러셀
-
-     var nextRoombtn = document.querySelector('#recommend-room-next-btn');
-     var recommendRoomList = document.querySelectorAll('.recommend-item');
-     nextRoombtn.addEventListener('click', function(event){
-       for (var i = 0; i < recommendRoomList.length; i++) {
-         console.log(event);
-         var recommendRoom = recommendRoomList[i];
-         console.log(recommendRoom);
-
-       } 
-     })
-    //다음 지도 api
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-        mapOption = { 
-                    center: new daum.maps.LatLng(33.2447806, 126.5644081), // 지도의 중심좌표
-                    level: 3 // 지도의 확대 레벨
-                };
-
-          var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-          // 마커가 표시될 위치입니다 
-          var markerPosition  = new daum.maps.LatLng(33.2447806, 126.5644081); 
-
-          // 마커를 생성합니다
-          var marker = new daum.maps.Marker({
-              position: markerPosition
-          });
-          marker.setMap(map);
-  
-
-   var nextSlideBtn = document.querySelector(.rc-next-btn);
-
-   next
     
+    var num = 0;
+    var nextSlideBtn = document.querySelector('#recommend-room-next-btn');
+    var data = 0;
 
+     nextSlideBtn.addEventListener('click', function () {
+      num = num - 10.444444444444;
+      data = data + 1;
+      var slideX = document.querySelector('.recommend-slide');
+      slideX.style.transform = 'translateX('+num+'%)';
+      var recommendItemList = document.querySelectorAll('#slide-item');
+      console.log(data);
+      if (data % 7 == 0) {
+        recommendItemList[0].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+      } else if (data % 7 == 1) {
+        recommendItemList[1].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+      } else if (data % 7 == 2) {
+        recommendItemList[2].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+      } else if (data % 7 == 3) {
+        recommendItemList[3].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+      } else if (data % 7 == 4) {
+        recommendItemList[4].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+      } else if (data % 7 == 5) {
+        recommendItemList[5].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
+      } else {
+        recommendItemList[6].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[7].classList.replace('unreveal-recommend-item', 'recommend-item');
+        recommendItemList[8].classList.replace('unreveal-recommend-item', 'recommend-item');
+        
+      } 
+      if (data % 7 == 0) {
+        document.querySelector('.prev-group').style.display = 'none';
+      } else if (data % 7 == 6) {
+        document.querySelector('.next-group').style.display = 'none';
+      } else {
+        document.querySelector('.prev-group').style.display = 'inline-block';
+        document.querySelector('.next-group').style.display = 'inline-block';
+      }
+      
+    });
+    
+    
+    var prevSlideBtn = document.querySelector('#recommend-room-prev-btn');
+    var recommendItemList = document.querySelectorAll('#slide-item');
+     prevSlideBtn.addEventListener('click', function () {
+        num = num + 10.444444444444;
+        data = data - 1;
+        var slideX = document.querySelector('.recommend-slide');
+        slideX.style.transform = 'translateX('+num+'%)';
+        console.log(data);
+  
+        if (data % 7 == 1) {
+          recommendItemList[4].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 2) {
+          recommendItemList[5].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 3) {
+          recommendItemList[6].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 4) {
+          recommendItemList[7].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 5) {
+          recommendItemList[8].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 6) {
+          recommendItemList[9].classList.replace('recommend-item','unreveal-recommend-item');
+        } else if (data % 7 == 0) {
+          recommendItemList[3].classList.replace('recommend-item','unreveal-recommend-item');
+          
+        }
+        if (data % 7 == 0) {
+          document.querySelector('.prev-group').style.display = 'none';
+        } else if (data % 7 == 6) {
+          document.querySelector('.next-group').style.display = 'none';
+        } else {
+          document.querySelector('.prev-group').style.display = 'inline-block';
+          document.querySelector('.next-group').style.display = 'inline-block';
+        }
+    });
+
+    
+ 
+
+    
+//다음 지도 api
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+mapOption = { 
+            center: new daum.maps.LatLng(33.2447806, 126.5644081), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+  var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+  // 마커가 표시될 위치입니다 
+  var markerPosition  = new daum.maps.LatLng(33.2447806, 126.5644081); 
+
+  // 마커를 생성합니다
+  var marker = new daum.maps.Marker({
+      position: markerPosition
+  });
+  marker.setMap(map);
     
