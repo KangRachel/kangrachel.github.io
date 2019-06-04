@@ -631,7 +631,6 @@ strong {
     margin-left: 80px;
     padding: 0 24px 30px 24px;
     display: inline-block;
-    z-index: -1;
     width: 326px;
 }
 .book-request {
@@ -1273,15 +1272,45 @@ strong {
 .condition-text {
     margin: 10px 0;
 }
+
 .side-calendar {
-    width: 300px;
-    z-index: 1;
-    border: 1px solid #cccccc;
-    height: 300px;
+    width: 324px;
+    border: 1px solid #e4e4e4;
+    height: 320px;
     position: absolute;
-    bottom: -25%;
+    bottom: -41%;
     background: white;
     display: none;
+}
+.side-calendar::after {
+    border-top: 0;
+    border-right: 10px solid #cccccc;
+    border-left: 10px solid #cccccc;
+}
+.side-date {
+    text-align: center;
+    border: 1px double rgb(228, 231, 231);
+    width: 4px;
+    height: 4px;
+    font-size: 14px;
+    font-weight: 700;  
+}
+.side-date:hover {
+    background: rgb(228, 231, 231);
+}
+.side-calendar .right-icon2 {
+    display: inline-block;
+}
+.side-calendar .pre-year-month {
+    padding: 0 45px;
+}
+.side-calendar .calendar-month {
+    padding-top: 15px;
+}
+.side-calendar .pre-month {
+    margin: 0 auto;
+    width: 88%;
+    float: none;
 }
 .added-message {
     padding-top: 20px;

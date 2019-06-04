@@ -10,9 +10,7 @@
   <link rel="stylesheet" type="text/css" href="./media.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <!-- <script src="./calendar.js"></script> -->
   <title>서귀포의 아담하고 접근성좋은 아파트</title>
 </head>
 
@@ -203,7 +201,7 @@
         <div class="side-reservation" id="side-reservation">
           <div class="sr-info">
             <div class="sr-price">
-              <span class="reservation-price">₩51,401</span>
+              <span class="reservation-price">₩{{ price }}</span>
               <span class="per-night">/박</span>
             </div>
             <div class="sr-score">
@@ -223,18 +221,47 @@
                 <div class="datebox">
                   <span>날짜</span>
                   <div class="dateItem">
-                    <input class="date-from" id="date-from" type="text" value="체크인" name="checkinDate">
+                    <input class="date-from" id="date-from" type="text" value="체크인" name="checkinDate" @focus="showSidecalendar">
                     <span><i class="fas fa-arrow-right"></i></span>
                     <input class="date-to" id="date-to" type="text" placeholder="체크아웃" name="checkinDate">
                   </div>
                 </div>
               </div>
               <div class="side-calendar" id="side-checkin">
-
+                <div class="pre-month">
+                  <div class="calendar-month">
+                    <span class="left-icon">
+                      <button type="button" class="pre-btn" name="pre-btn" @click="prevSideCalendar" >
+                        <i class="fas fa-arrow-left"></i>
+                      </button>
+                    </span>
+                    <span class="pre-year-month" id="side-checkin-month">
+                      yyyy년 m월
+                    </span>
+                    <span class="right-icon2">
+                      <button type="button" class="next-btn" name="next-btn" @click="nextSideCalendar">
+                        <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </span>
+                  </div>
+                  <div>
+                    <table class="calendar" id="side-calendar">
+                      <tr class="days">
+                        <td>일</td>
+                        <td>월</td>
+                        <td>화</td>
+                        <td>수</td>
+                        <td>목</td>
+                        <td>금</td>
+                        <td>토</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
               </div>
-              <div class="side-calendar" id="side-checkout">
+              <!-- <div class="side-calendar" id="side-checkout">
 
-              </div>
+              </div> -->
               <div class="sr-people">
                 <span>인원</span>
                 <div class="guest-box">
@@ -1078,7 +1105,7 @@
               <div class="footer-reservation" id="footer-reservation">
                 <div class="sr-info">
                   <div class="sr-price">
-                    <span class="reservation-price">₩51,401</span>
+                    <span class="reservation-price">₩{{ price }}</span>
                     <span class="per-night">/박</span>
                   </div>
                   <div class="sr-score">
@@ -1105,7 +1132,7 @@
                       </div>
                     </div>
                     <div class="side-calendar" id="side-checkin">
-
+                      
                     </div>
                     <div class="side-calendar" id="side-checkout">
 
@@ -1167,6 +1194,7 @@
         today: new Date(),
         date: new Date(),
         calendar: this.buildCalendar,
+        price: 51401,
         activityItems: [{
             type: '액티비티',
             title: '제주 조랑말 승마',
@@ -1496,6 +1524,7 @@
         window.addEventListener('scroll', this.appearFixedNav);
         window.addEventListener('scroll', this.coloredNavbar);
         this.buildCalendar();
+        this.buildSideCalendar();
         this.nextCalendarBuild();
         this.slideItemDefault();
         this.activityItemDefault();
@@ -1603,15 +1632,6 @@
           } else {
             moreReadLocationBtn.classList.add('show-read-lo');
           }
-          // if (moreReadLocationBtn.style.display != 'block') {
-          //   moreReadLocationBtn.style.display = 'block';
-          //   moreReadLocationBtn.style.opacity = '1';
-          //   target.value = '숨기기';
-          // } else {
-          //   document.getElementById('more-read-lo').style.display = 'none';
-          //   document.getElementById('more-read-lo').style.opacity = '0';
-          //   target.value = '이 지역 자세히 알아보기';
-          // }
         },
         readMoreRefund() {
           var moreReadRefundBtn = document.getElementById('more-read-refund');
@@ -1684,6 +1704,38 @@
             cell.classList.add('available')
           }
         },
+        buildSideCalendar() {
+          var doMonth = new Date(this.today.getFullYear(), this.today.getMonth(), 1);
+          var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() + 1, 0);
+          var tblCalendar = document.querySelector('#side-calendar');
+          var tblCalendarYM = document.querySelector('#side-checkin-month');
+          tblCalendarYM.innerHTML = this.today.getFullYear() + '년' + (this.today.getMonth() + 1) + '월';
+          console.log(tblCalendar);
+          while (tblCalendar.rows.length > 1) {
+            tblCalendar.deleteRow(tblCalendar.rows.length - 1);
+          }
+
+          var row = null;
+
+          row = tblCalendar.insertRow();
+
+          var cnt = 0;
+          for (var i = 0; i < doMonth.getDay(); i++) {
+            cell = row.insertCell();
+            cnt = cnt + 1;
+            cell.classList.add('empty-cell')
+          }
+
+          for (var j = 1; j <= lastDate.getDate(); j++) {
+            cell = row.insertCell();
+            cell.innerHTML = j;
+            cnt = cnt + 1;
+            if (cnt % 7 == 0) {
+              row = tblCalendar.insertRow();
+            }
+            cell.classList.add('side-date');
+          }
+        },
         nextCalendarBuild() {
           var doMonth = new Date(this.today.getFullYear(), this.today.getMonth() + 1, 1);
           var lastDate = new Date(this.today.getFullYear(), this.today.getMonth() + 2, 0);
@@ -1732,6 +1784,20 @@
           this.today = new Date(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
           this.buildCalendar();
           this.nextCalendarBuild();
+        },
+        prevSideCalendar() {
+          this.today = new Date(this.today.getFullYear(), this.today.getMonth() - 1, this.today.getDate());
+          this.buildSideCalendar();
+        },
+        nextSideCalendar() {
+          this.today = new Date(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
+          this.buildSideCalendar();
+        },
+        showSidecalendar() {
+          document.querySelector('.side-calendar').style.display = 'inline-block';
+        },
+        hideSidecalendar() {
+          document.querySelector('.side-calendar').style.display = 'none';
         },
         slideItemDefault() {
           var recommendItemList = document.querySelectorAll('#slide-item');
