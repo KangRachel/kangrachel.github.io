@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" @click="hideSidecalendar">
     <section class="header">
       <div class="logo">
         <span>
@@ -1794,9 +1794,11 @@
           this.buildSideCalendar();
         },
         showSidecalendar() {
+          event.stopPropagation();
           document.querySelector('.side-calendar').style.display = 'inline-block';
         },
-        hideSidecalendar() {
+        hideSidecalendar(event) {
+          console.log(event);
           document.querySelector('.side-calendar').style.display = 'none';
         },
         slideItemDefault() {
