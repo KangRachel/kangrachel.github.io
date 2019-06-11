@@ -775,7 +775,7 @@ strong {
 }
 .amenity-title span, .pre-month li, .next-month li,
 .conditions span, .pre-year-month, .next-year-month,
-.right-icon, .left-icon, #read-more-condition span {
+.right-icon, .left-icon, .read-more-condition span {
     display: inline-block;
     letter-spacing: 1px;
 }
@@ -786,6 +786,10 @@ strong {
     padding: 0 65px;
     font-size: 18px;
     font-weight: bold;
+}
+.read-more-condition {
+    display: none;
+    opacity: 0;
 }
 .calendar-month {
     float: left;
@@ -968,7 +972,7 @@ strong {
 #next-nav {
     border: 1px solid #006a70;
 }
-.about-host {
+.about-host,.refund-section {
     width: 55%;
     padding-top: 50px;
     display: inline-block;
@@ -1013,10 +1017,10 @@ strong {
     color: #60B6B5;
 }
 .location, .refund {
-    clear: both;
-    display: inline-block;
-    width: 55%;
     padding: 15px 0;
+}
+.refund {
+    border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
 }
 .location-more, .refund-more, 
@@ -1245,12 +1249,10 @@ strong {
     border: 0px;
 }
 #more-read-lo, .more-read-refund,
-#read-more-condition{
+.read-more-condition{
     padding: 15px 0;
     transition-property: opacity;
     transition-duration: 3s;
-    background: white;
-    display: inline-block;
 }
 .more-read-refund {
     display: none;
@@ -1265,7 +1267,7 @@ strong {
     display: inline-block;
     opacity: 1;
 }
-#read-more-condition a {
+.read-more-condition a {
     letter-spacing: 1px;
     color: #60B6B5;
 }
@@ -1419,6 +1421,7 @@ strong {
 .location-section, .refund-section {
     padding-top:30px;
 }
+
 #footer-reservation {
     display: inline-block;
 }

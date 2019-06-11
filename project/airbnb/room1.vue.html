@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div id="app" @click="hideSidecalendar">
+  <div id="app">
     <section class="header">
       <div class="logo">
         <span>
@@ -259,9 +259,38 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="side-calendar" id="side-checkout">
-
-              </div> -->
+              <div class="side-calendar" id="side-checkout">
+                <div class="pre-month">
+                  <div class="calendar-month">
+                    <span class="left-icon">
+                      <button type="button" class="pre-btn" name="pre-btn" @click="prevSideCalendar" >
+                        <i class="fas fa-arrow-left"></i>
+                      </button>
+                    </span>
+                    <span class="pre-year-month" id="side-checkin-month">
+                      yyyy년 m월
+                    </span>
+                    <span class="right-icon2">
+                      <button type="button" class="next-btn" name="next-btn" @click="nextSideCalendar">
+                        <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </span>
+                  </div>
+                  <div>
+                    <table class="calendar" id="side-calendar">
+                      <tr class="days">
+                        <td>일</td>
+                        <td>월</td>
+                        <td>화</td>
+                        <td>수</td>
+                        <td>목</td>
+                        <td>금</td>
+                        <td>토</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
               <div class="sr-people">
                 <span>인원</span>
                 <div class="guest-box">
@@ -720,7 +749,7 @@
                 </span>
               </div>
               <div>
-                <div id="read-more-condition" style="display: none; opacity: 0;">
+                <div class="read-more-condition" id="read-more-condition" style="display: none; opacity: 0;">
                   <span>엄격 규칙</span>
                   <p>체크인 30일 전까지 예약을 취소하면 모든 수수료를 포함한 요금 전액이 환불됩니다.</p>
                   <p>체크인까지 30일이 남지 않은 시점에 예약을 취소하면 수수료를 포함한 총 숙박 요금의 50%가 환불됩니다.</p>
@@ -729,7 +758,7 @@
                 </div>
                 <span>
                   <input type="button" class="condition-more" id="condition-more" value="정책 자세히 읽기"
-                    onclick="moreCondition(event)">
+                    @click="readMoreConditions">
                 </span>
               </div>
             </div>
@@ -1794,12 +1823,26 @@
           this.buildSideCalendar();
         },
         showSidecalendar() {
-          event.stopPropagation();
           document.querySelector('.side-calendar').style.display = 'inline-block';
         },
         hideSidecalendar(event) {
           console.log(event);
           document.querySelector('.side-calendar').style.display = 'none';
+        },
+        readMoreConditions() {
+          
+          var moreReadConditionBtn = document.querySelector('#read-more-condition');
+          var target = event.srcElement;
+          console.log(target);
+          if (moreReadConditionBtn.style.display != 'inline-block') {
+            moreReadConditionBtn.style.display = 'inline-block';
+            moreReadConditionBtn.style.opacity = '1';
+            target.value = '정책 숨기기';
+          } else {
+            moreReadConditionBtn.style.display = 'none';
+            moreReadConditionBtn.style.opacity = '0';
+            target.value = '정책 자세히 읽기';
+          }
         },
         slideItemDefault() {
           var recommendItemList = document.querySelectorAll('#slide-item');

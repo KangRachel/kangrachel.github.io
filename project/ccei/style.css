@@ -1,0 +1,147 @@
+* {
+    font-family: 'Noto Sans KR',dotum,'돋움',vernade,arial,sans-serif;
+    color: #5f6677;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.header .warp {
+    width: 100%;
+    height: 154px;
+}
+
+.upper-menu {
+    font-size: 14px;
+    background: #004ea2;
+    height: 79px;
+
+}
+.menu-wrap {
+    width: 1400px;
+    margin: 0 auto;
+}
+.logo {
+    display: inline-block;
+    width: 132px;
+    height: 27px;
+    padding-top: 14px;
+}
+.menu-list {
+    float: right;
+}
+.menu-list ul {
+    padding-top: 10px;
+}
+.menu-list li {
+    display: inline-block;
+    padding-left: 30px;
+}
+.menu-list a {
+    color: #ffffff;
+    font-size: 14px;
+}
+.facebook {
+    width: 35px;
+    margin-top: 22px;
+}
+.nav-box {
+    width: 1400px;
+    height: 75px;
+    margin: 0 auto;
+    border: 0;
+    overflow: hidden;
+}
+.nav-box:hover{
+    height: 650px;
+
+}
+.main-menu {
+    height: 78px;
+    position: relative;
+    width: 14.285714285714286%;
+    float: left;
+    border-bottom: 3px solid #ccd4dc;
+}
+.main-menu:after {
+    content: '';
+    position: absolute;
+    bottom: -3;
+    left: 0;
+    right: 100%;
+    transition: all 300ms;
+}
+.main-menu:hover:after {
+    right: 0;
+    border-bottom: 3px solid #e13246;
+    
+}
+.main-menu a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.nav-box span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #171717;
+    margin: 30px;
+    display: inline-block;
+}
+.nav-box>div {
+    
+}
+.sub-box {
+    height: 100%;
+    clear: both;
+}
+.sub-menu {
+    width: 14.285714285714286%;
+    height: 100px;
+    float: left;
+}
+.sub-menu div {
+    border-right: 1px solid #cccccc;
+    margin-top: 30px;
+    height: 415px;
+}
+.sub-menu-list {
+    margin: 0 20px;
+    border-bottom: 1px solid #cccccc;
+}
+.sub-menu-list li {
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #5f6677;
+}
+.sub-menu-list>li:first-child a {
+    font-size: 16px;
+    color: #171717;
+    font-weight: 400;
+}
+.sub-menu-list:last-child {
+    border:0;
+}
+.sub-menu-list a {
+    position: relative;
+}
+.sub-menu-list a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    display: inline-block;
+    transition: all 300ms;
+}
+.sub-menu-list a:hover:after {
+    right: 0;
+    border-bottom: 1px solid #918f8f;
+}
+.sub-menu:last-child>div{
+    border: 0;
+}
