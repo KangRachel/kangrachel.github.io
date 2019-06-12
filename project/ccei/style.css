@@ -20,7 +20,7 @@ a {
     height: 79px;
 
 }
-.menu-wrap {
+.menu-wrap, .slide-wrap {
     width: 1400px;
     margin: 0 auto;
 }
@@ -34,19 +34,29 @@ a {
     float: right;
 }
 .menu-list ul {
-    padding-top: 10px;
+    display: inline-block;
+    margin-top: 32px;
+
 }
 .menu-list li {
     display: inline-block;
     padding-left: 30px;
+    vertical-align: middle;
 }
 .menu-list a {
     color: #ffffff;
     font-size: 14px;
 }
+.popup-btn {
+    background-color: #1f2774;
+    display: inline-block;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
 .facebook {
     width: 35px;
-    margin-top: 22px;
 }
 .nav-box {
     width: 1400px;
@@ -85,14 +95,11 @@ a {
     text-align: center;
 }
 .nav-box span {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 400;
     color: #171717;
     margin: 30px;
     display: inline-block;
-}
-.nav-box>div {
-    
 }
 .sub-box {
     height: 100%;
@@ -136,7 +143,7 @@ a {
     left: 0;
     right: 100%;
     display: inline-block;
-    transition: all 300ms;
+    transition: all 500ms;
 }
 .sub-menu-list a:hover:after {
     right: 0;
@@ -144,4 +151,54 @@ a {
 }
 .sub-menu:last-child>div{
     border: 0;
+}
+.slide-wrap {
+    position: relative;
+}
+.slide {
+    height: 606px;
+}
+.img1 {
+   background: url('./asset/slide1.jpg') no-repeat;
+ 
+}
+.img2 {
+    background: url('./asset/slide2.jpg') no-repeat;
+}
+.img3 {
+    background: url('./asset/slide3.jpg') no-repeat;
+}
+.img4 {
+    background: url('./asset/slide4.jpg') no-repeat;
+}
+.img5 {
+    background: url('./asset/slide5.jpg') no-repeat;
+}
+.slide .main-caption {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    top: 240px;
+    left: 160px;
+    text-shadow: 2px 2px 2px black;
+
+}
+.slide .sub-caption {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    top: 285px;
+    left: 167px;
+    text-shadow: 2px 2px 2px black;
+}
+.utility {
+    width: 99.3%;
+    height: 140px;
+    background: #171717;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 10px;
+    border-left: 5px solid #fff;
 }
