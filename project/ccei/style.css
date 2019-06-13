@@ -196,9 +196,30 @@ a {
 .utility {
     width: 99.3%;
     height: 140px;
-    background: #171717;
-    opacity: 0.7;
+    background: rgb(0,0,0,0.7);
     position: absolute;
     bottom: 10px;
     border-left: 5px solid #fff;
+}
+.utility li {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.utility li:hover {
+    background: #1f2774;
+}
+.utility-list {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+}
+.utility-list a {
+    text-align: center;
+}
+
+.utility div {
+    color: #ffffff;
+    font-weight: 400;
+    padding-top: 25px;
 }
