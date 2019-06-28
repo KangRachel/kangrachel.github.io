@@ -7,6 +7,7 @@
   <title>제주창조경제혁신센터</title>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./media.css">
   <link rel="stylesheet" href="./jquery.bxslider.css">
   <script src="https://kit.fontawesome.com/a5cc0b47ad.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -33,6 +34,9 @@
                 <li><a href="#"><img class="facebook" src="./asset/hbtn_facebook.png"></a></li>
               </ul>
             </div>
+          </span>
+          <span class="menu-btn">
+            <button type="button" class="mobile-menu-btn"></button>
           </span>
         </div>
       </div>
@@ -412,31 +416,104 @@
     </div>
     <div class="content-wrap">
       <div class="half-content">
-        <div class="notice-nav-bar">
+        <nav class="notice-tab-bar">
           <ul>
-            <li class="notice-nav active">
+            <li class="tab-item tab-active">
               <a href="#">센터 공지사항</a>
             </li>
-            <li class="notice-nav">
+            <li class="tab-item">
               <a href="#">타센터 공지사항</a>
             </li>
-            <li class="notice-nav">
+            <li class="tab-item">
               <a href="#">관련기관 공지사항</a>
             </li>
             <li>
-              <a href="#"><span class="view-more"><i class="fas fa-plus"></i></span></a>
+              <span class="view-more"><i class="fas fa-plus"></i></span>
             </li>
           </ul>
-          
+        </nav>
+        <div class="notice-board">
+          <ul>
+            <li><a href="#">2019 Global Startup in Jeju</a><span class="date">2019.05.30</span></li>
+            <li><a href="#">청춘을 위해 쏜다! 「청춘트럭」</a><span class="date">2019.05.29</span></li>
+            <li><a href="#">[모집] 6월 체류지원프로그램 제주다움</a><span class="date">2019.05.08</span></li>
+            <li><a href="#">제주창조경제혁신센터 2019년 제1차 직원공개채용 공고</a><span class="date">2019.04.04</span></li>
+            <li><a href="#">[모집] 5월 체류지원프로그램 제주다움</a><span class="date">2019.03.26</span></li>
+            <li><a href="#">[공고] 2019년 제주창조경제혁신센터 Seed Money 투자사업 시행 (모집:...</a><span class="date">2019.03.15</span></li>
+          </ul>
         </div>
       </div>
       <div class="half-content">
-
+        <div class="program-title">
+          <span>홍보동영상</span>
+          <span class="view-more"><i class="fas fa-plus"></i></span>
+        </div>
+        <ul class="program-list">
+          <li>
+            <a href="#">
+              <div class="program-box">
+                <div>
+                  <iframe src="https://www.youtube.com/embed/NfevKp4wGog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="program-info video">
+                  <h3>[2019 지역혁신 네트워킹 Day...</h3>
+                </div>
+              </div>
+            </a>  
+          </li>
+          <li>
+            <a href="#">
+              <div class="program-box">
+                <div>
+                  <iframe src="https://www.youtube.com/embed/NfevKp4wGog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="program-info video">
+                  <h3>[2019 지역혁신 네트워킹 Day...</h3>
+                </div>
+              </div>
+            </a>  
+          </li>
+        </ul>
       </div>
     </div>
   </section>
-  <section class="footer">
-
+  <section class="survey">
+    <div class="survey-wrap">
+      <div class="survey-header">
+        <span>만족도조사</span>
+      </div>
+      <div class="survey-question">
+        <span class="survey-icon"><img src="./asset/survey.png"></span>
+        <span>유용한 정보가 되셨나요?</span>
+      </div>
+      <div class="survey-answer">
+        <ul>
+          <li>
+            <input type="radio">
+            <label>매우 만족</label>
+          </li>
+          <li>
+            <input type="radio">
+            <label>매우 만족</label>
+          </li>
+          <li>
+            <input type="radio">
+            <label>매우 만족</label>
+          </li>
+          <li>
+            <input type="radio">
+            <label>매우 만족</label>
+          </li>
+          <li>
+            <input type="radio">
+            <label>매우 만족</label>
+          </li>
+          <li>
+            <button type="button">확인</button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 </body>
 </html>

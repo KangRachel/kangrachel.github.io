@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="input-num">
+    <button type="button" id="btn">클릭</button>
+
+    <script>
+        function square(inputNum) {
+            var intInputNum = parseInt(inputNum, 10);
+            var sqrtNum = Math.sqrt(intInputNum);
+
+            if (Number.isInteger(sqrtNum)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function printSquare() {
+            var inputNum = document.querySelector('#input-num').value;
+
+        }
+
+        var btn = document.querySelector('#btn');
+        btn.addEventListener('click', printSquare);
+
+
+        function positiveSum(arr) {
+
+            function isPositive(num) {
+                return num < 0;
+            }
+            var positiveArray = arr.filter(isPositive);
+
+            var result = 0;
+
+            for (var i = 0; i < positiveArray.length; i++) {
+                result += positiveArray[i];
+            }
+            return result;
+        }
+
+        function highAndLow(number) {
+
+            var num = number.split(' ');
+            console.log(num);
+
+            var maxNum = 0;
+            var minNum = 0;
+
+            for (var i = 0; i < num.length; i++) {
+                var intNum = parseInt(num[i]);
+
+                if (intNum > maxNum) {
+                    maxNum = intNum;
+                }
+                if (intNum < minNum) {
+                    minNum = intNum;
+                }
+            }
+
+
+
+
+        }
+        highAndLow('1 2 3 -2 -5')
+
+        function maskify(cc) {
+            if (cc.length > 4) {
+                var num = cc.length - 4;
+                
+                var cutCc = cc.substring(num);
+               
+
+                var hash = '#'.repeat(num);
+
+                return hash + cutCc;
+
+            } else {
+                return cc;
+            }
+        }
+
+        function countBy(x, n) {
+            var z = [];
+            for (var i = 1; i < n+1 ; i++) {
+                var num = i * x
+                if (num <= n) {
+                    z.push(num);
+                }
+                
+            }
+            return z;
+        }
+
+        console.log(countBy(1, 10));
+    </script>
+</body>
+
+</html>
