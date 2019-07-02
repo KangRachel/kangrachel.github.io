@@ -1,5 +1,5 @@
 /* Desktop Device */
-@media all and (max-width:1400px) and (min-width:1024px) {
+@media all and (max-width:1399px) and (min-width:1024px) {
     .menu-wrap, .nav-box, .content-wrap {
         width: 1024px;
         margin: 0 auto;
