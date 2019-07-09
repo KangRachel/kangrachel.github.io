@@ -163,7 +163,7 @@ ul.bxslider {
 }
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   left: 99px;
-  top: 10px;
+  top: 2px;
   width: 35px;
   height: 30px;
   z-index: 100;

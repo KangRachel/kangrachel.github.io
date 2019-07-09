@@ -1,4 +1,4 @@
-* {
+body {
     font-family: 'Noto Sans KR',dotum,'돋움',vernade,arial,sans-serif;
     color: #5f6677;
     font-weight: 300;
@@ -11,6 +11,7 @@ html {
 a {
     text-decoration: none;
 }
+/* 헤더, wrap */
 
 .header .warp {
     width: 100%;
@@ -84,7 +85,9 @@ a {
 .menu-btn button:focus {
     outline: 0;
 }
+/* GNB영역 */
 .nav-box {
+    position: relative;
     width: 1400px;
     height: 75px;
     margin: 0 auto;
@@ -132,38 +135,43 @@ a {
     height: 100%;
     clear: both;
 }
-.sub-menu {
+.lnb {
     width: 14.285714285714286%;
-    height: 100px;
+    background: #fff;
     float: left;
 }
-.sub-menu div {
+.lnb div {
     border-right: 1px solid #cccccc;
     margin-top: 30px;
     height: 415px;
 }
-.sub-menu-list {
+.lnb-list {
     margin: 0 20px;
     border-bottom: 1px solid #cccccc;
 }
-.sub-menu-list li {
-    padding: 10px;
-    font-size: 13px;
+.sub-lnb li {
+    padding: 5px 0;
+    font-size: 0.8125em;
     font-weight: 300;
-    color: #5f6677;
 }
-.sub-menu-list>li:first-child a {
-    font-size: 16px;
+.sub-lnb li a{
+    color: #5f6677;
+} 
+.lnb-list>li:first-child {
+    padding: 10px 0;
+}
+.lnb-list>li:first-child a {
+    font-size: 1em;
     color: #171717;
     font-weight: 400;
 }
-.sub-menu-list:last-child {
+.lnb-list:last-child {
     border:0;
 }
-.sub-menu-list a {
+.lnb-list a {
     position: relative;
 }
-.sub-menu-list a:after {
+.lnb-list a:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -172,14 +180,16 @@ a {
     display: inline-block;
     transition: all 500ms;
 }
-.sub-menu-list a:hover:after {
+.lnb-list a:hover:after {
     right: 0;
     border-bottom: 1px solid #918f8f;
 }
 .sub-menu:last-child>div{
     border: 0;
 }
+
 .slide-wrap {
+    margin: 0 auto;
     position: relative;
 }
 .slide {
@@ -369,10 +379,12 @@ a {
 }
 
 .notice-board li {
-    padding: 10px 0;
+    padding: 5px 0;
+    position: relative;
 }
 .notice-board a {
     font-size: 0.938em;
+    color: #5f6677;
 }
 .notice-board a:hover {
     text-decoration: underline;
@@ -405,7 +417,6 @@ iframe {
     padding: 18px 25px;
     line-height: 3.125em;
 }
-
 .survey-icon,
 .manager-icon {
     display: inline-block;
@@ -413,6 +424,9 @@ iframe {
 }
 .survey-question {
     float: left;
+}
+.survey-question span:nth-child(2) {
+    vertical-align: super;
 }
 .survey-answer {
     float: right;
@@ -478,6 +492,13 @@ iframe {
     float: left;
     color: #fff;
     padding-right: 40px;
+    font-weight: 400;
+}
+.family-site {
+    float: right;
+}
+.family-site select {
+
 }
 .email {
     clear: both;
@@ -490,4 +511,15 @@ iframe {
 }
 .reserved {
     color: #fff;
+}
+
+.blind {
+    position: absolute;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    font-size: 1px;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
 }
