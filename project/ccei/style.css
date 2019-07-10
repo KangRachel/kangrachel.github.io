@@ -140,6 +140,7 @@ a {
     background: #fff;
     float: left;
 }
+
 .lnb div {
     border-right: 1px solid #cccccc;
     margin-top: 30px;
@@ -234,7 +235,7 @@ a {
 .utility {
     width: 99.3%;
     height: 140px;
-    background: rgb(0,0,0,0.7);
+    background: rgba(0,0,0,.7);
     position: absolute;
     bottom: 10px;
     border-left: 5px solid #fff;
@@ -304,14 +305,16 @@ a {
 .program-title {
     margin: 10px 0;
 }
-.program-title span {
-    font-size: 18px;
+.program-title h3 {
+    font-size: 1.125em;
+    font-weight: 400;
     color: #222222;
+    display: inline-block;
 }
 .program-info {
-    padding: 10px 20px;
+    padding: 0 20px;
 }
-.program-info h3{
+.program-info h4{
     font-size : 20px;
     color: #231f20;
     font-weight: 400;
@@ -319,7 +322,8 @@ a {
     height: 35px;
 }
 .program-info div {
-    padding-top: 30px;
+    padding: 20px 0;
+    color: #5f6677;
 }
 .half-content {
     width: 50%;
@@ -346,8 +350,8 @@ a {
     font-size: 14px;
 }
 .tab-item a{
-    display: block;
     height: 40px;
+    color: #5f6677;
 }
 
 .tab-active a {
@@ -363,10 +367,7 @@ a {
     font-size: 16px;
 }
 .notice-tab-bar .view-more {
-    position: absolute;
-    right: 1px;
-    top: 15px;
-    font-size: 18px;
+    padding-top: 5px;
 }
 .notice-board {
     border: 1px solid #e3e5e4;
