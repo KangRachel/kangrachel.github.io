@@ -85,7 +85,7 @@ a {
 .menu-btn button:focus {
     outline: 0;
 }
-/* GNB영역 */
+/* 대메뉴 (GNB) 영역 */
 .nav-box {
     position: relative;
     width: 1400px;
@@ -131,6 +131,7 @@ a {
     line-height: 78px;
     display: inline-block;
 }
+/* 소메뉴 (lnb) 영역 */
 .sub-box {
     height: 100%;
     clear: both;
@@ -145,6 +146,9 @@ a {
     border-right: 1px solid #cccccc;
     margin-top: 30px;
     height: 415px;
+}
+.lnb:last-child div {
+    border: 0;
 }
 .lnb-list {
     margin: 0 20px;
@@ -189,14 +193,12 @@ a {
     border: 0;
 }
 
+/* 이미지 슬라이드 영역 */
 .slide-wrap {
     margin: 0 auto;
     position: relative;
 }
-.slide {
-    height: 606px;
-    width: 100%;
-}
+
 .img1 {
    background: url('./asset/slide1.jpg') no-repeat;
  
@@ -212,6 +214,12 @@ a {
 }
 .img5 {
     background: url('./asset/slide5.jpg') no-repeat;
+}
+.slide {
+    height: 606px;
+    width: 100%;
+    background-size: cover;
+
 }
 .slide .main-caption {
     font-size: 2rem;
@@ -232,13 +240,13 @@ a {
     left: 167px;
     text-shadow: 2px 2px 2px black;
 }
+/* 슬라이드 내 메뉴 */
 .utility {
-    width: 99.3%;
+    width: 100%;
     height: 140px;
     background: rgba(0,0,0,.7);
     position: absolute;
-    bottom: 10px;
-    border-left: 5px solid #fff;
+    bottom: 5px;
 }
 .utility li {
     float: left;
@@ -262,12 +270,16 @@ a {
     font-weight: 400;
     padding-top: 25px;
 }
+/* 콘텐츠 영역 */
 .content-wrap {
     overflow: hidden;
 }
 .view-more {
     float: right;
     margin: 0 15px;
+}
+.content-wrap:nth-child(1) .half-content:nth-child(1) .view-more {
+    visibility: hidden;
 }
 .program-list {
     width: 100%;
@@ -304,6 +316,8 @@ a {
 }
 .program-title {
     margin: 10px 0;
+    height: 27px;
+    overflow: hidden;
 }
 .program-title h3 {
     font-size: 1.125em;
@@ -315,7 +329,7 @@ a {
     padding: 0 20px;
 }
 .program-info h4{
-    font-size : 20px;
+    font-size : 1.25em;
     color: #231f20;
     font-weight: 400;
     padding: 15px 0;
@@ -404,6 +418,7 @@ iframe {
     font-size: 1em;
     padding-bottom: 0;
 }
+/* 만족도 조사 및 관리자 소개 영역 */
 .survey-wrap {
     height: 120px;
     border: 1px solid #e3e5e4;
@@ -433,8 +448,6 @@ iframe {
     float: right;
     padding: 20px 25px;
 }
-
-
 .survey-answer li {
     display: inline-block;
     margin-left: 50px;
@@ -448,6 +461,7 @@ iframe {
     font-size: 0.825em;
     padding: 5px 0;
     margin-left: 100px;
+    text-align: center;
 }
 
 .contact-wrap {
@@ -461,15 +475,14 @@ iframe {
     margin-right: 396px;
     vertical-align: super;
 }
+/* 하단 (footer) 영역 */
 .footer-phone {
     width: 100%;
-    height: 100px;
     background: #67686e;
     border-bottom: 1px solid #777d8b
 }
 .footer-bottom {
     width: 100%;
-    height: 177px;
     background: #67686e;
 }
 
@@ -506,13 +519,22 @@ iframe {
     overflow: hidden;
     padding-top: 40px;
 }
-.mail-icon i {
-    font-size: 23px;
-    color: #fff;
+.email span, .mail-icon i {
+    font-size: 0.75em;
+    padding: 15px 0;
 }
 .reserved {
+    font-size: 0.75em;
+    padding-top: 15px;
+}
+.mail-icon i {
+    font-size: 1.375em;
     color: #fff;
 }
+.email span, .reserved {
+    color: #fff;
+}
+
 
 .blind {
     position: absolute;

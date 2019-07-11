@@ -1,6 +1,6 @@
 /* Desktop Device */
 @media all and (max-width:1399px) and (min-width:1024px) {
-    .menu-wrap, .nav-box, .content-wrap {
+    .menu-wrap, .nav-box, .content-wrap, .survey-wrap ,.contact-wrap {
         width: 1024px;
         margin: 0 auto;
     }
@@ -15,8 +15,9 @@
     .slide {
         height: 433px;
     }
-    .utility {
-        bottom: -5px;
+   
+    .survey-answer li {
+        margin-left: 15px;
     }
 }
 
@@ -27,7 +28,7 @@
         width: 100%;
         height: 45px;
     }
-    .menu-list, .nav-bar {
+    .menu-list, .nav-bar, .gnb,.survey-wrap, .contact-wrap {
         display: none;
     }
     .logo {
@@ -40,9 +41,138 @@
         width: 130px;
         height: 30px;
     }
+    .slide {
+        height: 330px;
+        background-position: bottom;
+    }
     .slide-wrap {
         width: 100%;
-        height: 433px;
+    }
+    .utility {
+        height: 85px;
+        bottom: 0;
+    }
+    .utility-list img {
+        width: 25px;
+        height: 25px;
+    }
+    .utility-list div {
+        font-size: 0.8125em;
+    }
+    .utility-list div {
+        padding-top: 15px;
+    }
+    .content-wrap {
+        max-width: 100%;
+        margin: 0 10px;
     }
 }
+@media all and (max-width: 767px) {
+    .menu-wrap, .upper-menu, .footer-wrap {
+        width: 100%;
+        height: 45px;
+    }
+    .menu-list, .nav-bar, .gnb, .survey-wrap, .contact-wrap {
+        display: none;
+    }
+    .logo {
+        padding: 10px 14px;
+    }
+    .menu-btn {
+        display: inline;
+    }
+    .ccei-logo {
+        width: 130px;
+        height: 30px;
+    }
+    
+    .slide {
+        height: 330px;
+        background-position: bottom;
+    }
+    .content-wrap {
+        width: 767px
+    }
+   .slide-wrap, .content-wrap {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+    .slide-wrap {
+        margin: 0;
+    }
+    .utility {
+        height: 85px;
+        bottom: 0;
+    }
+    .utility-list img {
+        width: 25px;
+        height: 25px;
+    }
+    .utility-list div {
+        font-size: 0.8125em;
+    }
+    .utility-list div {
+        padding-top: 15px;
+    }
+    .half-content {
+        display: block;
+        clear: both;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .content-wrap:nth-child(1) .half-content:nth-child(1) .view-more {
+        visibility: visible;
+    }
+    .content-wrap:nth-child(1) .half-content:nth-child(2) .view-more {
+        visibility: hidden;
+    }
+    .content-wrap:last-child .half-content:last-child li {
+        display: block;
+        width: 100%;
+    }
 
+
+    .footer-wrap {
+        padding: 0;
+        height: auto;
+    }
+    .footer-wrap div {
+        text-align: center;
+    }
+    .footer-wrap span:nth-child(2),
+    .footer-wrap a {
+        font-size: 0.8125em;
+        font-weight: 400;
+    }
+    .icon-phone i {
+        font-size: 1.2em;
+    }
+    .footer-phone {
+        height: auto;
+        padding: 10px 0;
+    }
+    .phone-number {
+        font-size: 1em;
+    }
+    .footer-menu li{
+        display: block;
+        border-bottom: 1px solid #777d8b;
+        overflow: hidden;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .footer-menu li a {
+        float: none;
+        padding: 0;
+    }
+    .family-site {
+        float: none;
+    }
+    .footer-bottom {
+        height: auto;
+    }
+    .email span, .mail-icon i, .reserved {
+        font-size: 0.75em;
+        padding: 15px 0;
+    }
+}
