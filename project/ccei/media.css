@@ -15,9 +15,18 @@
     .slide {
         height: 433px;
     }
-   
     .survey-answer li {
         margin-left: 15px;
+    }
+    .program-box img {
+        height: 150px;
+    }
+    
+    .manager-info {
+        margin-right: 150px;
+    }
+    .survey-wrap, .contact-wrap{
+        margin-bottom: 15px;
     }
 }
 
@@ -65,6 +74,9 @@
     .content-wrap {
         max-width: 100%;
         margin: 0 10px;
+    }
+    .program-box img {
+        height: 150px;
     }
 }
 @media all and (max-width: 767px) {
@@ -130,7 +142,10 @@
         display: block;
         width: 100%;
     }
-
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
 
     .footer-wrap {
         padding: 0;
@@ -171,8 +186,5 @@
     .footer-bottom {
         height: auto;
     }
-    .email span, .mail-icon i, .reserved {
-        font-size: 0.75em;
-        padding: 15px 0;
-    }
+    
 }
