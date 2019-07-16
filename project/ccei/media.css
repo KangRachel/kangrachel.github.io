@@ -30,7 +30,7 @@
     }
 }
 
-/* mobile, tablet Device */
+/* tablet Device */
 
 @media all and (max-width: 1023px) and (min-width:768px) {
     .menu-wrap, .upper-menu {
@@ -44,7 +44,7 @@
         padding: 10px 14px;
     }
     .menu-btn {
-        display: inline;
+        display: inline-block;
     }
     .ccei-logo {
         width: 130px;
@@ -79,6 +79,7 @@
         height: 150px;
     }
 }
+/* Tablet, Mobile Device */
 @media all and (max-width: 767px) {
     .menu-wrap, .upper-menu, .footer-wrap {
         width: 100%;
@@ -91,7 +92,7 @@
         padding: 10px 14px;
     }
     .menu-btn {
-        display: inline;
+        display: inline-block;
     }
     .ccei-logo {
         width: 130px;
@@ -105,7 +106,7 @@
     .content-wrap {
         width: 767px
     }
-   .slide-wrap, .content-wrap {
+    .slide-wrap, .content-wrap {
         max-width: 100%;
         margin: 0 10px;
     }
@@ -142,11 +143,16 @@
         display: block;
         width: 100%;
     }
+    .notice-tab-bar {
+        margin-top: 15px;
+    }
     iframe {
         width: 100%;
-        height: 500px;
+        height: 450px;
     }
-
+    .video-list li{
+        height: 550px;
+    }
     .footer-wrap {
         padding: 0;
         height: auto;

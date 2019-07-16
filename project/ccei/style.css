@@ -25,6 +25,7 @@ a {
     height: 79px;
 
 }
+.popup,
 .menu-wrap,
 .slide-wrap,
 .content-wrap,
@@ -73,17 +74,81 @@ a {
 }
 .menu-btn {
     display: none;
-    padding: 7px 10px;
+    position: relative;
     float: right;
-}
-.menu-btn button{
     width: 30px;
     height: 30px;
     background: #003399;
-    border: 0;
+    margin: 5px 10px;
     border-radius: 50%;
 }
-.menu-btn button:focus {
+.menu-btn span {
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    left: 6px;
+    width: 55%;
+    height: 2px;
+    color: transparent;
+    background: #fff;
+}
+
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+.menu-btn span:before {
+    top: -6px;
+}
+.menu-btn span:after {
+    top: 6px;
+}
+/* 상단팝업 */ 
+.popup {
+    position: relative;
+}
+.popup-slider {
+    width: 100%;
+    height: 188px;
+}
+.popup-slider-item {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.popup1 {
+    background-image: url(./asset/popup1.png)
+}
+.popup2 {
+    background-image: url(./asset/popup2.png)
+}
+.close-popup {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+legend {
+    visibility: hidden;
+}
+.close-popup label {
+    font-size: 0.825em;
+}
+.close-popup-btn {
+    border: 0;
+    background: transparent;
+}
+.close-popup-btn i {
+    color: #5f6677;
+}
+.fa-times {
+    font-size: 1.5em;
+}
+.close-popup-btn:focus{
     outline: 0;
 }
 /* 대메뉴 (GNB) 영역 */
@@ -425,7 +490,9 @@ a {
     font-size: 0.875em;
     color: #919cb6;
 }
-
+.program-list {
+    overflow: hidden;
+}
 iframe {
     width: 100%;
     height: 215px;
@@ -528,8 +595,48 @@ iframe {
 .family-site {
     float: right;
 }
+.family-site-list {
+    position: relative;
+}
 .family-site select {
-
+    position: absolute;
+    width: 1px;
+    border: 0;
+    height: 1px;
+    z-index: -1;
+    
+}
+.select-box {
+    display: inline-block;
+    width: 252px;
+    height: 36px;
+    background: #fff;
+    cursor: pointer;
+}
+.select-box span:nth-child(1){
+    display: inline-block;
+    color: #444444;
+    font-size: 0.825em;
+    padding: 8px 10px;
+}
+.drop-down {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-image: url(./asset/icon_select_open.png);
+    background-repeat: no-repeat;
+    margin: 13px 10px;
+}
+.other-site-btn {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: #b0b2bc;
+}
+.other-site-btn i {
+    color: #fff;
+    font-size: 1em;
 }
 .email {
     clear: both;
@@ -553,13 +660,4 @@ iframe {
 }
 
 
-.blind {
-    position: absolute;
-    top: 0;
-    height: 0;
-    visibility: hidden;
-    font-size: 1px;
-    line-height: 0;
-    text-indent: -9999px;
-    overflow: hidden;
-}
+

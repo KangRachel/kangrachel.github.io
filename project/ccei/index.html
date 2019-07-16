@@ -8,17 +8,34 @@
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./media.css">
-  <link rel="stylesheet" href="./fonts.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
   <link rel="stylesheet" href="./jquery.bxslider.css">
   <script src="https://kit.fontawesome.com/a5cc0b47ad.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <script src="./main.js"></script>
+  <script src="./slide.js"></script>
 </head>
 <body>
   <section class="header">
     <div class="wrap">
+      <div class="popup">
+        <div class="popup-slider">
+          <div class="popup-slider-item popup1"></div>
+          <div class="popup-slider-item popup2"></div>
+        </div>
+        <div class="close-popup">
+          <form>
+            <fieldset>
+              <legend>하루만 숨겨놓기</legend>
+              <input type="checkbox" id="close-popup-today" name="popup-close-today">
+              <label for="close-popup-today">하루만 숨겨놓기</label>
+              <button type="button" class="close-popup-btn">
+                  <i class="fas fa-times"></i>
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <div class="upper-menu">
           <div class="menu-wrap">
           <h1 class="logo">
@@ -31,14 +48,14 @@
               <ul>
                 <li><a href="#none">Login</a></li>
                 <li><a href="#none">회원가입</a></li>
-                <li><a href="#none" class="popup-btn">팝업열기</a></li>
+                <li><a href="#none" class="popup-btn">팝업닫기</a></li>
                 <li><a href="#none"><img class="facebook" src="./asset/hbtn_facebook.png" alt="제주창조혁신센터페이스북"></a></li>
               </ul>
             </div>
           </div>
-          <span class="menu-btn">
-            <button type="button" class="mobile-menu-btn"></button>
-          </span>
+          <a href="#a" class="menu-btn">
+            <span>menu</span>
+          </a>
         </div>
       </div>
       <div class="gnb">
@@ -487,7 +504,7 @@
           <h3>홍보동영상</h3>
           <span class="view-more"><i class="fas fa-plus"></i></span>
         </div>
-        <ul class="program-list">
+        <ul class="program-list video-list">
           <li>
             <div class="program-box">
               <div>
@@ -605,6 +622,13 @@
               <option value="pohang">포항 창조경제혁신센터</option>
               <option value="bitgaram">빛가람 창조경제혁신센터</option>
             </select>
+            <span class="select-box">
+              <span>Family Site</span>
+              <span class="drop-down"></span>
+            </span>
+            <button class="other-site-btn">
+                <i class="fas fa-play"></i>
+            </button>
           </span>
         </div>
         <div class="email">
@@ -617,5 +641,6 @@
       </div>
     </div>
   </section>
+  <script src="./main.js"></script>
 </body>
 </html>
